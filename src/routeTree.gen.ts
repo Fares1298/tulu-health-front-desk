@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiFrontDeskRouteImport } from './routes/ai-front-desk'
 import { Route as ArchitectureRouteImport } from './routes/architecture'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -27,6 +28,11 @@ import { Route as TwinRouteImport } from './routes/twin'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiFrontDeskRoute = AiFrontDeskRouteImport.update({
+  id: '/ai-front-desk',
+  path: '/ai-front-desk',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArchitectureRoute = ArchitectureRouteImport.update({
@@ -97,6 +103,7 @@ const TwinRoute = TwinRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-front-desk': typeof AiFrontDeskRoute
   '/architecture': typeof ArchitectureRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
@@ -113,6 +120,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-front-desk': typeof AiFrontDeskRoute
   '/architecture': typeof ArchitectureRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
@@ -130,6 +138,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-front-desk': typeof AiFrontDeskRoute
   '/architecture': typeof ArchitectureRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
@@ -148,6 +157,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/ai-front-desk'
     | '/architecture'
     | '/blog'
     | '/contact'
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/ai-front-desk'
     | '/architecture'
     | '/blog'
     | '/contact'
@@ -180,6 +191,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/ai-front-desk'
     | '/architecture'
     | '/blog'
     | '/contact'
@@ -197,6 +209,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiFrontDeskRoute: typeof AiFrontDeskRoute
   ArchitectureRoute: typeof ArchitectureRoute
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
@@ -219,6 +232,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-front-desk': {
+      id: '/ai-front-desk'
+      path: '/ai-front-desk'
+      fullPath: '/ai-front-desk'
+      preLoaderRoute: typeof AiFrontDeskRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/architecture': {
@@ -317,6 +337,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiFrontDeskRoute: AiFrontDeskRoute,
   ArchitectureRoute: ArchitectureRoute,
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
