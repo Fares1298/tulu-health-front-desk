@@ -24,6 +24,8 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TeamRouteImport } from './routes/team'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TwinRouteImport } from './routes/twin'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -100,12 +102,22 @@ const TwinRoute = TwinRouteImport.update({
   path: '/twin',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ai-front-desk': typeof AiFrontDeskRoute
   '/architecture': typeof ArchitectureRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/demo': typeof DemoRoute
   '/governance': typeof GovernanceRoute
@@ -117,12 +129,13 @@ export interface FileRoutesByFullPath {
   '/team': typeof TeamRoute
   '/terms': typeof TermsRoute
   '/twin': typeof TwinRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ai-front-desk': typeof AiFrontDeskRoute
   '/architecture': typeof ArchitectureRoute
-  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/demo': typeof DemoRoute
   '/governance': typeof GovernanceRoute
@@ -134,13 +147,15 @@ export interface FileRoutesByTo {
   '/team': typeof TeamRoute
   '/terms': typeof TermsRoute
   '/twin': typeof TwinRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/ai-front-desk': typeof AiFrontDeskRoute
   '/architecture': typeof ArchitectureRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/demo': typeof DemoRoute
   '/governance': typeof GovernanceRoute
@@ -152,6 +167,8 @@ export interface FileRoutesById {
   '/team': typeof TeamRoute
   '/terms': typeof TermsRoute
   '/twin': typeof TwinRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -171,12 +188,13 @@ export interface FileRouteTypes {
     | '/team'
     | '/terms'
     | '/twin'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/ai-front-desk'
     | '/architecture'
-    | '/blog'
     | '/contact'
     | '/demo'
     | '/governance'
@@ -188,6 +206,8 @@ export interface FileRouteTypes {
     | '/team'
     | '/terms'
     | '/twin'
+    | '/blog/$slug'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -205,13 +225,15 @@ export interface FileRouteTypes {
     | '/team'
     | '/terms'
     | '/twin'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AiFrontDeskRoute: typeof AiFrontDeskRoute
   ArchitectureRoute: typeof ArchitectureRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   DemoRoute: typeof DemoRoute
   GovernanceRoute: typeof GovernanceRoute
@@ -332,14 +354,40 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TwinRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AiFrontDeskRoute: AiFrontDeskRoute,
   ArchitectureRoute: ArchitectureRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   DemoRoute: DemoRoute,
   GovernanceRoute: GovernanceRoute,
