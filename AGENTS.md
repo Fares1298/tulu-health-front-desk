@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Keep shared site navigation and footer in the root layout so all product destinations remain one website.
+- Preserve imported original pages as same-origin documents with their original scripts and assets; wrap them in a height-synchronised frame to avoid rewriting existing product and demo functionality.
+- Keep newly authored homepage and AI Front Desk content in native React routes, using shared semantic CSS tokens and the Button component.
