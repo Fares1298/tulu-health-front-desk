@@ -1,0 +1,54 @@
+{
+  "longevity-os": {
+    "title": "Tulu Health | The Operating System for the Longevity Economy",
+    "description": "Tulu Health builds the Patient Twin, a living profile per patient, and four AI services on top of it: AI Recall, AI Front Desk, AI Care Navigator, and AI Benchmarks, for longevity clinics and med spas."
+  },
+  "twin": {
+    "title": "The Patient Twin | Tulu Health",
+    "description": "Not a database or a dashboard: a single, continuously updating profile per patient that the clinician, the patient, and Tulu's AI all read from and write back to."
+  },
+  "operations": {
+    "title": "Clinic Operations | Tulu Health",
+    "description": "The command center for running a longevity practice, worklist, campaigns, clinic pulse, capacity, membership, compliance, and outcomes, all computed from the same Patient Twin."
+  },
+  "services": {
+    "title": "AI Services | Tulu Health",
+    "description": "Four AI services, one shared Patient Twin memory: AI Recall, AI Front Desk, AI Care Navigator, and AI Benchmarks."
+  },
+  "architecture": {
+    "title": "Architecture | Tulu Health",
+    "description": "Deep dive into Tulu Health's multi-agent AI architecture: EHR integrations, FHIR/HL7 standards, LLM orchestration, and how the specialized agents work together for longevity clinics."
+  },
+  "demo": {
+    "title": "See it in Action | Tulu Health",
+    "description": "Walk through the Patient Twin live: biological age, longevity score, the AI health copilot, and a daily care plan, on the exact screen your patients use."
+  },
+  "blog": {
+    "title": "Clinical Perspectives | Tulu Health",
+    "description": "Perspectives on autonomous AI systems, healthcare governance, and the future of clinical operations, from the team building it."
+  },
+  "team": {
+    "title": "Team | Tulu Health",
+    "description": "Meet the team behind Tulu Health, engineering the Patient Twin and AI services for longevity clinics and med spas, guided by board-certified clinicians."
+  },
+  "contact": {
+    "title": "Book a Demo | Tulu Health",
+    "description": "A 20-minute walkthrough mapped to where your practice is losing members today. See the Patient Twin work on your own patients."
+  },
+  "governance": {
+    "title": "AI Governance | Tulu Health",
+    "description": "Tulu Health's AI governance framework: HIPAA compliance, SOC2 Type II certification, bias monitoring, explainability, and responsible AI deployment for longevity clinics."
+  },
+  "security": {
+    "title": "Security | Tulu Health",
+    "description": "Tulu Health operates on a zero-trust, natively encrypted architecture: HIPAA-native infrastructure, SOC 2 Type II certification, zero-retention inference, and end-to-end encryption for clinic data."
+  },
+  "privacy": {
+    "title": "Privacy Policy | Tulu Health",
+    "description": "How Tulu Health collects, uses, and safeguards visitor information on tuluhealth.com, with HIPAA-compliant practices for patient and clinic data."
+  },
+  "terms": {
+    "title": "Terms of Service | Tulu Health",
+    "description": "Tulu Health's terms of service governing use of the Patient Twin, AI services, and related products for longevity clinics and med spas."
+  }
+}
