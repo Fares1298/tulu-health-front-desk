@@ -14,18 +14,35 @@ export function PreservedDocument({ name, embedded = false, hideClosing = false 
       if (event.origin !== window.location.origin || event.source !== frame.current?.contentWindow) return;
       if (typeof event.data?.tuluHeight === 'number') setHeight(Math.max(700, event.data.tuluHeight));
     };
-    window.addEventListener('message', handle);
-    return () => window.removeEventListener('message', handle);
-  }, []);
-  const prepareDocument = () => {
-    if (!embedded) return;
-    const document = frame.current?.contentDocument;
-    if (!document) return;
-    const style = document.createElement('style');
-    style.textContent = `main > header { padding-top: 48px !important; } ${hideClosing ? '#cta { display: none !important; }' : ''}`;
-    document.head.appendChild(style);
-  };
-  return <iframe ref={frame} src={`/preserved/${name}.html`} title={metadata[name].title} height={height} className="preserved-frame" onLoad={prepareDocument} />;
+    if (!embedded) window.addEventListener('message', handle);
+    let observer: ResizeObserver | undefined;
+    const timer = window.setInterval(() => {
+      const document = frame.current?.contentDocument;
+      const main = document?.querySelector('main');
+      if (!document || !main || document.readyState === 'loading') return;
+      window.clearInterval(timer);
+      if (embedded) {
+        const style = document.createElement('style');
+        style.textContent = `main > header { padding-top: 48px !important; } ${hideClosing ? '#cta { display: none !important; }' : ''}`;
+        document.head.appendChild(style);
+      }
+      const measure = () => {
+        const last = main.lastElementChild;
+        if (!last) return;
+        setHeight(Math.max(700, Math.ceil(last.getBoundingClientRect().bottom + (document.defaultView?.scrollY ?? 0))));
+      };
+      observer = new ResizeObserver(measure);
+      observer.observe(document.body);
+      for (const child of main.children) observer.observe(child);
+      measure();
+    }, 100);
+    return () => {
+      window.clearInterval(timer);
+      observer?.disconnect();
+      window.removeEventListener('message', handle);
+    };
+  }, [name, embedded, hideClosing]);
+  return <iframe ref={frame} src={`/preserved/${name}.html`} title={metadata[name].title} height={height} className="preserved-frame" />;
 }
 
 export function PreservedPage({ name }: { name: keyof typeof metadata }) {
