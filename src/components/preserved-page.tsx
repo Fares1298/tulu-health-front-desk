@@ -6,7 +6,7 @@ export function preservedHead(name: keyof typeof metadata) {
   return { meta: [{ title }, { name: 'description', content: description }, { property: 'og:title', content: title }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] };
 }
 
-export function PreservedPage({ name }: { name: keyof typeof metadata }) {
+export function PreservedDocument({ name, embedded = false, hideClosing = false }: { name: keyof typeof metadata; embedded?: boolean; hideClosing?: boolean }) {
   const frame = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(1800);
   useEffect(() => {
@@ -17,5 +17,17 @@ export function PreservedPage({ name }: { name: keyof typeof metadata }) {
     window.addEventListener('message', handle);
     return () => window.removeEventListener('message', handle);
   }, []);
-  return <main className="preserved-page"><iframe ref={frame} src={`/preserved/${name}.html`} title={metadata[name].title} height={height} className="preserved-frame" /></main>;
+  const prepareDocument = () => {
+    if (!embedded) return;
+    const document = frame.current?.contentDocument;
+    if (!document) return;
+    const style = document.createElement('style');
+    style.textContent = `main > header { padding-top: 48px !important; } ${hideClosing ? '#cta { display: none !important; }' : ''}`;
+    document.head.appendChild(style);
+  };
+  return <iframe ref={frame} src={`/preserved/${name}.html`} title={metadata[name].title} height={height} className="preserved-frame" onLoad={prepareDocument} />;
+}
+
+export function PreservedPage({ name }: { name: keyof typeof metadata }) {
+  return <main className="preserved-page"><PreservedDocument name={name} /></main>;
 }

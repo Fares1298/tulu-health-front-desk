@@ -262,6 +262,20 @@ em { font-weight: inherit; color: var(--primary); }
 .linkedin { display: grid; place-items: center; width: 24px; height: 24px; border: 1px solid var(--muted-foreground); border-radius: 50%; margin-top: 14px; font-size: 10px; }
 .footer-bottom { padding: 23px 0; margin-top: 40px; border-top: 1px solid var(--muted-foreground); display: flex; justify-content: space-between; font-size: 8px; color: var(--inverse-muted); }
 .preserved-frame { width: 100%; border: 0; display: block; }
+.longevity-opening { text-align: center; padding: 60px 0 44px; }
+.longevity-opening .eyebrow { color: var(--primary); }
+.longevity-opening h1 { font-size: 54px; line-height: 1.15; margin-top: 18px; }
+.longevity-intro { max-width: 650px; margin: 20px auto 0; font-size: 21px; line-height: 1.5; }
+.longevity-opening .opening-copy { max-width: 720px; margin-inline: auto; margin-top: 16px; }
+.longevity-section-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
+.longevity-section-links a { background: var(--card); border-color: var(--border); color: var(--foreground); font-size: 12px; border-radius: 100px; gap: 10px; }
+.longevity-product-section { border-top: 1px solid var(--border); scroll-margin-top: 82px; }
+@media (max-width: 540px) {
+  .longevity-opening { padding: 42px 0 32px; }
+  .longevity-opening h1 { font-size: 38px; }
+  .longevity-intro { font-size: 18px; }
+  .longevity-product-section { scroll-margin-top: 70px; }
+}
 .front-opening { text-align: center; padding-block: 75px 85px; }
 .front-opening h1 { font-size: 48px; line-height: 1.12; margin-top: 22px; }
 .front-opening p { font-size: 13px; color: var(--muted-foreground); margin-top: 22px; line-height: 1.8; }

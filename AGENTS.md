@@ -32,3 +32,4 @@ use the editor.
 - Keep shared site navigation and footer in the root layout so all product destinations remain one website.
 - Preserve imported original pages as same-origin documents with their original scripts and assets; wrap them in a height-synchronised frame to avoid rewriting existing product and demo functionality.
 - Keep newly authored homepage and AI Front Desk content in native React routes, using shared semantic CSS tokens and the Button component.
+- Compose the native Longevity OS introduction with reusable preserved document frames for Operations and AI Services; suppress only the intermediate closing invitation so original demonstrations remain intact.
