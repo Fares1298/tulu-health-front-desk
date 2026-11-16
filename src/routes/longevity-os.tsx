@@ -45,6 +45,7 @@ function Page() {
       const frame = window.requestAnimationFrame(scrollToContent);
       return () => window.cancelAnimationFrame(frame);
     }
+    return undefined;
   }, [hash, navigate]);
 
   function selectTab(tab: LongevityTab) {
