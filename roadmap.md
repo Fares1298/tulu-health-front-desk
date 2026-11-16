@@ -1,4 +1,6 @@
 # Tulu website restructuring
+- [x] Simplify only Longevity OS into three operations groups and four service summaries, preserving complete details and existing closing content.
+- [x] Verify exclusive details, direct links, keyboard, mobile, reduced motion and preserved content.
 - [x] Add clearly labelled evidence placeholders and readable security links on the homepage.
 - [x] Replace Longevity OS tab-only navigation with visible summaries and inline complete details; preserve video, metrics, direct links and Growth.
 - [x] Correct AI Front Desk actions, remove calculator and unsupported proof figures, and connect the approved reactivation review.
