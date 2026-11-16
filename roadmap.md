@@ -1,4 +1,6 @@
 # Tulu website restructuring
+- [x] Refine only Longevity OS AI Services typography, preview frames, Coming soon availability and closing spacing.
+- [x] Verify all four visible services, contact actions and closing transition on desktop/mobile.
 - [x] Rework only Longevity OS into fully visible editorial rows and a four-service grid, retaining copy, metrics, examples and links.
 - [x] Verify visibility, screenshots, walkthrough, direct links and desktop/mobile reading order.
 - [x] Simplify only Longevity OS into three operations groups and four service summaries, preserving complete details and existing closing content.
