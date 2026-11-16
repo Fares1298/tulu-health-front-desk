@@ -270,6 +270,7 @@ em { font-weight: inherit; color: var(--primary); }
 .longevity-opening .opening-copy { max-width: 760px; margin-inline: auto; margin-top: 10px; font-size: 16px; line-height: 1.65; }
 .longevity-content-region { position: relative; }
 .longevity-tabs-bar { position: sticky; top: var(--longevity-header-height, 0px); z-index: 40; background: var(--background); border-bottom: 1px solid var(--border); }
+.longevity-tabs-bar.longevity-tabs-released { position: relative; top: auto; }
 .longevity-navigation { display: flex; align-items: center; justify-content: space-between; min-height: 54px; gap: 24px; }
 .longevity-context { font-size: 14px; font-weight: 600; }
 .longevity-tabs { display: flex; gap: 24px; }

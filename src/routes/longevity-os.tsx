@@ -26,6 +26,16 @@ function Page() {
   const pendingScroll = useRef(false);
   const normalizingHash = useRef(false);
   const [reservedHeight, setReservedHeight] = useState<number | undefined>();
+  const closing = useRef<HTMLDivElement>(null);
+  const [closingVisible, setClosingVisible] = useState(false);
+
+  useEffect(() => {
+    const element = closing.current;
+    if (!element) return;
+    const observer = new IntersectionObserver(([entry]) => setClosingVisible(entry?.isIntersecting ?? false));
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const header = document.querySelector('.site-header');
@@ -84,7 +94,7 @@ function Page() {
       </div>
     </section>
     <div className="longevity-content-region">
-    <div ref={tabs} className="longevity-tabs-bar">
+    <div ref={tabs} className={`longevity-tabs-bar${closingVisible ? ' longevity-tabs-released' : ''}`}>
       <div className="wrap longevity-navigation">
       <span className="longevity-context">Longevity OS</span>
       <div className="longevity-tabs" role="tablist" aria-label="Longevity OS">
@@ -116,6 +126,6 @@ function Page() {
     </section>
     </div>
     <noscript><div className="wrap longevity-no-script"><a href="/preserved/operations.html">Clinic Operations — complete content</a><a href="/preserved/services.html">AI Services — complete content</a></div></noscript>
-    <PreservedDocument name="services" embedded closingOnly />
+    <div ref={closing} className="longevity-closing"><PreservedDocument name="services" embedded closingOnly /></div>
   </main>;
 }
