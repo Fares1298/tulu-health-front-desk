@@ -6,6 +6,17 @@ const html = readFileSync('public/preserved/longevity-explorer.html', 'utf8');
 const script = readFileSync('public/preserved/longevity-explorer.js', 'utf8');
 
 describe('Longevity OS feature navigation', () => {
+  it('keeps AI Benchmarks coming soon without implying current access', () => {
+    const dom = new JSDOM(html);
+    const service = dom.window.document.getElementById('benchmarks');
+    if (!service) throw new Error('Missing AI Benchmarks');
+    expect(service.dataset['availability']).toBe('coming-soon');
+    expect(service.textContent?.toLowerCase()).not.toContain('limited early access');
+    const action = service.querySelector('a');
+    expect(action?.getAttribute('href')).toBe('/contact');
+    dom.window.close();
+  });
+
   it('scrolls directly to the requested feature without changing other content', async () => {
     const dom = new JSDOM(html, { url: 'http://localhost/longevity-os#outcomes', runScripts: 'outside-only' });
     dom.window['ResizeObserver'] = class { observe() {} disconnect() {} unobserve() {} };
