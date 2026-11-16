@@ -10,7 +10,7 @@ describe('Longevity OS feature navigation', () => {
     const dom = new JSDOM(html, { url: 'http://localhost/longevity-os#outcomes', runScripts: 'outside-only' });
     dom.window['ResizeObserver'] = class { observe() {} disconnect() {} unobserve() {} };
     const scrolls: number[] = [];
-    dom.window.scrollBy = (options: ScrollToOptions | number) => {
+    dom.window.scrollBy = (options?: ScrollToOptions | number) => {
       if (typeof options === 'object') scrolls.push(options.top ?? 0);
     };
     const outcomes = dom.window.document.getElementById('outcomes');
