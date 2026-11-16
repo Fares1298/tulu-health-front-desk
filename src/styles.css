@@ -267,8 +267,13 @@ em { font-weight: inherit; color: var(--primary); }
 .longevity-opening h1 { font-size: 54px; line-height: 1.15; margin-top: 18px; }
 .longevity-intro { max-width: 650px; margin: 20px auto 0; font-size: 21px; line-height: 1.5; }
 .longevity-opening .opening-copy { max-width: 720px; margin-inline: auto; margin-top: 16px; }
-.longevity-section-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
-.longevity-section-links a { background: var(--card); border-color: var(--border); color: var(--foreground); font-size: 12px; border-radius: 100px; gap: 10px; }
+.longevity-tabs-bar { position: sticky; top: 83px; z-index: 40; background: var(--background); border-block: 1px solid var(--border); }
+.longevity-tabs { display: flex; justify-content: center; gap: 12px; padding-block: 12px; }
+.longevity-tabs button { height: 44px; min-width: 180px; color: var(--muted-foreground); border: 1px solid transparent; border-radius: 8px; font-size: 14px; }
+.longevity-tabs button[aria-selected='true'] { background: var(--card); color: var(--primary); border-color: var(--primary); box-shadow: var(--soft-shadow); }
+.longevity-tabs button:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+@media (max-width: 800px) { .longevity-tabs-bar { top: 71px; } }
+@media (max-width: 540px) { .longevity-tabs { gap: 8px; } .longevity-tabs button { flex: 1; min-width: 0; font-size: 12px; padding-inline: 10px; } }
 .longevity-product-section { border-top: 1px solid var(--border); scroll-margin-top: 82px; }
 @media (max-width: 540px) {
   .longevity-opening { padding: 42px 0 32px; }

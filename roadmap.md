@@ -12,3 +12,5 @@
 - [x] Verify homepage controls, navigation, desktop/mobile layouts and reduced motion.
 - [x] Expand the homepage Longevity OS preview with connected practice workflows and a readable patient showcase based on the live product.
 - [x] Group confirmed integrations and verify the expanded homepage on desktop/mobile with reduced motion and working product links.
+- [x] Add sticky Longevity OS tabs with complete original sections, direct links, restored selection and one shared closing invitation.
+- [x] Verify tab switching, content preservation, returning navigation, mobile layout and original demonstrations.
