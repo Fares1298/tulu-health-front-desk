@@ -7,7 +7,7 @@ const script = readFileSync('public/preserved/longevity-explorer.js', 'utf8');
 
 function page(hash = '') {
   const dom = new JSDOM(html, { url: `http://localhost/longevity-os${hash}`, runScripts: 'outside-only' });
-  dom.window.ResizeObserver = class { observe() {} disconnect() {} unobserve() {} };
+  dom.window['ResizeObserver'] = class { observe() {} disconnect() {} unobserve() {} };
   dom.window.scrollBy = () => {};
   dom.window.eval(script);
   return dom;
