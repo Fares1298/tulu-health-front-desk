@@ -3,7 +3,7 @@ import { PreservedPage, preservedHead } from '@/components/preserved-page';
 import { Button } from '@/components/ui/button';
 import { isReviewInquiry, reviewBookingUrl, reviewInquiry } from '@/lib/review-request';
 export const Route = createFileRoute('/contact')({
-  validateSearch: (search: Record<string, unknown>): { inquiry?: string } => ({ inquiry: isReviewInquiry(search['inquiry']) ? 'revive-review' : undefined }),
+  validateSearch: (search: Record<string, unknown>): { inquiry?: string } => isReviewInquiry(search['inquiry']) ? { inquiry: 'revive-review' } : {},
   head: () => preservedHead('contact'), component: Page,
 });
 function Page() {
