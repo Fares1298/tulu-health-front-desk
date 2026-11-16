@@ -1,6 +1,6 @@
 # Tulu website restructuring
-- [ ] Present Clinic Operations only as an open 2 / 3 / 2 editorial feature matrix, retaining every metric, qualification, screenshot and link.
-- [ ] Verify grid sizing, feature links, screenshots, once-only motion and mobile/reduced-motion readability.
+- [x] Present Clinic Operations only as an open 2 / 3 / 2 editorial feature matrix, retaining every metric, qualification, screenshot and link.
+- [x] Verify grid sizing, feature links, screenshots, once-only motion and mobile/reduced-motion readability.
 - [x] Refine only Longevity OS AI Services typography, preview frames, Coming soon availability and closing spacing.
 - [x] Verify all four visible services, contact actions and closing transition on desktop/mobile.
 - [x] Rework only Longevity OS into fully visible editorial rows and a four-service grid, retaining copy, metrics, examples and links.
