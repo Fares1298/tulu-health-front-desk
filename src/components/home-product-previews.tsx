@@ -49,7 +49,7 @@ export function PatientTwinPreview() {
   const [replay, setReplay] = useState(0);
   return <div ref={ref} className="twin-visual home-twin" data-entered={entered} data-sequence={entered && !reduced} data-running={visible} aria-label="Clinical data, conversations, wearable data and EHR connected to the Patient Twin">
     <div className="home-twin-diagram" key={replay}>
-      <svg className="home-twin-lines" viewBox="0 0 500 260" preserveAspectRatio="none" aria-hidden="true">{['M110 35 L250 130', 'M390 35 L250 130', 'M110 225 L250 130', 'M390 225 L250 130'].map((path, index) => <g key={path}><path d={path} /><circle r="3" className={`home-signal home-signal-${index}`}><animateMotion dur="0.8s" begin={`${index * 0.8}s`} path={path} fill="freeze" /></circle></g>)}</svg>
+      <svg className="home-twin-lines" viewBox="0 0 500 260" preserveAspectRatio="none" aria-hidden="true">{['M110 35 L250 130', 'M390 35 L250 130', 'M110 225 L250 130', 'M390 225 L250 130'].map((path, index) => <g key={path}><path d={path} /><circle r="3" className={`home-signal home-signal-${index}`} /></g>)}</svg>
       <span className="home-twin-source source-clinical"><Stethoscope />Clinical data</span>
       <span className="home-twin-source source-conversations"><MessageCircle />Conversations</span>
       <div className="twin-core"><Activity /><span>Patient Twin</span></div>
