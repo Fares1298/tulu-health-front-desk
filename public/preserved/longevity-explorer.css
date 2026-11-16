@@ -41,7 +41,7 @@ main{min-height:0!important}main>.bg-radial-spot,main>.bg-grid{display:none}
 @media(max-width:540px){.lx-service-example{padding:20px}.lx-service .lx-service-value{font-size:24px}.lx-service-example .glass-solid .mb-3.flex{flex-wrap:wrap;gap:8px}.lx-services .lx-section-head h2{font-size:28px}}
 .lx-feature-matrix{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;align-items:start}
 .lx-business-row .lx-feature-matrix{grid-template-columns:repeat(3,minmax(0,1fr))}
-.lx-feature-matrix>.lx-operation-copy{min-width:0;padding:0 24px}
+.lx-feature-matrix>.lx-operation-copy{grid-area:auto;min-width:0;padding:0 24px}
 .lx-feature-matrix>.lx-operation-copy:first-child{padding-left:0}
 .lx-feature-matrix>.lx-operation-copy:last-child{padding-right:0}
 .lx-feature-matrix>.lx-operation-copy+article{border-left:1px solid var(--lx-line)}
