@@ -50,5 +50,9 @@
   "terms": {
     "title": "Terms of Service | Tulu Health",
     "description": "Tulu Health's terms of service governing use of the Patient Twin, AI services, and related products for longevity clinics and med spas."
+  },
+  "ai-front-desk": {
+    "title": "AI Front Desk | Convert IQ & Revive | Tulu Health",
+    "description": "Convert IQ answers calls and WhatsApp inquiries and connects patients to appointments. Revive brings lapsed patients back through voice, WhatsApp and email outreach."
   }
 }
