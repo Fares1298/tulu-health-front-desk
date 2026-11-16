@@ -34,3 +34,4 @@ use the editor.
 - Keep newly authored homepage content in native React routes, using shared semantic CSS tokens and the Button component; render the user-supplied AI Front Desk HTML through the preserved-document wrapper so its design and interactive demos remain intact.
 - Compose the native Longevity OS introduction with reusable preserved document frames for Operations and AI Services; suppress only the intermediate closing invitation so original demonstrations remain intact.
 - Isolate homepage motion and illustrative sequences in homepage-only components; viewport-aware playback and static base styles preserve other pages and no-script readability.
+- Adapt the live patient-home interface into a labelled native sample for the homepage longevity showcase; legible layouts and finite emphasis sequences avoid shrinking or altering the preserved product pages.
