@@ -53,8 +53,9 @@
   mq.addEventListener('change',function(){explorers.forEach(function(s){s.render()})});
   // section jump links inside the page
   document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]'); if(!a)return; var id=a.getAttribute('href').slice(1), el=document.getElementById(id); if(!el)return; e.preventDefault(); setHash(id); reveal(el,true);});
-  (parentWin||window).addEventListener('hashchange',function(){fromHash(true)});
-  if(parentWin) parentWin.addEventListener('popstate',function(){setTimeout(function(){fromHash(true)},0)});
+  var onParent=function(){ try{ if(parentWin&&parentWin.location.pathname!=='/longevity-os')return; }catch(e){return} setTimeout(function(){fromHash(true)},0); };
+  var host=parentWin||window; host.addEventListener('hashchange',onParent); if(parentWin) parentWin.addEventListener('popstate',onParent);
+  addEventListener('pagehide',function(){ host.removeEventListener('hashchange',onParent); if(parentWin) parentWin.removeEventListener('popstate',onParent); });
   new ResizeObserver(post).observe(document.body);
   if(document.readyState==='complete') setTimeout(function(){fromHash(true)},50); else addEventListener('load',function(){setTimeout(function(){fromHash(true)},50)});
   post();
