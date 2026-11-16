@@ -36,7 +36,7 @@ export function PreservedDocument({ name, embedded = false, hideClosing = false,
         document.head.appendChild(style);
       }
       const handleAnchor = (event: MouseEvent) => {
-        if (!compact || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        if (!compact || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         const ElementConstructor = document.defaultView?.Element;
         const target = ElementConstructor && event.target instanceof ElementConstructor ? event.target.closest('a[href^="#"]') : null;
         const href = target?.getAttribute('href');
@@ -44,12 +44,18 @@ export function PreservedDocument({ name, embedded = false, hideClosing = false,
         const iframe = frame.current;
         if (!destination || !iframe) return;
         event.preventDefault();
-        const header = window.document.querySelector('.site-header')?.getBoundingClientRect().height ?? 0;
-        const tabs = window.document.querySelector('.longevity-tabs-bar')?.getBoundingClientRect().height ?? 0;
-        window.scrollTo({ top: window.scrollY + iframe.getBoundingClientRect().top + destination.getBoundingClientRect().top - header - tabs - 12, behavior: 'instant' });
+        event.stopImmediatePropagation();
+        const scrollToDestination = () => {
+          const header = window.document.querySelector('.site-header')?.getBoundingClientRect().height ?? 0;
+          const tabs = window.document.querySelector('.longevity-tabs-bar')?.getBoundingClientRect().height ?? 0;
+          const innerScroll = document.defaultView?.scrollY ?? 0;
+          window.scrollTo({ top: window.scrollY + iframe.getBoundingClientRect().top + destination.getBoundingClientRect().top + innerScroll - header - tabs - 12, behavior: 'instant' });
+        };
+        scrollToDestination();
+        window.requestAnimationFrame(scrollToDestination);
       };
-      document.addEventListener('click', handleAnchor);
-      removeAnchorListener = () => document.removeEventListener('click', handleAnchor);
+      document.addEventListener('click', handleAnchor, true);
+      removeAnchorListener = () => document.removeEventListener('click', handleAnchor, true);
       const measure = () => {
         const last = main.lastElementChild;
         if (!last) return;
