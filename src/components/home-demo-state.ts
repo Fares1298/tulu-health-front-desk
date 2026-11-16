@@ -15,8 +15,8 @@ export const homepageExamples = {
     messages: [
       { speaker: 'Cohort', text: 'Patients due for a follow-up · routine care campaign' },
       { speaker: 'Campaign', text: 'A personalised follow-up invitation, prepared for WhatsApp.' },
-      { speaker: 'Tulu', text: 'Hi Alex, ready for your follow-up? We have Tuesday at 2 pm available.' },
-      { speaker: 'Patient', text: 'Yes please, Tuesday at 2 pm. — Your follow-up is confirmed for Tuesday at 2 pm.' },
+      { speaker: 'Outreach', text: '“Hi Alex, ready for your follow-up on Tuesday at 2 pm?” Alex: “Yes please, that works.”' },
+      { speaker: 'Tulu', text: 'Your follow-up is confirmed for Tuesday at 2 pm.' },
     ],
   },
 } satisfies Record<DemoMode, { steps: string[]; messages: { speaker: string; text: string }[] }>;
