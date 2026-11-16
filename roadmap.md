@@ -8,3 +8,5 @@
 - [x] Verify the combined Longevity OS page and its original walkthrough on desktop and mobile.
 - [x] Replace AI Front Desk with the uploaded Convert IQ and Revive HTML, retaining shared navigation and original interactions.
 - [x] Verify the uploaded page’s tabs, conversations, campaign workspace, calculator and booking links on desktop and mobile.
+- [x] Enhance only the homepage: entrances, product interactions, compact Front Desk demo, Twin signals, dashboard and integration tiles.
+- [x] Verify homepage controls, navigation, desktop/mobile layouts and reduced motion.
