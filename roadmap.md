@@ -5,5 +5,6 @@
 - [x] Share updated product navigation and footer across the site.
 - [x] Verify desktop/mobile layouts and navigation.
 - [x] Add a short Longevity OS introduction followed by the original Clinic Operations and AI Services pages, with one closing invitation.
-- [x] Verify the combined Longevity OS page and its original walkthrough on desktop and mobile.- [x] Replace AI Front Desk with the uploaded Convert IQ and Revive HTML, retaining shared navigation and original interactions.
-- [ ] Verify the uploaded page’s tabs, conversations, campaign workspace, calculator and booking links on desktop and mobile.
+- [x] Verify the combined Longevity OS page and its original walkthrough on desktop and mobile.
+- [x] Replace AI Front Desk with the uploaded Convert IQ and Revive HTML, retaining shared navigation and original interactions.
+- [x] Verify the uploaded page’s tabs, conversations, campaign workspace, calculator and booking links on desktop and mobile.
