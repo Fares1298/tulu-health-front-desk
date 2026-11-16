@@ -54,5 +54,9 @@
   "ai-front-desk": {
     "title": "AI Front Desk | Convert IQ & Revive | Tulu Health",
     "description": "Convert IQ answers calls and WhatsApp inquiries and connects patients to appointments. Revive brings lapsed patients back through voice, WhatsApp and email outreach."
+  },
+  "longevity-explorer": {
+    "title": "Longevity OS | Clinic Operations & AI Services | Tulu Health",
+    "description": "Longevity OS connects your practice around the Patient Twin: a Clinic Operations command center and four AI services sharing one living patient memory."
   }
 }

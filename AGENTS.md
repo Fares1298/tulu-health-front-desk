@@ -32,6 +32,6 @@ use the editor.
 - Keep shared site navigation and footer in the root layout so all product destinations remain one website.
 - Preserve imported original pages as same-origin documents with their original scripts and assets; wrap them in a height-synchronised frame to avoid rewriting existing product and demo functionality.
 - Keep newly authored homepage content in native React routes, using shared semantic CSS tokens and the Button component; render the user-supplied AI Front Desk HTML through the preserved-document wrapper so its design and interactive demos remain intact.
-- Compose Longevity OS with history-aware, session-restored tabs around complete preserved documents; bound sticky tabs to the content region and measure the shared header, so closing sections stay clear and original demonstrations remain intact.
+- Present Longevity OS as one preserved document assembled from the original Operations and Services markup, with section-local tabs (accordions on mobile) and hash deep links handled inside that document; keeps original visuals intact without stacked sticky bars.
 - Isolate homepage motion and illustrative sequences in homepage-only components; viewport-aware playback and static base styles preserve other pages and no-script readability.
 - Adapt the live patient-home interface into a labelled native sample for the homepage longevity showcase; legible layouts and finite emphasis sequences avoid shrinking or altering the preserved product pages.
