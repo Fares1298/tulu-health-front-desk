@@ -37,7 +37,7 @@
     var id;try{id=decodeURIComponent(host.location.hash.slice(1));}catch(e){return;}
     var el=document.getElementById(id);if(!el)return;
     var d=el.closest('.lx-details');if(d)openOnly(d);
-    post();afterResize(d?d.querySelector('summary'):el);
+    post();afterResize(d?d.closest('article').querySelector('h3,h4'):el);
   }
   // Native details names enforce exclusivity without JavaScript; this also
   // supports browsers that predate grouped details and keeps labels in sync.
@@ -54,7 +54,7 @@
         var previous=Array.from(d.closest('[data-explorer]').querySelectorAll('.lx-details')).find(function(other){return other.open&&other!==d;});
         openOnly(d);
         host.history.pushState(host.history.state,'','#'+d.dataset.feature);
-        if(previous)afterResize(summary);
+        if(previous)afterResize(d.closest('article').querySelector('h3,h4'));
       }else{d.open=false;label(d);post();}
     });
   });
