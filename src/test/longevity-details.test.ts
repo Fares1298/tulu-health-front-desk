@@ -14,17 +14,18 @@ function page(hash = '') {
 }
 
 describe('Longevity OS detail rules', () => {
-  it('allows only one operations capability open at a time', () => {
+  it('allows only one operations capability open at a time', async () => {
     const dom = page();
     const doc = dom.window.document;
     doc.querySelector<HTMLDetailsElement>('[data-feature="worklist"] > summary')?.click();
     doc.querySelector<HTMLDetailsElement>('[data-feature="capacity"] > summary')?.click();
     expect(doc.querySelector<HTMLDetailsElement>('[data-feature="worklist"]')?.open).toBe(false);
     expect(doc.querySelector<HTMLDetailsElement>('[data-feature="capacity"]')?.open).toBe(true);
+    await new Promise(resolve => dom.window.setTimeout(resolve, 30));
     dom.window.close();
   });
 
-  it('allows only one service open, independently of operations', () => {
+  it('allows only one service open, independently of operations', async () => {
     const dom = page();
     const doc = dom.window.document;
     for (const id of ['capacity', 'recall', 'front-desk']) {
@@ -33,14 +34,16 @@ describe('Longevity OS detail rules', () => {
     expect(doc.querySelector<HTMLDetailsElement>('[data-feature="capacity"]')?.open).toBe(true);
     expect(doc.querySelector<HTMLDetailsElement>('[data-feature="recall"]')?.open).toBe(false);
     expect(doc.querySelector<HTMLDetailsElement>('[data-feature="front-desk"]')?.open).toBe(true);
+    await new Promise(resolve => dom.window.setTimeout(resolve, 30));
     dom.window.close();
   });
 
-  it('opens the linked feature automatically', () => {
+  it('opens the linked feature automatically', async () => {
     const dom = page('#outcomes');
     dom.window.dispatchEvent(new dom.window.Event('hashchange'));
     expect(dom.window.document.querySelector<HTMLDetailsElement>('[data-feature="outcomes"]')?.open).toBe(true);
     expect(dom.window.document.querySelector<HTMLDetailsElement>('[data-feature="worklist"]')?.open).toBe(false);
+    await new Promise(resolve => dom.window.setTimeout(resolve, 30));
     dom.window.close();
   });
 });
