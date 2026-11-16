@@ -23,7 +23,7 @@
     var detail=el.closest('details');if(detail)detail.open=true;
     if(el.classList.contains('lx-conversation'))el.open=true;
     post();
-    requestAnimationFrame(function(){requestAnimationFrame(function(){reveal(detail?detail.querySelector('summary'):el);});});
+    setTimeout(function(){reveal(detail?detail.querySelector('summary'):el);},200);
   }
   document.querySelectorAll('.lx-details').forEach(function(d){d.addEventListener('toggle',function(){
     d.querySelector('summary').textContent=(d.open?'Hide ':'View ')+d.closest('article').querySelector('h3').textContent+' details';

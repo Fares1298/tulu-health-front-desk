@@ -67,6 +67,8 @@ main{min-height:0!important}
 .lx-panel>div{padding-top:16px}
 .lx-example-note{font-size:14px;line-height:1.7;color:var(--lx-muted);margin-bottom:16px}
 .lx-panel .text-haze,.lx-panel [class*="text-espresso/"]{color:var(--lx-muted)}
+.lx-panel .glass-solid{background:var(--lx-ink);color:var(--lx-paper)}
+.lx-panel .glass-solid [class*="text-sand/"],.lx-panel .glass-solid .text-amber-soft{color:var(--lx-paper)}
 .lx-metrics p{font-size:14px;color:var(--lx-muted)}
 .lx-services{background:var(--lx-ink);padding-bottom:48px}
 .lx-services .lx-section-head>*{color:var(--lx-paper)}
