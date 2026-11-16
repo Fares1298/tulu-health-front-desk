@@ -17,7 +17,7 @@ export const Route = createFileRoute('/longevity-os')({
 });
 
 function Page() {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
   const navigate = useNavigate();
   const [selected, setSelected] = useState<LongevityTab>('clinic-operations');
   const tabs = useRef<HTMLDivElement>(null);
@@ -56,6 +56,9 @@ function Page() {
   }
 
   useEffect(() => {
+    // The outgoing page can remain mounted while another destination loads.
+    // Never normalize its hash after navigation has left Longevity OS.
+    if (pathname !== '/longevity-os') return;
     let saved: string | null = null;
     try { saved = window.sessionStorage.getItem(longevityTabStorageKey); } catch { /* The direct links still work if storage is unavailable. */ }
     const next = resolveLongevityTab(hash, saved);
@@ -73,7 +76,7 @@ function Page() {
       return () => window.cancelAnimationFrame(frame);
     }
     return undefined;
-  }, [hash, navigate]);
+  }, [hash, pathname, navigate]);
 
   function selectTab(tab: LongevityTab) {
     pendingScroll.current = true;
