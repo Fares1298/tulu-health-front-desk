@@ -1,4 +1,6 @@
 # Tulu website restructuring
+- [ ] Rework only Longevity OS into fully visible editorial rows and a four-service grid, retaining copy, metrics, examples and links.
+- [ ] Verify visibility, screenshots, walkthrough, direct links and desktop/mobile reading order.
 - [x] Simplify only Longevity OS into three operations groups and four service summaries, preserving complete details and existing closing content.
 - [x] Verify exclusive details, direct links, keyboard, mobile, reduced motion and preserved content.
 - [x] Add clearly labelled evidence placeholders and readable security links on the homepage.
