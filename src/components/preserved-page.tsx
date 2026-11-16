@@ -18,6 +18,7 @@ export function PreservedDocument({ name, embedded = false, hideClosing = false,
     };
     if (!embedded) window.addEventListener('message', handle);
     let observer: ResizeObserver | undefined;
+    let removeAnchorListener: (() => void) | undefined;
     const timer = window.setInterval(() => {
       const document = frame.current?.contentDocument;
       const main = document?.querySelector('main');
@@ -36,7 +37,8 @@ export function PreservedDocument({ name, embedded = false, hideClosing = false,
       }
       const handleAnchor = (event: MouseEvent) => {
         if (!compact || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-        const target = event.target instanceof document.defaultView!.Element ? event.target.closest('a[href^="#"]') : null;
+        const ElementConstructor = document.defaultView?.Element;
+        const target = ElementConstructor && event.target instanceof ElementConstructor ? event.target.closest('a[href^="#"]') : null;
         const href = target?.getAttribute('href');
         const destination = href ? document.getElementById(href.slice(1)) : null;
         const iframe = frame.current;
