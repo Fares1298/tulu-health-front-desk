@@ -39,6 +39,14 @@
   host.addEventListener('hashchange',openHash);host.addEventListener('popstate',openHash);
   addEventListener('pagehide',function(){host.removeEventListener('hashchange',openHash);host.removeEventListener('popstate',openHash);});
   new ResizeObserver(post).observe(document.body);
+  if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var groups=new IntersectionObserver(function(entries){entries.forEach(function(entry){
+      if(!entry.isIntersecting)return;
+      entry.target.setAttribute('data-revealed','true');groups.unobserve(entry.target);
+    });},{threshold:0.08});
+    document.querySelectorAll('#clinic-operations .lx-editorial-row').forEach(function(row){groups.observe(row);});
+    addEventListener('pagehide',function(){groups.disconnect();});
+  }
   if(document.readyState==='complete')setTimeout(openHash,100);else addEventListener('load',function(){setTimeout(openHash,100);});
   post();
 })();
