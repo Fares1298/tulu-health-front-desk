@@ -10,3 +10,5 @@
 - [x] Verify the uploaded page’s tabs, conversations, campaign workspace, calculator and booking links on desktop and mobile.
 - [x] Enhance only the homepage: entrances, product interactions, compact Front Desk demo, Twin signals, dashboard and integration tiles.
 - [x] Verify homepage controls, navigation, desktop/mobile layouts and reduced motion.
+- [ ] Expand the homepage Longevity OS preview with connected practice workflows and a readable patient showcase based on the live product.
+- [ ] Group confirmed integrations and verify the expanded homepage on desktop/mobile with reduced motion and working product links.
