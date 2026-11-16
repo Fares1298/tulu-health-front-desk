@@ -278,6 +278,8 @@ em { font-weight: inherit; color: var(--primary); }
 .longevity-tabs button:hover { color: var(--primary); background: transparent; }
 .longevity-tabs button:focus-visible { outline: 2px solid var(--primary); outline-offset: -5px; }
 .longevity-product-section { min-height: 700px; scroll-margin-top: calc(var(--longevity-header-height, 0px) + 54px); }
+.longevity-product-section:focus { outline: none; }
+.longevity-product-section:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; }
 .longevity-panel-content { animation: longevity-panel-fade 180ms ease-out; }
 .longevity-no-script { display: flex; gap: 24px; padding-block: 24px; color: var(--primary); }
 @keyframes longevity-panel-fade { from { opacity: .4; } to { opacity: 1; } }

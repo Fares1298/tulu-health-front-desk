@@ -24,6 +24,8 @@ function Page() {
   const panel = useRef<HTMLElement>(null);
   const page = useRef<HTMLElement>(null);
   const pendingScroll = useRef(false);
+  const normalizingHash = useRef(false);
+  const [reservedHeight, setReservedHeight] = useState<number | undefined>();
 
   useEffect(() => {
     const header = document.querySelector('.site-header');
@@ -47,10 +49,13 @@ function Page() {
     let saved: string | null = null;
     try { saved = window.sessionStorage.getItem(longevityTabStorageKey); } catch { /* The direct links still work if storage is unavailable. */ }
     const next = resolveLongevityTab(hash, saved);
-    pendingScroll.current = Boolean(hash || next === 'ai-services');
+    pendingScroll.current = !normalizingHash.current && Boolean(hash || next === 'ai-services');
+    normalizingHash.current = false;
+    if (next !== selected) setReservedHeight(panel.current?.getBoundingClientRect().height);
     setSelected(next);
     try { window.sessionStorage.setItem(longevityTabStorageKey, next); } catch { /* Selection remains usable for this visit. */ }
     if (!hash) {
+      normalizingHash.current = next === 'clinic-operations';
       void navigate({ to: '/longevity-os', hash: next, replace: true, resetScroll: false, hashScrollIntoView: false });
     }
     if (pendingScroll.current) {
@@ -62,6 +67,7 @@ function Page() {
 
   function selectTab(tab: LongevityTab) {
     pendingScroll.current = true;
+    if (tab !== selected) setReservedHeight(panel.current?.getBoundingClientRect().height);
     setSelected(tab);
     try { window.sessionStorage.setItem(longevityTabStorageKey, tab); } catch { /* Optional visit preference. */ }
     void navigate({ to: '/longevity-os', hash: tab, resetScroll: false, hashScrollIntoView: false });
@@ -97,9 +103,10 @@ function Page() {
       </div>
       </div>
     </div>
-    <section ref={panel} id={selected} role="tabpanel" aria-labelledby={`${selected}-tab`} tabIndex={0} className="longevity-product-section">
+    <section ref={panel} id={selected} role="tabpanel" aria-labelledby={`${selected}-tab`} tabIndex={0} className="longevity-product-section" style={{ minHeight: reservedHeight }}>
       <div key={selected} className="longevity-panel-content">
       <PreservedDocument name={selected === 'clinic-operations' ? 'operations' : 'services'} embedded hideClosing compact onReady={() => {
+        setReservedHeight(undefined);
         if (pendingScroll.current) {
           window.requestAnimationFrame(scrollToContent);
           pendingScroll.current = false;
