@@ -761,3 +761,21 @@ em { font-weight: inherit; color: var(--primary); }
 }
 @media (max-width: 420px) { .int-panel ul { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .int-tile { transition: none; } .int-tile:hover { transform: none; } }
+
+/* Evidence remains explicitly unverified until approved assets are supplied. */
+.customer-evidence-band { background: var(--card); padding-block: 24px; }
+.longevity-evidence-band { background: var(--panel); padding-block: 0 36px; }
+.evidence-placeholder { border: 1px dashed var(--border); padding: 20px 24px; text-align: left; }
+.evidence-placeholder h3 { font-size: 18px; margin-top: 6px; }
+.evidence-placeholder p { font-size: 14px; line-height: 1.7; color: var(--foreground); margin-top: 8px; max-width: 760px; }
+.evidence-status { display: block; font-size: 14px; line-height: 1.6; color: var(--foreground); }
+.home-security { display: flex; align-items: flex-start; gap: 20px; border: 1px solid var(--border); padding: 28px; margin-bottom: 48px; }
+.home-security > svg { flex-shrink: 0; color: var(--primary); width: 26px; height: 26px; }
+.home-security h2 { font-size: 22px; }
+.home-security p { font-size: 15px; line-height: 1.7; max-width: 760px; margin-top: 10px; }
+.security-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; }
+.review-request { padding-block: 36px; border-bottom: 1px solid var(--border); }
+.review-request h1 { font-size: 30px; }
+.review-request p { font-size: 16px; line-height: 1.7; margin-top: 12px; max-width: 760px; }
+.review-request a { margin-top: 18px; }
+@media(max-width:540px) { .home-security { gap: 12px; padding: 20px; } .evidence-placeholder { padding: 18px; } .security-actions { align-items: flex-start; flex-direction: column; } }

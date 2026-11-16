@@ -5,6 +5,7 @@ import hologic from '@/assets/logos/hologic.svg.asset.json';
 import inbody from '@/assets/logos/inbody.png.asset.json';
 import invitae from '@/assets/logos/invitae.png.asset.json';
 import stripe from '@/assets/logos/stripe.svg.asset.json';
+import { EvidencePlaceholder } from '@/components/evidence-and-security';
 
 type Item = { name: string; logo?: string; category?: string };
 const wearables: Item[] = [{ name: 'Oura' }, { name: 'Whoop', logo: whoop.url }, { name: 'Apple Health', logo: apple.url }, { name: 'Dexcom', logo: dexcom.url }];
@@ -24,5 +25,6 @@ export function HomeIntegrations() {
   return <div className="int-groups" data-reveal>
     <div className="int-wearables"><h3>Wearables & Devices</h3><ul>{wearables.map(i => <li key={i.name} className="int-tile"><Logo item={i} /><span>{i.name}</span></li>)}</ul></div>
     <div className="int-panels"><Panel title="Clinical Data" items={clinical} /><Panel title="Systems" items={systems} /></div>
+    <EvidencePlaceholder title="Integration workflow example">Awaiting a verified platform, information exchanged, available Tulu action and an approved screenshot or connection diagram. Logos alone do not confirm a particular workflow.</EvidencePlaceholder>
   </div>;
 }
