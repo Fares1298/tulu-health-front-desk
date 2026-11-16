@@ -6,7 +6,7 @@ export function preservedHead(name: keyof typeof metadata) {
   return { meta: [{ title }, { name: 'description', content: description }, { property: 'og:title', content: title }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] };
 }
 
-export function PreservedDocument({ name, embedded = false, hideClosing = false }: { name: keyof typeof metadata; embedded?: boolean; hideClosing?: boolean }) {
+export function PreservedDocument({ name, embedded = false, hideClosing = false, closingOnly = false }: { name: keyof typeof metadata; embedded?: boolean; hideClosing?: boolean; closingOnly?: boolean }) {
   const frame = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(1800);
   useEffect(() => {
@@ -23,13 +23,13 @@ export function PreservedDocument({ name, embedded = false, hideClosing = false 
       window.clearInterval(timer);
       if (embedded) {
         const style = document.createElement('style');
-        style.textContent = `main > header { padding-top: 48px !important; } ${hideClosing ? '#cta { display: none !important; }' : ''}`;
+        style.textContent = `main > header { padding-top: 48px !important; } ${hideClosing ? '#cta { display: none !important; }' : ''} ${closingOnly ? 'main { min-height: 0 !important; } main > :not(:has(#cta)), main > div:has(#cta) > :not(#cta) { display: none !important; }' : ''}`;
         document.head.appendChild(style);
       }
       const measure = () => {
         const last = main.lastElementChild;
         if (!last) return;
-        setHeight(Math.max(700, Math.ceil(last.getBoundingClientRect().bottom + (document.defaultView?.scrollY ?? 0))));
+        setHeight(Math.max(closingOnly ? 0 : 700, Math.ceil(last.getBoundingClientRect().bottom + (document.defaultView?.scrollY ?? 0))));
       };
       observer = new ResizeObserver(measure);
       observer.observe(document.body);
@@ -41,8 +41,8 @@ export function PreservedDocument({ name, embedded = false, hideClosing = false 
       observer?.disconnect();
       window.removeEventListener('message', handle);
     };
-  }, [name, embedded, hideClosing]);
-  return <iframe ref={frame} src={`/preserved/${name}.html`} title={metadata[name].title} height={height} className="preserved-frame" />;
+  }, [name, embedded, hideClosing, closingOnly]);
+  return <iframe ref={frame} src={`/preserved/${name}.html`} title={closingOnly ? 'Longevity OS — Book a Demo' : metadata[name].title} height={height} className="preserved-frame" />;
 }
 
 export function PreservedPage({ name }: { name: keyof typeof metadata }) {

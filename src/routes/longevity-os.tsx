@@ -1,7 +1,9 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, useLocation, useNavigate } from '@tanstack/react-router';
+import { useEffect, useRef, useState } from 'react';
 import { PreservedDocument } from '@/components/preserved-page';
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Layers3, Workflow } from 'lucide-react';
+import { Layers3, Workflow } from 'lucide-react';
+import { longevityTabStorageKey, resolveLongevityTab, type LongevityTab } from '@/components/longevity-tab-state';
 
 export const Route = createFileRoute('/longevity-os')({
   head: () => ({ meta: [
@@ -16,6 +18,42 @@ export const Route = createFileRoute('/longevity-os')({
 });
 
 function Page() {
+  const { hash } = useLocation();
+  const navigate = useNavigate();
+  const [selected, setSelected] = useState<LongevityTab>('clinic-operations');
+  const tabs = useRef<HTMLDivElement>(null);
+  const panel = useRef<HTMLElement>(null);
+
+  function scrollToContent() {
+    const content = panel.current;
+    if (!content) return;
+    const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 82;
+    const tabHeight = tabs.current?.getBoundingClientRect().height ?? 68;
+    window.scrollTo({ top: window.scrollY + content.getBoundingClientRect().top - headerHeight - tabHeight, behavior: 'instant' });
+  }
+
+  useEffect(() => {
+    let saved: string | null = null;
+    try { saved = window.sessionStorage.getItem(longevityTabStorageKey); } catch { /* The direct links still work if storage is unavailable. */ }
+    const next = resolveLongevityTab(hash, saved);
+    setSelected(next);
+    try { window.sessionStorage.setItem(longevityTabStorageKey, next); } catch { /* Selection remains usable for this visit. */ }
+    if (!hash && next === 'ai-services') {
+      void navigate({ to: '/longevity-os', hash: next, replace: true, resetScroll: false, hashScrollIntoView: false });
+    }
+    if (hash || next === 'ai-services') {
+      const frame = window.requestAnimationFrame(scrollToContent);
+      return () => window.cancelAnimationFrame(frame);
+    }
+  }, [hash, navigate]);
+
+  function selectTab(tab: LongevityTab) {
+    setSelected(tab);
+    try { window.sessionStorage.setItem(longevityTabStorageKey, tab); } catch { /* Optional visit preference. */ }
+    void navigate({ to: '/longevity-os', hash: tab, replace: true, resetScroll: false, hashScrollIntoView: false });
+    window.requestAnimationFrame(scrollToContent);
+  }
+
   return <main>
     <section className="longevity-opening grid-background">
       <div className="wrap">
@@ -23,17 +61,27 @@ function Page() {
         <h1>Longevity OS</h1>
         <p className="longevity-intro">Your practice’s data, clinical picture and operational work — connected around every patient.</p>
         <p className="opening-copy">Built on the Patient Twin, Longevity OS brings your clinic’s command center and AI services together.<br className="desktop-break" /> Run the practice. Keep patients connected to their next step.</p>
-        <div className="longevity-section-links">
-          <Button asChild variant="outline"><a href="#clinic-operations"><Workflow size={17} />Clinic Operations<ArrowDown size={15} /></a></Button>
-          <Button asChild variant="outline"><a href="#ai-services"><Layers3 size={17} />AI Services<ArrowDown size={15} /></a></Button>
-        </div>
       </div>
     </section>
-    <section id="clinic-operations" aria-label="Clinic Operations" className="longevity-product-section">
-      <PreservedDocument name="operations" embedded hideClosing />
+    <div ref={tabs} className="longevity-tabs-bar">
+      <div className="wrap longevity-tabs" role="tablist" aria-label="Longevity OS">
+        {(['clinic-operations', 'ai-services'] as const).map(tab => <Button
+          key={tab} id={`${tab}-tab`} role="tab" variant="ghost"
+          aria-selected={selected === tab} aria-controls={tab} tabIndex={selected === tab ? 0 : -1}
+          onClick={() => selectTab(tab)}
+          onKeyDown={event => {
+            if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+            event.preventDefault();
+            const next = event.key === 'Home' ? 'clinic-operations' : event.key === 'End' ? 'ai-services' : tab === 'clinic-operations' ? 'ai-services' : 'clinic-operations';
+            selectTab(next);
+            document.getElementById(`${next}-tab`)?.focus({ preventScroll: true });
+          }}
+        >{tab === 'clinic-operations' ? <Workflow size={17} /> : <Layers3 size={17} />}{tab === 'clinic-operations' ? 'Clinic Operations' : 'AI Services'}</Button>)}
+      </div>
+    </div>
+    <section ref={panel} id={selected} role="tabpanel" aria-labelledby={`${selected}-tab`} tabIndex={0} className="longevity-product-section">
+      <PreservedDocument key={selected} name={selected === 'clinic-operations' ? 'operations' : 'services'} embedded hideClosing />
     </section>
-    <section id="ai-services" aria-label="AI Services" className="longevity-product-section">
-      <PreservedDocument name="services" embedded />
-    </section>
+    <PreservedDocument name="services" embedded closingOnly />
   </main>;
 }
