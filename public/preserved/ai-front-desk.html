@@ -1,22 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Convert IQ &amp; Revive for Hospitals and Clinics | Tulu Health</title>
-<meta name="description" content="Tulu's Convert IQ answers every call and WhatsApp inquiry and books the visit. Revive brings lapsed, missed and overdue patients back, on voice, WhatsApp and email.">
+<meta content="Tulu's Convert IQ answers every call and WhatsApp inquiry and books the visit. Revive brings lapsed, missed and overdue patients back, on voice, WhatsApp and email." name="description"/>
 <!-- DEV: set canonical to the final subdomain URL before launch -->
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Convert IQ & Revive | Tulu Health">
-<meta property="og:description" content="Answer every inquiry. Bring back every patient you've lost touch with. Voice and WhatsApp AI agents for hospitals and clinics.">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#241B14">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23BE6B45'/%3E%3Cpath d='M5 16 H11 l2 -6 l3 12 l2 -8 l1.5 2 H27' stroke='%23fff' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta content="website" property="og:type"/>
+<meta content="Convert IQ &amp; Revive | Tulu Health" property="og:title"/>
+<meta content="Answer every inquiry. Bring back every patient you've lost touch with. Voice and WhatsApp AI agents for hospitals and clinics." property="og:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#241B14" name="theme-color"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23BE6B45'/%3E%3Cpath d='M5 16 H11 l2 -6 l3 12 l2 -8 l1.5 2 H27' stroke='%23fff' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" rel="icon"/>
 <!-- Satoshi: same family as tuluhealth.com. In production, reuse the main site's self-hosted font files. -->
-<link rel="preconnect" href="https://api.fontshare.com">
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com" rel="preconnect"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&amp;display=swap" rel="stylesheet"/>
 <!--
   SOURCES FOR EVERY FIGURE ON THIS PAGE (verify before launch):
   - "+18% lapsed list reactivation", "answers instantly, 24/7", "SOC-2 compliant", "HIPAA-compliant",
@@ -311,32 +310,6 @@ h3{font-size:18px;line-height:28px;font-weight:500}
 .next b{color:#fff;font-weight:500}
 .sample{position:absolute;top:-12px;right:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--cream);border:1px solid var(--line);color:var(--muted)}
 
-/* ---------- Calculator ---------- */
-.calc{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);overflow:hidden}
-.calc>*,.builder>*,.hero-grid>*,.demo-grid>*,.twin-grid>*,.agent>*{min-width:0}
-.money select{flex:none}
-.c-in{padding:36px;display:grid;grid-template-columns:minmax(0,1fr);gap:26px;min-width:0}
-.field{min-width:0}
-.field label{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;font-weight:500;margin-bottom:10px;gap:12px}
-.field label output{font-size:15px;font-weight:600;color:var(--clay);font-variant-numeric:tabular-nums}
-.field small{display:block;font-size:13px;color:var(--muted);margin-top:6px}
-input[type=range]{width:100%;accent-color:var(--clay);height:28px}
-.money{display:flex;gap:10px}
-.money select,.money input{font:inherit;font-size:15px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--espresso)}
-.money input{flex:1;min-width:0}
-details.assume summary{cursor:pointer;font-size:14px;font-weight:500;color:var(--clay);list-style:none}
-details.assume summary::-webkit-details-marker{display:none}
-details.assume[open] summary{margin-bottom:18px}
-details.assume .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
-.c-out{padding:36px;background:var(--espresso);color:var(--on-dark);display:flex;flex-direction:column;gap:18px}
-.c-out .big b{font-size:52px;line-height:1;letter-spacing:-2px;font-weight:600;color:#fff;display:block;font-variant-numeric:tabular-nums}
-.c-out .big span{font-size:14px;color:var(--on-dark-60);display:block;margin-top:8px}
-.c-split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.c-split div{padding:16px;border-radius:14px;background:rgba(255,244,230,.05);border:1px solid var(--line-dark)}
-.c-split b{font-size:26px;font-weight:600;color:#fff;display:block;font-variant-numeric:tabular-nums}
-.c-split span{font-size:13px;color:var(--on-dark-60)}
-.c-out .fine{color:var(--on-dark-40);margin-top:auto}
-
 /* ---------- Safety / integrations / rollout ---------- */
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .feat{padding:28px}
@@ -447,488 +420,402 @@ footer{background:var(--espresso);color:var(--on-dark-60);border-top:1px solid v
   .reveal{opacity:1;transform:none}
 }
 </style>
-<style>body > header, body > footer { display:none!important; } h1,h2,h3,.metric b,.stat b,.b-total b,.c-out .big b { letter-spacing:0; }</style></head>
+<style>body > header, body > footer { display:none!important; } h1,h2,h3,.metric b,.stat b,.b-total b,.c-out .big b { letter-spacing:0; }</style><style>.hero-meta,.trust,.cta-strip {font-size:15px;color:var(--on-dark)} .trust {color:var(--espresso);border:1px solid var(--line);border-radius:8px;padding:20px;gap:18px} .trust a,.hero-meta a {text-decoration:underline;text-underline-offset:4px} .trust p{width:100%;font-size:14px} .stat b {font-size:23px} .fine.review-offer{font-size:15px;color:var(--on-dark);line-height:1.7} .integration-evidence-placeholder{border:1px dashed var(--line);padding:20px;margin-top:24px;font-size:14px} .hero-meta span{color:var(--on-dark)}</style></head>
 <body>
-
 <!-- ================= HEADER (identical structure to tuluhealth.com) ================= -->
 <header class="site-header" id="top">
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="/" target="_top" aria-label="Tulu Health home">
-      <span class="mark"><svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true"><path d="M5 16 H11 l2 -6 l3 12 l2 -8 l1.5 2 H27" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <span class="wm">tulu<span>health</span></span>
-    </a>
-    <div class="navlinks" id="navlinks">
-      <a href="/twin" target="_top">The Patient Twin</a>
-      <a href="/operations" target="_top">Clinic Operations</a>
-      <a href="/services" target="_top" aria-current="page">AI Services</a>
-      <a href="/demo" target="_top">See it in Action</a>
-      <a href="/blog" target="_top">Blog</a>
-      <a class="btn btn-primary btn-sm" href="/contact" target="_top">Book a Demo</a>
-    </div>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
-  </nav>
+<nav aria-label="Main" class="nav">
+<a aria-label="Tulu Health home" class="brand" href="/" target="_top">
+<span class="mark"><svg aria-hidden="true" fill="none" height="20" viewbox="0 0 32 32" width="20"><path d="M5 16 H11 l2 -6 l3 12 l2 -8 l1.5 2 H27" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span>
+<span class="wm">tulu<span>health</span></span>
+</a>
+<div class="navlinks" id="navlinks">
+<a href="/twin" target="_top">The Patient Twin</a>
+<a href="/operations" target="_top">Clinic Operations</a>
+<a aria-current="page" href="/services" target="_top">AI Services</a>
+<a href="/demo" target="_top">See it in Action</a>
+<a href="/blog" target="_top">Blog</a>
+<a class="btn btn-primary btn-sm" href="/contact" target="_top">Book a Demo</a>
+</div>
+<button aria-controls="navlinks" aria-expanded="false" aria-label="Open menu" class="menu-btn" id="menuBtn">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+</nav>
 </header>
-
 <main>
 <!-- ================= HERO ================= -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Convert IQ + Revive · For Hospitals &amp; Clinics</span>
-      <h1 id="hero-title">Every Inquiry Answered.<br> <span class="grad">Every Lapsed Patient Brought Back.</span></h1>
-      <p class="lead"><b>Convert IQ</b> answers every call and WhatsApp message, day or night, and books the visit. <b>Revive</b> finds the patients who drifted away and gives each one a reason to return. Your team steps in only when it matters.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="/contact" target="_top">Book a Demo</a>
-        <a class="btn btn-ghost" href="#demo">Hear It Handle a Call</a>
-      </div>
-      <div class="hero-meta">
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>SOC-2 · HIPAA</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Human handoff on every call</span>
-        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>Live in weeks</span>
-      </div>
-    </div>
-
-    <div style="position:relative">
-      <div class="float-tag t1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BE6B45" stroke-width="2.4"><path d="m5 12 5 5 9-10"/></svg>Booked <em>into your schedule</em></div>
-      <div class="float-tag t2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6E7253" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Answered <em>at 9:47 pm</em></div>
-      <div class="call" aria-label="Sample AI call">
-        <div class="call-top">
-          <span class="live"><i></i><span id="hcMode">Convert IQ · Inbound call</span></span>
-          <span id="hcTime">00:00</span>
-        </div>
-        <div class="call-who">
-          <div class="avatar" id="hcAv">PS</div>
-          <div><b id="hcName">Priya S.</b><small id="hcSub">Calling Riverside Clinic · after hours</small></div>
-          <div class="wave" aria-hidden="true"><i style="animation-delay:0s"></i><i style="animation-delay:.12s"></i><i style="animation-delay:.24s"></i><i style="animation-delay:.36s"></i><i style="animation-delay:.18s"></i><i style="animation-delay:.3s"></i><i style="animation-delay:.06s"></i></div>
-        </div>
-        <div class="twin-chips" id="hcTwin">
-          <span class="lbl"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>From your records</span>
-        </div>
-        <div class="thread" id="hcThread" aria-live="polite"></div>
-        <div class="outcome" id="hcOut"><span class="tick"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg></span><div><b id="hcOutT"></b><small id="hcOutS"></small></div></div>
-        <div class="call-modes" role="group" aria-label="Choose sample">
-          <button aria-pressed="true" data-hc="0">Convert IQ · inbound</button>
-          <button aria-pressed="false" data-hc="1">Revive · outbound</button>
-        </div>
-      </div>
-    </div>
-  </div>
+<section aria-labelledby="hero-title" class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="eyebrow">Convert IQ + Revive · For Hospitals &amp; Clinics</span>
+<h1 id="hero-title">Every Inquiry Answered.<br/> <span class="grad">Every Lapsed Patient Brought Back.</span></h1>
+<p class="lead"><b>Convert IQ</b> answers every call and WhatsApp message, day or night, and books the visit. <b>Revive</b> finds the patients who drifted away and gives each one a reason to return. Your team steps in only when it matters.</p>
+<div class="hero-ctas">
+<a class="btn btn-primary" href="/contact" target="_top">Book a Demo</a>
+<a class="btn btn-ghost" href="#demo">Watch a sample conversation</a>
+</div>
+<div class="hero-meta"><a href="/security" target="_top">Review security details</a><a href="/governance" target="_top">AI governance</a><span>Human handoff on every call</span></div>
+</div>
+<div style="position:relative">
+<div class="float-tag t1"><svg fill="none" height="14" stroke="#BE6B45" stroke-width="2.4" viewbox="0 0 24 24" width="14"><path d="m5 12 5 5 9-10"></path></svg>Booked <em>into your schedule</em></div>
+<div class="float-tag t2"><svg fill="none" height="14" stroke="#6E7253" stroke-width="2.4" viewbox="0 0 24 24" width="14"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Answered <em>at 9:47 pm</em></div>
+<div aria-label="Sample AI call" class="call">
+<div class="call-top">
+<span class="live"><i></i><span id="hcMode">Convert IQ · Inbound call</span></span>
+<span id="hcTime">00:00</span>
+</div>
+<div class="call-who">
+<div class="avatar" id="hcAv">PS</div>
+<div><b id="hcName">Priya S.</b><small id="hcSub">Calling Riverside Clinic · after hours</small></div>
+<div aria-hidden="true" class="wave"><i style="animation-delay:0s"></i><i style="animation-delay:.12s"></i><i style="animation-delay:.24s"></i><i style="animation-delay:.36s"></i><i style="animation-delay:.18s"></i><i style="animation-delay:.3s"></i><i style="animation-delay:.06s"></i></div>
+</div>
+<div class="twin-chips" id="hcTwin">
+<span class="lbl"><svg fill="none" height="12" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24" width="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>From your records</span>
+</div>
+<div aria-live="polite" class="thread" id="hcThread"></div>
+<div class="outcome" id="hcOut"><span class="tick"><svg fill="none" height="14" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" width="14"><path d="m5 12 5 5 9-10"></path></svg></span><div><b id="hcOutT"></b><small id="hcOutS"></small></div></div>
+<div aria-label="Choose sample" class="call-modes" role="group">
+<button aria-pressed="true" data-hc="0">Convert IQ · inbound</button>
+<button aria-pressed="false" data-hc="1">Revive · outbound</button>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ================= PROOF ================= -->
-<section class="proof" aria-label="Proof">
-  <div class="wrap">
-    <div class="stats reveal">
-      <div class="stat"><b>24<em>/</em>7</b><span>Calls and WhatsApp messages answered instantly, including after hours</span></div>
-      <div class="stat"><b><em>+</em>18%</b><span>Lapsed-list reactivation rate with Revive</span></div>
-      <div class="stat"><b>100k<em>+</em></b><span>Healthcare operations tasks already automated by Tulu</span></div>
-      <div class="stat"><b>1–2<em> wks</em></b><span>For most EHR and CRM integrations to go live</span></div>
-    </div>
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>SOC-2 compliant</span><span>HIPAA-compliant</span><span>Human handoff on every call</span><span>Voice + WhatsApp + Email</span><span>Live in weeks</span><span>Teams across the US, UAE, Malaysia &amp; India</span><span>No lock-in</span>
-        <span>SOC-2 compliant</span><span>HIPAA-compliant</span><span>Human handoff on every call</span><span>Voice + WhatsApp + Email</span><span>Live in weeks</span><span>Teams across the US, UAE, Malaysia &amp; India</span><span>No lock-in</span>
-      </div>
-    </div>
-  </div>
-</section>
+<section aria-label="AI Front Desk capabilities" class="proof">
+<div class="wrap">
+<div class="stats reveal">
+<div class="stat"><b>Day &amp; night</b><span>Calls and WhatsApp inquiries, including after hours</span></div>
+<div class="stat"><b>Patient reactivation</b><span>Outreach to lapsed, missed and overdue patients</span></div>
+<div class="stat"><b>Team visibility</b><span>Conversations and outcomes logged for staff</span></div>
+<div class="stat"><b>Your systems</b><span>Deployment scope confirmed for your setup</span></div>
+</div>
 
+</div>
+</section>
 <!-- ================= PROBLEM ================= -->
-<section class="sec" aria-labelledby="leak-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow olive">The Problem</span>
-      <h2 id="leak-title">Your Patients Leak Out Through Two Doors.</h2>
-      <p class="lead">New patients slip out the front when nobody answers. Existing patients slip out the back when nobody follows up. Neither shows up on a dashboard, but both cost you visits every week.</p>
-    </div>
-    <div class="leaks">
-      <article class="card leak reveal">
-        <span class="tag"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i>The front door</span>
-        <h3>Calls Ring Out. Messages Wait. Patients Book Elsewhere.</h3>
-        <p>Missed callers rarely leave a voicemail. They call the next hospital on the list.</p>
-        <ul>
-          <li>After-hours calls when the desk is closed</li>
-          <li>Peak-hour queues while staff handle patients in person</li>
-          <li>WhatsApp inquiries that sit unread until tomorrow</li>
-        </ul>
-        <div class="fix"><span>Fixed by <b>Convert IQ</b></span><a class="link" href="#agents" data-tab="fd">See how →</a></div>
-      </article>
-      <article class="card leak reveal">
-        <span class="tag"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></i>The back door</span>
-        <h3>Patients Drift Away, Quietly.</h3>
-        <p>Bringing back a patient you already have is your cheapest revenue, and the work nobody on the team gets to.</p>
-        <ul>
-          <li>Missed appointments that never get rebooked</li>
-          <li>Follow-ups and repeat tests that slip past their due date</li>
-          <li>Patients who haven't visited in a year</li>
-        </ul>
-        <div class="fix"><span>Fixed by <b>Revive</b></span><a class="link" href="#agents" data-tab="ar">See how →</a></div>
-      </article>
-    </div>
-    <div class="card journey reveal" aria-label="Patient journey with two leaks">
-      <div class="j-node"><div class="j-dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><span>Inquiry</span></div>
-      <div class="j-link"><span class="save">Convert IQ</span><span class="drip">Leak: unanswered</span></div>
-      <div class="j-node"><div class="j-dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><span>First visit</span></div>
-      <div class="j-link"><span class="save">Reminders</span></div>
-      <div class="j-node"><div class="j-dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg></div><span>Follow-up due</span></div>
-      <div class="j-link"><span class="save">Revive</span><span class="drip">Leak: never rebooked</span></div>
-      <div class="j-node"><div class="j-dot" style="background:var(--clay);color:#fff;border-color:var(--clay)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-10"/></svg></div><span>Returning patient</span></div>
-    </div>
-  </div>
+<section aria-labelledby="leak-title" class="sec">
+<div class="wrap">
+<div class="sec-head reveal">
+<span class="eyebrow olive">The Problem</span>
+<h2 id="leak-title">Your Patients Leak Out Through Two Doors.</h2>
+<p class="lead">New patients slip out the front when nobody answers. Existing patients slip out the back when nobody follows up. Neither shows up on a dashboard, but both cost you visits every week.</p>
+</div>
+<div class="leaks">
+<article class="card leak reveal">
+<span class="tag"><i><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></i>The front door</span>
+<h3>Calls Ring Out. Messages Wait. Patients Book Elsewhere.</h3>
+<p>Missed callers rarely leave a voicemail. They call the next hospital on the list.</p>
+<ul>
+<li>After-hours calls when the desk is closed</li>
+<li>Peak-hour queues while staff handle patients in person</li>
+<li>WhatsApp inquiries that sit unread until tomorrow</li>
+</ul>
+<div class="fix"><span>Fixed by <b>Convert IQ</b></span><a class="link" data-tab="fd" href="#agents">See how →</a></div>
+</article>
+<article class="card leak reveal">
+<span class="tag"><i><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></i>The back door</span>
+<h3>Patients Drift Away, Quietly.</h3>
+<p>Bringing back a patient you already have is your cheapest revenue, and the work nobody on the team gets to.</p>
+<ul>
+<li>Missed appointments that never get rebooked</li>
+<li>Follow-ups and repeat tests that slip past their due date</li>
+<li>Patients who haven't visited in a year</li>
+</ul>
+<div class="fix"><span>Fixed by <b>Revive</b></span><a class="link" data-tab="ar" href="#agents">See how →</a></div>
+</article>
+</div>
+<div aria-label="Patient journey with two leaks" class="card journey reveal">
+<div class="j-node"><div class="j-dot"><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><span>Inquiry</span></div>
+<div class="j-link"><span class="save">Convert IQ</span><span class="drip">Leak: unanswered</span></div>
+<div class="j-node"><div class="j-dot"><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="18" rx="2" width="18" x="3" y="4"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></div><span>First visit</span></div>
+<div class="j-link"><span class="save">Reminders</span></div>
+<div class="j-node"><div class="j-dot"><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle></svg></div><span>Follow-up due</span></div>
+<div class="j-link"><span class="save">Revive</span><span class="drip">Leak: never rebooked</span></div>
+<div class="j-node"><div class="j-dot" style="background:var(--clay);color:#fff;border-color:var(--clay)"><svg fill="none" height="18" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24" width="18"><path d="m5 12 5 5 9-10"></path></svg></div><span>Returning patient</span></div>
+</div>
+</div>
 </section>
-
 <!-- ================= AGENTS ================= -->
-<section class="sec agents" id="agents" aria-labelledby="agents-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow olive">Two AI Services · One Shared Memory</span>
-      <h2 id="agents-title">One Agent Answers. One Agent Follows Up.</h2>
-      <p class="lead">Start with either one. Both connect to your phone line, WhatsApp and scheduling, and every conversation is logged for your team.</p>
-    </div>
-    <div class="seg" role="tablist" aria-label="AI services">
-      <button role="tab" id="tab-fd" aria-selected="true" aria-controls="panel-fd" data-tab="fd">Convert IQ <small>Inbound</small></button>
-      <button role="tab" id="tab-ar" aria-selected="false" aria-controls="panel-ar" data-tab="ar">Revive <small>Outbound</small></button>
-    </div>
-
-    <div class="agent active" id="panel-fd" role="tabpanel" aria-labelledby="tab-fd">
-      <div>
-        <span class="eyebrow">Convert IQ · Incoming calls &amp; messages</span>
-        <h3 class="big">Never Send Another Inquiry to Voicemail.</h3>
-        <div class="pf">
-          <div><small>Without it</small><p>Your desk can't catch every call. After hours, the demand is still there but the lights are off.</p></div>
-          <div><small>With it</small><p>Every caller gets an instant answer, a booked visit, or a person, around the clock.</p></div>
-        </div>
-        <ul class="caps">
-          <li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i><div><b>Answers every call, instantly</b><span>Doctors, timings, departments, preparation and directions, from answers your team has approved.</span></div></li>
-          <li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></i><div><b>Replies on WhatsApp</b><span>Turns "is the doctor available?" messages into confirmed slots, with reminders sent to the same chat.</span></div></li>
-          <li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></i><div><b>Books into your schedule</b><span>Knows new patients from returning ones, and books straight into your scheduling system.</span></div></li>
-          <li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4M16 11l2 2 4-4"/></svg></i><div><b>Hands off at the right moment</b><span>Clinical or urgent calls go to your team, with the full conversation already on screen.</span></div></li>
-        </ul>
-        <div class="channels"><span class="chip">Voice calls</span><span class="chip">WhatsApp</span><span class="chip">After-hours cover</span><span class="chip">Overflow at peak hours</span></div>
-        <a class="btn btn-primary" href="/contact" target="_top">Book a Demo</a>
-      </div>
-      <div class="agent-side">
-        <div class="metric"><b>24/7</b><span>Instant answers to calls and WhatsApp, including nights, weekends and holidays.</span></div>
-        <ol class="steps">
-          <li><div><b>Patient calls or messages</b><span>Any hour, on your existing number or WhatsApp.</span></div></li>
-          <li><div><b>Recognises the patient</b><span>Checks your records to tell new callers from returning patients.</span></div></li>
-          <li><div><b>Answers and books</b><span>Approved answers only, then a confirmed slot.</span></div></li>
-          <li><div><b>Confirms or hands off</b><span>Sends a reminder, or transfers to staff with context.</span></div></li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="agent" id="panel-ar" role="tabpanel" aria-labelledby="tab-ar" hidden>
-      <div>
-        <span class="eyebrow">Revive · Patient reactivation</span>
-        <h3 class="big">Your Best Revenue Is Sitting in Your Lapsed List.</h3>
-        <div class="pf">
-          <div><small>Without it</small><p>Someone is meant to call the no-shows and overdue patients. Nobody ever has the time.</p></div>
-          <div><small>With it</small><p>Every lapsed patient hears from you, with a personal, relevant reason to come back.</p></div>
-        </div>
-        <ul class="caps">
-          <li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><circle cx="17" cy="9" r="3"/><path d="M2 21v-1a6 6 0 0 1 12 0v1M14 21v-1a4 4 0 0 1 8 0v1"/></svg></i><div><b>Builds the right cohorts</b><span>Lapsed patients, missed appointments and overdue follow-ups, pulled from your scheduling and patient records.</span></div></li>
-          <li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H5.2L4 17.2z"/><path d="M8 9h8M8 12h5"/></svg></i><div><b>Gives each patient a real reason</b><span>"Your 6-month review is due" lands better than "We miss you", because it reads as care, not marketing.</span></div></li>
-          <li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></i><div><b>Reaches patients where they reply</b><span>Starts on WhatsApp, follows up with a voice call or email, and stops as soon as the patient responds.</span></div></li>
-          <li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></i><div><b>Shows you what came back</b><span>Reached, replied, booked: every campaign is measured, and every reply is logged for your team.</span></div></li>
-        </ul>
-        <div class="channels"><span class="chip">WhatsApp</span><span class="chip">Voice calls</span><span class="chip">Email</span><span class="chip">Opt-out respected</span></div>
-        <a class="btn btn-primary" href="/contact" target="_top">Book a Demo</a>
-      </div>
-      <div class="agent-side">
-        <div class="metric"><b>+18%</b><span>Lapsed-list reactivation rate. Near-pure margin, with zero acquisition cost.</span><small>Source: Tulu AI Services</small></div>
-        <ol class="steps">
-          <li><div><b>Build the cohort</b><span>Choose who to reach: lapsed, missed or overdue.</span></div></li>
-          <li><div><b>Set the reason</b><span>One relevant message per cohort, approved by your team.</span></div></li>
-          <li><div><b>Reach out</b><span>WhatsApp first, then voice or email if there's no reply.</span></div></li>
-          <li><div><b>Book the return visit</b><span>Rebooked on the spot, or a callback from your team.</span></div></li>
-        </ol>
-      </div>
-    </div>
-  </div>
+<section aria-labelledby="agents-title" class="sec agents" id="agents">
+<div class="wrap">
+<div class="sec-head reveal">
+<span class="eyebrow olive">Two AI Services · One Shared Memory</span>
+<h2 id="agents-title">One Agent Answers. One Agent Follows Up.</h2>
+<p class="lead">Start with either one. Both connect to your phone line, WhatsApp and scheduling, and every conversation is logged for your team.</p>
+</div>
+<div aria-label="AI services" class="seg" role="tablist">
+<button aria-controls="panel-fd" aria-selected="true" data-tab="fd" id="tab-fd" role="tab">Convert IQ <small>Inbound</small></button>
+<button aria-controls="panel-ar" aria-selected="false" data-tab="ar" id="tab-ar" role="tab">Revive <small>Outbound</small></button>
+</div>
+<div aria-labelledby="tab-fd" class="agent active" id="panel-fd" role="tabpanel">
+<div>
+<span class="eyebrow">Convert IQ · Incoming calls &amp; messages</span>
+<h3 class="big">Never Send Another Inquiry to Voicemail.</h3>
+<div class="pf">
+<div><small>Without it</small><p>Your desk can't catch every call. After hours, the demand is still there but the lights are off.</p></div>
+<div><small>With it</small><p>Every caller gets an instant answer, a booked visit, or a person, around the clock.</p></div>
+</div>
+<ul class="caps">
+<li><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></i><div><b>Answers every call, instantly</b><span>Doctors, timings, departments, preparation and directions, from answers your team has approved.</span></div></li>
+<li><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></i><div><b>Replies on WhatsApp</b><span>Turns "is the doctor available?" messages into confirmed slots, with reminders sent to the same chat.</span></div></li>
+<li><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="18" rx="2" width="18" x="3" y="4"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></i><div><b>Books into your schedule</b><span>Knows new patients from returning ones, and books straight into your scheduling system.</span></div></li>
+<li><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="9" cy="7" r="4"></circle><path d="M3 21v-2a4 4 0 0 1 4-4h4M16 11l2 2 4-4"></path></svg></i><div><b>Hands off at the right moment</b><span>Clinical or urgent calls go to your team, with the full conversation already on screen.</span></div></li>
+</ul>
+<div class="channels"><span class="chip">Voice calls</span><span class="chip">WhatsApp</span><span class="chip">After-hours cover</span><span class="chip">Overflow at peak hours</span></div>
+<a class="btn btn-primary" href="/contact" target="_top">Book a Demo</a>
+</div>
+<div class="agent-side">
+<div class="metric"><b>24/7</b><span>Instant answers to calls and WhatsApp, including nights, weekends and holidays.</span></div>
+<ol class="steps">
+<li><div><b>Patient calls or messages</b><span>Any hour, on your existing number or WhatsApp.</span></div></li>
+<li><div><b>Recognises the patient</b><span>Checks your records to tell new callers from returning patients.</span></div></li>
+<li><div><b>Answers and books</b><span>Approved answers only, then a confirmed slot.</span></div></li>
+<li><div><b>Confirms or hands off</b><span>Sends a reminder, or transfers to staff with context.</span></div></li>
+</ol>
+</div>
+</div>
+<div aria-labelledby="tab-ar" class="agent" hidden="" id="panel-ar" role="tabpanel">
+<div>
+<span class="eyebrow">Revive · Patient reactivation</span>
+<h3 class="big">Your Best Revenue Is Sitting in Your Lapsed List.</h3>
+<div class="pf">
+<div><small>Without it</small><p>Someone is meant to call the no-shows and overdue patients. Nobody ever has the time.</p></div>
+<div><small>With it</small><p>Every lapsed patient hears from you, with a personal, relevant reason to come back.</p></div>
+</div>
+<ul class="caps">
+<li><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="9" cy="7" r="4"></circle><circle cx="17" cy="9" r="3"></circle><path d="M2 21v-1a6 6 0 0 1 12 0v1M14 21v-1a4 4 0 0 1 8 0v1"></path></svg></i><div><b>Builds the right cohorts</b><span>Lapsed patients, missed appointments and overdue follow-ups, pulled from your scheduling and patient records.</span></div></li>
+<li><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M4 4h16v12H5.2L4 17.2z"></path><path d="M8 9h8M8 12h5"></path></svg></i><div><b>Gives each patient a real reason</b><span>"Your 6-month review is due" lands better than "We miss you", because it reads as care, not marketing.</span></div></li>
+<li><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"></path></svg></i><div><b>Reaches patients where they reply</b><span>Starts on WhatsApp, follows up with a voice call or email, and stops as soon as the patient responds.</span></div></li>
+<li><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 3v18h18"></path><path d="m7 15 4-4 3 3 5-6"></path></svg></i><div><b>Shows you what came back</b><span>Reached, replied, booked: every campaign is measured, and every reply is logged for your team.</span></div></li>
+</ul>
+<div class="channels"><span class="chip">WhatsApp</span><span class="chip">Voice calls</span><span class="chip">Email</span><span class="chip">Opt-out respected</span></div>
+<a class="btn btn-primary" href="/contact" target="_top">Book a Demo</a>
+</div>
+<div class="agent-side">
+<div class="metric"><b>Relevant outreach</b><span>Lapsed, missed and overdue patients reached with a reason to return.</span></div>
+<ol class="steps">
+<li><div><b>Build the cohort</b><span>Choose who to reach: lapsed, missed or overdue.</span></div></li>
+<li><div><b>Set the reason</b><span>One relevant message per cohort, approved by your team.</span></div></li>
+<li><div><b>Reach out</b><span>WhatsApp first, then voice or email if there's no reply.</span></div></li>
+<li><div><b>Book the return visit</b><span>Rebooked on the spot, or a callback from your team.</span></div></li>
+</ol>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ================= DEMO ================= -->
-<section class="sec" id="demo" aria-labelledby="demo-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow olive">See It in Action</span>
-      <h2 id="demo-title">Pick a Situation. Watch It End in a Booking.</h2>
-      <p class="lead">Five real situations your front desk handles every day, played out from the first message to the result.</p>
-    </div>
-    <div class="demo-grid">
-      <div class="scen" role="group" aria-label="Scenarios" id="scenList">
-        <div class="scen-group">Convert IQ</div>
-        <button aria-pressed="true" data-s="0"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></i><div><b>After-hours call</b><span>New patient · voice</span></div></button>
-        <button aria-pressed="false" data-s="1"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></i><div><b>WhatsApp inquiry</b><span>Health check · WhatsApp</span></div></button>
-        <button aria-pressed="false" data-s="2"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4M16 11l2 2 4-4"/></svg></i><div><b>Clinical question</b><span>Warm handoff to a nurse</span></div></button>
-        <div class="scen-group">Revive</div>
-        <button aria-pressed="false" data-s="3"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></i><div><b>Missed appointment</b><span>Rebooked · voice</span></div></button>
-        <button aria-pressed="false" data-s="4"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg></i><div><b>Overdue follow-up</b><span>Two visits booked · WhatsApp</span></div></button>
-      </div>
-      <div class="device" id="device">
-        <div class="dev-top">
-          <div class="avatar" id="dAv">RC</div>
-          <div><b id="dTitle">Riverside Clinic · Convert IQ</b><small id="dSub">Inbound call · 9:47 pm</small></div>
-          <span class="ch" id="dCh">Voice</span>
-        </div>
-        <div class="thread" id="dThread" aria-live="polite"></div>
-        <div class="result" id="dRes">
-          <div class="r1"><small>Result</small><span id="dR1"></span></div>
-          <div class="r2"><small>Logged for your team</small><span id="dR2"></span></div>
-        </div>
-        <div class="dev-foot">
-          <button id="dReplay"><span aria-hidden="true">↺</span> Replay</button>
-          <button id="dSkip">Show all</button>
-          <span class="note">Sample conversation · names are fictional</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<section aria-labelledby="demo-title" class="sec" id="demo">
+<div class="wrap">
+<div class="sec-head reveal">
+<span class="eyebrow olive">See It in Action</span>
+<h2 id="demo-title">Pick a Situation. Watch It End in a Booking.</h2>
+<p class="lead">Five real situations your front desk handles every day, played out from the first message to the result.</p>
+</div>
+<div class="demo-grid">
+<div aria-label="Scenarios" class="scen" id="scenList" role="group">
+<div class="scen-group">Convert IQ</div>
+<button aria-pressed="true" data-s="0"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path></svg></i><div><b>After-hours call</b><span>New patient · voice</span></div></button>
+<button aria-pressed="false" data-s="1"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></i><div><b>WhatsApp inquiry</b><span>Health check · WhatsApp</span></div></button>
+<button aria-pressed="false" data-s="2"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="9" cy="7" r="4"></circle><path d="M3 21v-2a4 4 0 0 1 4-4h4M16 11l2 2 4-4"></path></svg></i><div><b>Clinical question</b><span>Warm handoff to a nurse</span></div></button>
+<div class="scen-group">Revive</div>
+<button aria-pressed="false" data-s="3"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></i><div><b>Missed appointment</b><span>Rebooked · voice</span></div></button>
+<button aria-pressed="false" data-s="4"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle></svg></i><div><b>Overdue follow-up</b><span>Two visits booked · WhatsApp</span></div></button>
+</div>
+<div class="device" id="device">
+<div class="dev-top">
+<div class="avatar" id="dAv">RC</div>
+<div><b id="dTitle">Riverside Clinic · Convert IQ</b><small id="dSub">Inbound call · 9:47 pm</small></div>
+<span class="ch" id="dCh">Voice</span>
+</div>
+<div aria-live="polite" class="thread" id="dThread"></div>
+<div class="result" id="dRes">
+<div class="r1"><small>Result</small><span id="dR1"></span></div>
+<div class="r2"><small>Logged for your team</small><span id="dR2"></span></div>
+</div>
+<div class="dev-foot">
+<button id="dReplay"><span aria-hidden="true">↺</span> Replay</button>
+<button id="dSkip">Show all</button>
+<span class="note">Sample conversation · names are fictional</span>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ================= CAMPAIGN BUILDER ================= -->
-<section class="sec" style="padding-top:0" aria-labelledby="camp-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow olive">Revive · Campaign Workspace</span>
-      <h2 id="camp-title">Build a Recall Campaign in Three Clicks.</h2>
-      <p class="lead">Pick who to reach and how. Revive writes the message, runs the outreach and shows you exactly who came back.</p>
-    </div>
-    <div class="card builder reveal">
-      <div class="b-left">
-        <div class="b-step">
-          <small>1 · Choose a cohort</small>
-          <div class="opt" id="cohorts">
-            <label><input type="radio" name="cohort" value="lapsed" checked> Not visited in 12+ months <em>1,240</em></label>
-            <label><input type="radio" name="cohort" value="missed"> Missed appointment, last 90 days <em>310</em></label>
-            <label><input type="radio" name="cohort" value="overdue"> Follow-up or repeat test overdue <em>680</em></label>
-          </div>
-        </div>
-        <div class="b-step">
-          <small>2 · Choose channels</small>
-          <div class="opt row" id="chans">
-            <label><input type="checkbox" value="wa" checked> WhatsApp</label>
-            <label><input type="checkbox" value="voice" checked> Voice</label>
-            <label><input type="checkbox" value="email"> Email</label>
-          </div>
-        </div>
-        <div class="b-step" style="margin-bottom:0">
-          <small>3 · Message Revive will send</small>
-          <div class="preview"><small id="pvCh">WhatsApp · first touch</small><span id="pvMsg"></span></div>
-        </div>
-      </div>
-      <div class="b-right">
-        <small class="eyebrow olive" style="display:block;margin-bottom:20px">Campaign results · sample clinic</small>
-        <div class="funnel" id="funnel">
-          <div class="f-row"><span>In cohort</span><div class="f-bar"><i></i></div><b>0</b></div>
-          <div class="f-row"><span>Reached</span><div class="f-bar"><i></i></div><b>0</b></div>
-          <div class="f-row"><span>Replied</span><div class="f-bar"><i></i></div><b>0</b></div>
-          <div class="f-row"><span>Booked</span><div class="f-bar"><i></i></div><b>0</b></div>
-        </div>
-        <div class="b-total">
-          <div><b id="bBooked">0</b><span>return visits booked, with no manual calling</span></div>
-          <a class="btn btn-line" href="/contact" target="_top">Run This on My List</a>
-        </div>
-        <p class="fine">Illustrative sample, not a forecast. Real reach and booking rates depend on your list, consent and channels.</p>
-      </div>
-    </div>
-  </div>
+<section aria-labelledby="camp-title" class="sec" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head reveal">
+<span class="eyebrow olive">Revive · Campaign Workspace</span>
+<h2 id="camp-title">Build a Recall Campaign in Three Clicks.</h2>
+<p class="lead">Pick who to reach and how. Revive writes the message, runs the outreach and shows you exactly who came back.</p>
+</div>
+<div class="card builder reveal">
+<div class="b-left">
+<div class="b-step">
+<small>1 · Choose a cohort</small>
+<div class="opt" id="cohorts">
+<label><input checked="" name="cohort" type="radio" value="lapsed"/> Not visited in 12+ months <em>1,240</em></label>
+<label><input name="cohort" type="radio" value="missed"/> Missed appointment, last 90 days <em>310</em></label>
+<label><input name="cohort" type="radio" value="overdue"/> Follow-up or repeat test overdue <em>680</em></label>
+</div>
+</div>
+<div class="b-step">
+<small>2 · Choose channels</small>
+<div class="opt row" id="chans">
+<label><input checked="" type="checkbox" value="wa"/> WhatsApp</label>
+<label><input checked="" type="checkbox" value="voice"/> Voice</label>
+<label><input type="checkbox" value="email"/> Email</label>
+</div>
+</div>
+<div class="b-step" style="margin-bottom:0">
+<small>3 · Message Revive will send</small>
+<div class="preview"><small id="pvCh">WhatsApp · first touch</small><span id="pvMsg"></span></div>
+</div>
+</div>
+<div class="b-right">
+<small class="eyebrow olive" style="display:block;margin-bottom:20px">Campaign results · sample clinic</small>
+<div class="funnel" id="funnel">
+<div class="f-row"><span>In cohort</span><div class="f-bar"><i></i></div><b>0</b></div>
+<div class="f-row"><span>Reached</span><div class="f-bar"><i></i></div><b>0</b></div>
+<div class="f-row"><span>Replied</span><div class="f-bar"><i></i></div><b>0</b></div>
+<div class="f-row"><span>Booked</span><div class="f-bar"><i></i></div><b>0</b></div>
+</div>
+<div class="b-total">
+<div><b id="bBooked">0</b><span>return visits booked, with no manual calling</span></div>
+<a class="btn btn-line" href="/contact?inquiry=revive-review" target="_top">Request a reactivation review</a>
+</div><p class="fine review-offer">We’ll review your reactivation workflow and identify a practical starting cohort and campaign. No patient-list upload is required.</p>
+<p class="fine">Illustrative sample, not a forecast. Real reach and booking rates depend on your list, consent and channels.</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ================= TEAM VISIBILITY ================= -->
-<section class="sec" style="background:var(--cream-2)" aria-labelledby="log-title">
-  <div class="wrap twin-grid">
-    <div class="reveal">
-      <span class="eyebrow olive">Your Team's View</span>
-      <h2 id="log-title" style="margin-top:16px">Every Conversation Logged. Nothing Falls Through.</h2>
-      <p class="lead" style="margin-top:16px">Your staff walk in to a clear list, not a voicemail box: what was booked, who was rebooked, and the few conversations that need a person.</p>
-      <div class="flow">
-        <div><small>Before</small><span><b>Checks your records</b>New caller or returning patient, and what's already booked.</span></div>
-        <div><small>During</small><span><b>Moves to a booking</b>Answers, books, and brings in staff when needed.</span></div>
-        <div><small>After</small><span><b>Logs the outcome</b>Booking, transcript and any follow-up, ready for your team.</span></div>
-      </div>
-    </div>
-    <div class="card profile reveal">
-      <span class="sample">Sample view</span>
-      <div class="p-head">
-        <div class="avatar">RC</div>
-        <div><b>Today at Riverside Clinic</b><small>Convert IQ + Revive · since 7 pm yesterday</small></div>
-        <span class="badge">Live</span>
-      </div>
-      <div class="p-prefs"><span class="chip">38 conversations</span><span class="chip">21 booked</span><span class="chip">6 rebooked</span><span class="chip">2 need staff</span></div>
-      <ol class="tl">
-        <li><time>9:47 pm</time><span>Priya S. · dermatology consult booked, Thu 11:00 <span class="src">Convert IQ</span></span></li>
-        <li><time>10:12 pm</time><span>WhatsApp · health check booked, Sat 8:00 <span class="src">Convert IQ</span></span></li>
-        <li><time>8:05 am</time><span>Anita K. · missed physio rebooked, Wed 7:30 <span class="src">Revive</span></span></li>
-        <li><time>8:31 am</time><span>Post-surgery wound question · transferred to nurse <span class="src">Handoff</span></span></li>
-      </ol>
-      <div class="next"><span>Needs your team</span><b>2 callbacks requested · assigned to front desk</b></div>
-    </div>
-  </div>
+<section aria-labelledby="log-title" class="sec" style="background:var(--cream-2)">
+<div class="wrap twin-grid">
+<div class="reveal">
+<span class="eyebrow olive">Your Team's View</span>
+<h2 id="log-title" style="margin-top:16px">Every Conversation Logged. Nothing Falls Through.</h2>
+<p class="lead" style="margin-top:16px">Your staff walk in to a clear list, not a voicemail box: what was booked, who was rebooked, and the few conversations that need a person.</p>
+<div class="flow">
+<div><small>Before</small><span><b>Checks your records</b>New caller or returning patient, and what's already booked.</span></div>
+<div><small>During</small><span><b>Moves to a booking</b>Answers, books, and brings in staff when needed.</span></div>
+<div><small>After</small><span><b>Logs the outcome</b>Booking, transcript and any follow-up, ready for your team.</span></div>
+</div>
+</div>
+<div class="card profile reveal">
+<span class="sample">Sample view</span>
+<div class="p-head">
+<div class="avatar">RC</div>
+<div><b>Today at Riverside Clinic</b><small>Convert IQ + Revive · since 7 pm yesterday</small></div>
+<span class="badge">Live</span>
+</div>
+<div class="p-prefs"><span class="chip">38 conversations</span><span class="chip">21 booked</span><span class="chip">6 rebooked</span><span class="chip">2 need staff</span></div>
+<ol class="tl">
+<li><time>9:47 pm</time><span>Priya S. · dermatology consult booked, Thu 11:00 <span class="src">Convert IQ</span></span></li>
+<li><time>10:12 pm</time><span>WhatsApp · health check booked, Sat 8:00 <span class="src">Convert IQ</span></span></li>
+<li><time>8:05 am</time><span>Anita K. · missed physio rebooked, Wed 7:30 <span class="src">Revive</span></span></li>
+<li><time>8:31 am</time><span>Post-surgery wound question · transferred to nurse <span class="src">Handoff</span></span></li>
+</ol>
+<div class="next"><span>Needs your team</span><b>2 callbacks requested · assigned to front desk</b></div>
+</div>
+</div>
 </section>
-
 <!-- ================= ROI CALCULATOR ================= -->
-<section class="sec" id="roi" aria-labelledby="roi-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow olive">Estimate Your Upside</span>
-      <h2 id="roi-title">What Are Missed Calls and Lapsed Patients Costing You?</h2>
-      <p class="lead">Use your own numbers. Every assumption can be changed.</p>
-    </div>
-    <div class="card calc reveal">
-      <form class="c-in" id="roiForm" onsubmit="return false">
-        <div class="field">
-          <label for="r-calls">Calls and WhatsApp inquiries per month <output id="o-calls">3,000</output></label>
-          <input type="range" id="r-calls" min="200" max="30000" step="100" value="3000">
-        </div>
-        <div class="field">
-          <label for="r-miss">Share that go unanswered today <output id="o-miss">20%</output></label>
-          <input type="range" id="r-miss" min="0" max="60" step="1" value="20">
-        </div>
-        <div class="field">
-          <label for="r-lapsed">Lapsed or overdue patients in your records <output id="o-lapsed">2,000</output></label>
-          <input type="range" id="r-lapsed" min="0" max="50000" step="100" value="2000">
-        </div>
-        <div class="field">
-          <label for="r-value">Average revenue per visit</label>
-          <div class="money">
-            <select id="r-cur" aria-label="Currency">
-              <option value="USD">USD $</option><option value="INR">INR ₹</option><option value="AED">AED</option><option value="MYR">MYR RM</option><option value="GBP">GBP £</option><option value="EUR">EUR €</option>
-            </select>
-            <input type="number" id="r-value" min="0" step="1" value="120" inputmode="numeric" aria-label="Average revenue per visit">
-          </div>
-        </div>
-        <details class="assume">
-          <summary>Adjust assumptions ↓</summary>
-          <div class="grid">
-            <div class="field"><label for="a-cap">Missed inquiries recovered <output id="o-cap">70%</output></label><input type="range" id="a-cap" min="0" max="100" value="70"></div>
-            <div class="field"><label for="a-book">Recovered inquiries that book <output id="o-book">40%</output></label><input type="range" id="a-book" min="0" max="100" value="40"></div>
-            <div class="field"><label for="a-react">Lapsed patients who return <output id="o-react">8%</output></label><input type="range" id="a-react" min="0" max="40" value="8"></div>
-          </div>
-        </details>
-      </form>
-      <div class="c-out" aria-live="polite">
-        <span class="eyebrow" style="color:var(--peach)">Estimated extra revenue per month</span>
-        <div class="big"><b id="out-rev">$0</b><span>from visits you are losing today</span></div>
-        <div class="c-split">
-          <div><b id="out-fd">0</b><span>extra bookings from Convert IQ</span></div>
-          <div><b id="out-ar">0</b><span>returning patients from one Revive campaign</span></div>
-        </div>
-        <a class="btn btn-primary" style="align-self:flex-start" href="/contact" target="_top">Check These Numbers With Us</a>
-        <p class="fine">An estimate from your inputs, not a guarantee. Doesn't account for duplicate callers, capacity or costs.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ================= HUMAN HANDOFF & TRUST ================= -->
-<section class="sec" style="padding-top:0" aria-labelledby="safe-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow olive">Human Handoff · Your Team in Control</span>
-      <h2 id="safe-title">AI Handles the Routine. Your Team Handles the Care.</h2>
-      <p class="lead">You set the rules before the first call. The agents never go beyond them.</p>
-    </div>
-    <div class="three">
-      <div class="card feat reveal"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></i><h3>Approved Answers Only</h3><p>Agents answer from content your team has signed off: services, doctors, timings, preparation, prices. Nothing improvised.</p></div>
-      <div class="card feat reveal"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg></i><h3>Clinical Questions Go to Clinicians</h3><p>No medical advice, ever. Symptoms, results and urgent calls go straight to your clinical team, following your escalation rules.</p></div>
-      <div class="card feat reveal"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></i><h3>A Person, Whenever It's Needed</h3><p>A caller can ask for a human at any point. Your staff see the conversation so far, so the patient never repeats themselves.</p></div>
-    </div>
-    <div class="trust reveal">
-      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-10"/></svg>SOC-2 compliant</span>
-      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-10"/></svg>HIPAA-compliant</span>
-      
-      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-10"/></svg>Patient opt-outs honoured</span>
-    </div>
-  </div>
+<section aria-labelledby="safe-title" class="sec" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head reveal">
+<span class="eyebrow olive">Human Handoff · Your Team in Control</span>
+<h2 id="safe-title">AI Handles the Routine. Your Team Handles the Care.</h2>
+<p class="lead">You set the rules before the first call. The agents never go beyond them.</p>
+</div>
+<div class="three">
+<div class="card feat reveal"><i><svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M9 12l2 2 4-4"></path><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></i><h3>Approved Answers Only</h3><p>Agents answer from content your team has signed off: services, doctors, timings, preparation, prices. Nothing improvised.</p></div>
+<div class="card feat reveal"><i><svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"></path><circle cx="20" cy="10" r="2"></circle></svg></i><h3>Clinical Questions Go to Clinicians</h3><p>No medical advice, ever. Symptoms, results and urgent calls go straight to your clinical team, following your escalation rules.</p></div>
+<div class="card feat reveal"><i><svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></i><h3>A Person, Whenever It's Needed</h3><p>A caller can ask for a human at any point. Your staff see the conversation so far, so the patient never repeats themselves.</p></div>
+</div>
+<div class="trust reveal"><a href="/security" target="_top">Review security details</a><a href="/governance" target="_top">AI governance</a><a href="/contact" target="_top">Request security documentation</a><span>Patient opt-outs honoured</span><p>Supporting security evidence: awaiting approved documentation.</p></div>
+</div>
 </section>
-
 <!-- ================= INTEGRATIONS + ROLLOUT ================= -->
-<section class="sec" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)" aria-labelledby="int-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow olive">Integrations</span>
-      <h2 id="int-title">Keep Your Stack. Tulu Connects It.</h2>
-      <p class="lead">No rip-and-replace project. Your patients keep calling the same number and messaging the same WhatsApp.</p>
-    </div>
-    <div class="integ">
-      <div class="card reveal"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i><div><b>Phone system</b><span>Your existing numbers, call routing and staff transfer lines.</span></div></div>
-      <div class="card reveal"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></i><div><b>WhatsApp Business</b><span>Two-way chat, confirmations, reminders and recall messages.</span></div></div>
-      <div class="card reveal"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></i><div><b>EHR / EMR / HIS</b><span>Patient identity and visit history, so agents recognise returning patients.</span></div></div>
-      <div class="card reveal"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></i><div><b>Scheduling</b><span>Live availability and direct booking, rescheduling and cancellation.</span></div></div>
-      <div class="card reveal"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4"/><circle cx="17" cy="15" r="4"/></svg></i><div><b>CRM</b><span>Leads, campaigns and consent preferences, kept in sync.</span></div></div>
-      <div class="card reveal"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></i><div><b>Email</b><span>Recall follow-ups and visit preparation for patients who prefer email.</span></div></div>
-    </div>
-    <div class="integ-note reveal"><span><b>Most EHR and CRM integrations go live in 1–2 weeks.</b> We confirm the exact scope for your systems in the walkthrough.</span><a class="link" href="/contact" target="_top">Discuss your setup →</a></div>
-
-    <div class="sec-head reveal" style="margin:96px 0 40px">
-      <span class="eyebrow olive">Rollout</span>
-      <h2>Live in Weeks, Not Quarters.</h2>
-    </div>
-    <div class="roll">
-      <div class="card reveal"><h3>Map One Workflow</h3><p>Pick where you lose the most: after-hours calls, WhatsApp or no-shows.</p></div>
-      <div class="card reveal"><h3>Approve the Answers</h3><p>Your team signs off what the agent says, and when it hands over.</p></div>
-      <div class="card reveal"><h3>Connect and Go Live</h3><p>Phone, WhatsApp and scheduling connected. The first calls are answered.</p></div>
-      <div class="card reveal"><h3>Measure and Expand</h3><p>See bookings and returns, then add Revive or more departments.</p></div>
-    </div>
-  </div>
+<section aria-labelledby="int-title" class="sec" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<div class="wrap">
+<div class="sec-head reveal">
+<span class="eyebrow olive">Integrations</span>
+<h2 id="int-title">Keep Your Stack. Tulu Connects It.</h2>
+<p class="lead">No rip-and-replace project. Your patients keep calling the same number and messaging the same WhatsApp.</p>
+</div>
+<div class="integ">
+<div class="card reveal"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></i><div><b>Phone system</b><span>Your existing numbers, call routing and staff transfer lines.</span></div></div>
+<div class="card reveal"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></i><div><b>WhatsApp Business</b><span>Two-way chat, confirmations, reminders and recall messages.</span></div></div>
+<div class="card reveal"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h6"></path></svg></i><div><b>EHR / EMR / HIS</b><span>Patient identity and visit history, so agents recognise returning patients.</span></div></div>
+<div class="card reveal"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="18" rx="2" width="18" x="3" y="4"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></i><div><b>Scheduling</b><span>Live availability and direct booking, rescheduling and cancellation.</span></div></div>
+<div class="card reveal"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="9" cy="7" r="4"></circle><path d="M3 21v-2a4 4 0 0 1 4-4h4"></path><circle cx="17" cy="15" r="4"></circle></svg></i><div><b>CRM</b><span>Leads, campaigns and consent preferences, kept in sync.</span></div></div>
+<div class="card reveal"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg></i><div><b>Email</b><span>Recall follow-ups and visit preparation for patients who prefer email.</span></div></div>
+</div>
+<div class="integ-note reveal"><span><b>Integration scope and timing depend on your systems.</b> We confirm the exact scope for your systems in the walkthrough.</span><a class="link" href="/contact" target="_top">Check compatibility with your systems →</a></div><aside class="integration-evidence-placeholder">Integration example placeholder — awaiting a verified named platform, documented workflow and approved visual.</aside>
+<div class="sec-head reveal" style="margin:96px 0 40px">
+<span class="eyebrow olive">Rollout</span>
+<h2>Connect Around Your Workflow.</h2>
+</div>
+<div class="roll">
+<div class="card reveal"><h3>Map One Workflow</h3><p>Pick where you lose the most: after-hours calls, WhatsApp or no-shows.</p></div>
+<div class="card reveal"><h3>Approve the Answers</h3><p>Your team signs off what the agent says, and when it hands over.</p></div>
+<div class="card reveal"><h3>Connect and Go Live</h3><p>Phone, WhatsApp and scheduling connected. The first calls are answered.</p></div>
+<div class="card reveal"><h3>Measure and Expand</h3><p>See bookings and returns, then add Revive or more departments.</p></div>
+</div>
+</div>
 </section>
-
 <!-- ================= TESTIMONIAL (placeholder) ================= -->
-
-
 <!-- ================= FAQ ================= -->
-<section class="sec" style="padding-top:0" aria-labelledby="faq-title">
-  <div class="wrap">
-    <div class="sec-head center reveal" style="text-align:center">
-      <span class="eyebrow olive">FAQ</span>
-      <h2 id="faq-title">Questions Hospitals Ask Us First.</h2>
-    </div>
-    <div class="faq">
-      <details open><summary>What's the difference between Convert IQ and Revive?</summary><p>Convert IQ handles incoming demand: calls and WhatsApp messages from people who want to book. Revive handles outgoing follow-up: it reaches patients who lapsed, missed an appointment or are overdue for a follow-up, and books them back in. Each can run on its own.</p></details>
-      <details><summary>Can we start with just one?</summary><p>Yes. Most teams start where they lose the most visits, usually after-hours calls or no-shows, and add the second service once the first is live.</p></details>
-      <details><summary>Will it work with our phone system, WhatsApp and EHR / EMR?</summary><p>Your patients keep using the same numbers and WhatsApp account. Most EHR and CRM integrations go live in 1–2 weeks, and we confirm the exact scope for your systems before launch.</p></details>
-      <details><summary>Which languages does it speak?</summary><p>Tell us which languages your patients use and we'll show you the agent speaking them in the demo.</p></details>
-      <details><summary>Does the AI give medical advice?</summary><p>No. It answers administrative questions from content your team has approved. Anything clinical or urgent goes straight to your clinical team under the escalation rules you set.</p></details>
-      <details><summary>What happens when a patient wants a person?</summary><p>They get one. The agent transfers the call or chat to your staff with the full conversation so far, so nobody starts over.</p></details>
-      <details><summary>How is patient data protected?</summary><p>Tulu is SOC-2 and HIPAA compliant. Outreach respects each patient's consent and opt-out preferences.</p></details>
-      <details><summary>How do we begin?</summary><p><a href="/contact" target="_top">Book a demo</a>. Bring your inquiry volume and a sample of your patient list, and we'll show you where Convert IQ and Revive can recover visits.</p></details>
-    </div>
-  </div>
+<section aria-labelledby="faq-title" class="sec" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head center reveal" style="text-align:center">
+<span class="eyebrow olive">FAQ</span>
+<h2 id="faq-title">Questions Hospitals Ask Us First.</h2>
+</div>
+<div class="faq">
+<details open=""><summary>What's the difference between Convert IQ and Revive?</summary><p>Convert IQ handles incoming demand: calls and WhatsApp messages from people who want to book. Revive handles outgoing follow-up: it reaches patients who lapsed, missed an appointment or are overdue for a follow-up, and books them back in. Each can run on its own.</p></details>
+<details><summary>Can we start with just one?</summary><p>Yes. Most teams start where they lose the most visits, usually after-hours calls or no-shows, and add the second service once the first is live.</p></details>
+<details><summary>Will it work with our phone system, WhatsApp and EHR / EMR?</summary><p>Your patients keep using the same numbers and WhatsApp account. Most EHR and CRM integrations go live in 1–2 weeks, and we confirm the exact scope for your systems before launch.</p></details>
+<details><summary>Which languages does it speak?</summary><p>Tell us which languages your patients use and we'll show you the agent speaking them in the demo.</p></details>
+<details><summary>Does the AI give medical advice?</summary><p>No. It answers administrative questions from content your team has approved. Anything clinical or urgent goes straight to your clinical team under the escalation rules you set.</p></details>
+<details><summary>What happens when a patient wants a person?</summary><p>They get one. The agent transfers the call or chat to your staff with the full conversation so far, so nobody starts over.</p></details>
+<details><summary>How is patient data protected?</summary><p>Review Tulu’s security and AI governance information with our team. Outreach respects each patient's consent and opt-out preferences.</p></details>
+<details><summary>How do we begin?</summary><p><a href="/contact" target="_top">Book a demo</a>. Bring your inquiry volume and workflow questions, and we'll show you where Convert IQ and Revive can recover visits.</p></details>
+</div>
+</div>
 </section>
-
 <!-- ================= FINAL CTA ================= -->
-<section class="sec cta" aria-labelledby="cta-title">
-  <div class="wrap">
-    <span class="eyebrow" style="color:var(--peach)">Services-as-Software</span>
-    <h2 id="cta-title">Bring Us Your <span class="grad">Busiest Phone Line.</span></h2>
-    <p>In 20 minutes, we'll show you the calls you're missing and the patients you could bring back this month.</p>
-    <div class="hero-ctas"><a class="btn btn-primary" href="/contact" target="_top">Book a Demo</a><a class="btn btn-ghost" href="#roi">Estimate My Upside</a></div>
-    <div class="cta-strip">SOC-2 · HIPAA · Live in Weeks · No Lock-in</div>
-  </div>
+<section aria-labelledby="cta-title" class="sec cta">
+<div class="wrap">
+<span class="eyebrow" style="color:var(--peach)">Services-as-Software</span>
+<h2 id="cta-title">Bring Us Your <span class="grad">Busiest Phone Line.</span></h2>
+<p>In 20 minutes, we'll show you the calls you're missing and the patients you could bring back this month.</p>
+<div class="hero-ctas"><a class="btn btn-primary" href="/contact" target="_top">Book a Demo</a></div>
+<div class="cta-strip"><a href="/security" target="_top">Security details</a> · <a href="/governance" target="_top">AI governance</a></div>
+</div>
 </section>
 </main>
-
 <!-- ================= FOOTER (mirrors tuluhealth.com) ================= -->
 <footer>
-  <div class="wrap">
-    <div class="f-grid">
-      <div>
-        <a class="brand" href="/" target="_top"><span class="mark"><svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true"><path d="M5 16 H11 l2 -6 l3 12 l2 -8 l1.5 2 H27" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="wm">tulu<span>health</span></span></a>
-        <p>Voice and WhatsApp AI agents that turn every patient conversation into a booked visit.</p>
-        <p>8 The Green, Suite B, Dover, DE 19901<br>Delaware, USA</p>
-      </div>
-      <div><h4>Platform</h4><ul><li><a href="/twin" target="_top">The Patient Twin</a></li><li><a href="/operations" target="_top">Clinic Operations</a></li><li><a href="/services" target="_top">AI Services</a></li><li><a href="#agents">Convert IQ &amp; Revive</a></li><li><a href="/architecture" target="_top">Architecture</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><a href="/team" target="_top">Team</a></li><li><a href="/blog" target="_top">Blog</a></li><li><a href="/demo" target="_top">See it in Action</a></li><li><a href="/contact" target="_top">Contact</a></li></ul></div>
-      <div><h4>Trust</h4><ul><li><a href="/governance" target="_top">AI Governance</a></li><li><a href="/security" target="_top">Security</a></li><li><a href="/privacy" target="_top">Privacy</a></li><li><a href="/terms" target="_top">Terms</a></li></ul></div>
-    </div>
-    <div class="f-base"><span>© 2026 Tulu Health, Inc. All rights reserved.</span><span>Convert IQ · Revive</span></div>
-  </div>
+<div class="wrap">
+<div class="f-grid">
+<div>
+<a class="brand" href="/" target="_top"><span class="mark"><svg aria-hidden="true" fill="none" height="20" viewbox="0 0 32 32" width="20"><path d="M5 16 H11 l2 -6 l3 12 l2 -8 l1.5 2 H27" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></span><span class="wm">tulu<span>health</span></span></a>
+<p>Voice and WhatsApp AI agents that turn every patient conversation into a booked visit.</p>
+<p>8 The Green, Suite B, Dover, DE 19901<br/>Delaware, USA</p>
+</div>
+<div><h4>Platform</h4><ul><li><a href="/twin" target="_top">The Patient Twin</a></li><li><a href="/operations" target="_top">Clinic Operations</a></li><li><a href="/services" target="_top">AI Services</a></li><li><a href="#agents">Convert IQ &amp; Revive</a></li><li><a href="/architecture" target="_top">Architecture</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="/team" target="_top">Team</a></li><li><a href="/blog" target="_top">Blog</a></li><li><a href="/demo" target="_top">See it in Action</a></li><li><a href="/contact" target="_top">Contact</a></li></ul></div>
+<div><h4>Trust</h4><ul><li><a href="/governance" target="_top">AI Governance</a></li><li><a href="/security" target="_top">Security</a></li><li><a href="/privacy" target="_top">Privacy</a></li><li><a href="/terms" target="_top">Terms</a></li></ul></div>
+</div>
+<div class="f-base"><span>© 2026 Tulu Health, Inc. All rights reserved.</span><span>Convert IQ · Revive</span></div>
+</div>
 </footer>
-
 <script>
 (() => {
   const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1124,25 +1011,6 @@ footer{background:var(--espresso);color:var(--on-dark-60);border-top:1px solid v
   $$('#cohorts input, #chans input').forEach(i => i.addEventListener('change', updateCampaign));
   new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { updateCampaign(); o.disconnect(); } }), {threshold:.3}).observe($('#funnel'));
 
-  /* ---------- ROI calculator ---------- */
-  const SYM = {USD:'$', INR:'₹', AED:'AED ', MYR:'RM ', GBP:'£', EUR:'€'};
-  const DEF = {USD:120, INR:1500, AED:400, MYR:250, GBP:100, EUR:110};
-  function calc() {
-    const v = id => +$('#' + id).value;
-    const calls = v('r-calls'), miss = v('r-miss') / 100, lapsed = v('r-lapsed'), val = Math.max(0, v('r-value'));
-    const cap = v('a-cap') / 100, book = v('a-book') / 100, react = v('a-react') / 100;
-    $('#o-calls').textContent = fmt(calls); $('#o-miss').textContent = Math.round(miss * 100) + '%';
-    $('#o-lapsed').textContent = fmt(lapsed);
-    $('#o-cap').textContent = Math.round(cap * 100) + '%'; $('#o-book').textContent = Math.round(book * 100) + '%'; $('#o-react').textContent = Math.round(react * 100) + '%';
-    const fd = calls * miss * cap * book, ar = lapsed * react;
-    const cur = $('#r-cur').value;
-    const loc = cur === 'INR' ? 'en-IN' : 'en-US';
-    $('#out-fd').textContent = fmt(fd); $('#out-ar').textContent = fmt(ar);
-    $('#out-rev').textContent = SYM[cur] + Math.round((fd + ar) * val).toLocaleString(loc);
-  }
-  $('#r-cur').addEventListener('change', e => { $('#r-value').value = DEF[e.target.value]; calc(); });
-  $$('#roiForm input').forEach(i => i.addEventListener('input', calc));
-  calc();
 })();
 </script>
 <script>
