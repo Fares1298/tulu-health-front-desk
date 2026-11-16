@@ -23,7 +23,14 @@
     var detail=el.closest('details');if(detail)detail.open=true;
     if(el.classList.contains('lx-conversation'))el.open=true;
     post();
-    setTimeout(function(){reveal(detail?detail.querySelector('summary'):el);},200);
+    var attempts=0;
+    function settledReveal(){
+      var main=document.querySelector('main'),frame=window.frameElement;
+      var expected=main?Math.ceil(main.getBoundingClientRect().bottom+scrollY):0;
+      if(frame&&Math.abs(frame.getBoundingClientRect().height-expected)>4&&attempts++<40){post();setTimeout(settledReveal,100);return;}
+      reveal(detail?detail.querySelector('summary'):el);
+    }
+    setTimeout(settledReveal,600);
   }
   document.querySelectorAll('.lx-details').forEach(function(d){d.addEventListener('toggle',function(){
     d.querySelector('summary').textContent=(d.open?'Hide ':'View ')+d.closest('article').querySelector('h3').textContent+' details';
