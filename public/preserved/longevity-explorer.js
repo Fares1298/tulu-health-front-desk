@@ -8,14 +8,7 @@
     video.controls=true;
     video.play().then(function(){play.hidden=true;}).catch(function(){video.controls=true;});
   });
-  var details=Array.from(document.querySelectorAll('.lx-details'));
   function post(){var main=document.querySelector('main');if(main&&parentWin)parentWin.postMessage({tuluHeight:Math.ceil(main.getBoundingClientRect().bottom+scrollY)},location.origin);}
-  function label(d){d.querySelector('summary').textContent=d.open?'Hide details':'View details';d.querySelector('summary').setAttribute('aria-label',(d.open?'Hide ':'View ')+d.closest('article').querySelector('h3,h4').textContent+' details');}
-  function openOnly(d){
-    var group=d.closest('[data-explorer]');
-    group.querySelectorAll('.lx-details').forEach(function(other){if(other!==d){other.open=false;label(other);}});
-    d.open=true;label(d);post();
-  }
   function reveal(el){
     var frame=window.frameElement;
     var header=parentWin&&parentWin.document.querySelector('.site-header');
@@ -36,28 +29,8 @@
     if(parentWin&&parentWin.location.pathname!=='/longevity-os')return;
     var id;try{id=decodeURIComponent(host.location.hash.slice(1));}catch(e){return;}
     var el=document.getElementById(id);if(!el)return;
-    var d=el.closest('.lx-details');if(d)openOnly(d);
-    post();afterResize(d?d.closest('article').querySelector('h3,h4'):el);
+    post();afterResize(el);
   }
-  // Native details names enforce exclusivity without JavaScript; this also
-  // supports browsers that predate grouped details and keeps labels in sync.
-  details.forEach(function(d){
-    d.addEventListener('toggle',function(){
-      if(d.open)openOnly(d);else label(d);
-      post();
-    });
-    var summary=d.querySelector('summary');
-    summary.addEventListener('click',function(e){
-      e.preventDefault();
-      var opening=!d.open;
-      if(opening){
-        var previous=Array.from(d.closest('[data-explorer]').querySelectorAll('.lx-details')).find(function(other){return other.open&&other!==d;});
-        openOnly(d);
-        host.history.pushState(host.history.state,'','#'+d.dataset.feature);
-        if(previous)afterResize(d.closest('article').querySelector('h3,h4'));
-      }else{d.open=false;label(d);post();}
-    });
-  });
   document.addEventListener('click',function(e){
     var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;
     var id=a.getAttribute('href').slice(1);if(!document.getElementById(id))return;

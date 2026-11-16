@@ -5,45 +5,22 @@ import { describe, expect, it } from 'vitest';
 const html = readFileSync('public/preserved/longevity-explorer.html', 'utf8');
 const script = readFileSync('public/preserved/longevity-explorer.js', 'utf8');
 
-function page(hash = '') {
-  const dom = new JSDOM(html, { url: `http://localhost/longevity-os${hash}`, runScripts: 'outside-only' });
-  dom.window['ResizeObserver'] = class { observe() {} disconnect() {} unobserve() {} };
-  dom.window.scrollBy = () => {};
-  dom.window.eval(script);
-  return dom;
-}
-
-describe('Longevity OS detail rules', () => {
-  it('allows only one operations capability open at a time', async () => {
-    const dom = page();
-    const doc = dom.window.document;
-    doc.querySelector<HTMLDetailsElement>('[data-feature="worklist"] > summary')?.click();
-    doc.querySelector<HTMLDetailsElement>('[data-feature="capacity"] > summary')?.click();
-    expect(doc.querySelector<HTMLDetailsElement>('[data-feature="worklist"]')?.open).toBe(false);
-    expect(doc.querySelector<HTMLDetailsElement>('[data-feature="capacity"]')?.open).toBe(true);
-    await new Promise(resolve => dom.window.setTimeout(resolve, 30));
-    dom.window.close();
-  });
-
-  it('allows only one service open, independently of operations', async () => {
-    const dom = page();
-    const doc = dom.window.document;
-    for (const id of ['capacity', 'recall', 'front-desk']) {
-      doc.querySelector<HTMLElement>(`[data-feature="${id}"] > summary`)?.click();
-    }
-    expect(doc.querySelector<HTMLDetailsElement>('[data-feature="capacity"]')?.open).toBe(true);
-    expect(doc.querySelector<HTMLDetailsElement>('[data-feature="recall"]')?.open).toBe(false);
-    expect(doc.querySelector<HTMLDetailsElement>('[data-feature="front-desk"]')?.open).toBe(true);
-    await new Promise(resolve => dom.window.setTimeout(resolve, 30));
-    dom.window.close();
-  });
-
-  it('opens the linked feature automatically', async () => {
-    const dom = page('#outcomes');
+describe('Longevity OS feature navigation', () => {
+  it('scrolls directly to the requested feature without changing other content', async () => {
+    const dom = new JSDOM(html, { url: 'http://localhost/longevity-os#outcomes', runScripts: 'outside-only' });
+    dom.window['ResizeObserver'] = class { observe() {} disconnect() {} unobserve() {} };
+    const scrolls: number[] = [];
+    dom.window.scrollBy = (options?: ScrollToOptions | number) => {
+      if (typeof options === 'object') scrolls.push(options.top ?? 0);
+    };
+    const outcomes = dom.window.document.getElementById('outcomes');
+    if (!outcomes) throw new Error('Missing outcomes destination');
+    outcomes.getBoundingClientRect = () => ({ top: 640, bottom: 800, left: 0, right: 500, width: 500, height: 160, x: 0, y: 640, toJSON: () => ({}) });
+    dom.window.eval(script);
     dom.window.dispatchEvent(new dom.window.Event('hashchange'));
-    expect(dom.window.document.querySelector<HTMLDetailsElement>('[data-feature="outcomes"]')?.open).toBe(true);
-    expect(dom.window.document.querySelector<HTMLDetailsElement>('[data-feature="worklist"]')?.open).toBe(false);
-    await new Promise(resolve => dom.window.setTimeout(resolve, 30));
+    await new Promise(resolve => dom.window.setTimeout(resolve, 150));
+    expect(scrolls).toContain(624);
+    expect(dom.window.location.hash).toBe('#outcomes');
     dom.window.close();
   });
 });

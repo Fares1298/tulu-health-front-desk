@@ -9,6 +9,8 @@ export const Route = createFileRoute('/longevity-os')({
     { property: 'og:description', content: 'One longevity practice, all the pieces connected. Clinic Operations and AI Services, grounded in the same Patient Twin.' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
+    { property: 'og:image', content: 'https://www.tuluhealth.com/videos/clinic-demo-poster.jpg' },
+    { name: 'twitter:image', content: 'https://www.tuluhealth.com/videos/clinic-demo-poster.jpg' },
   ] }),
   component: () => <PreservedPage name="longevity-explorer" />,
 });
