@@ -2,7 +2,6 @@ import { createFileRoute, useLocation, useNavigate } from '@tanstack/react-route
 import { useEffect, useRef, useState } from 'react';
 import { PreservedDocument } from '@/components/preserved-page';
 import { Button } from '@/components/ui/button';
-import { Layers3, Workflow } from 'lucide-react';
 import { longevityTabStorageKey, resolveLongevityTab, type LongevityTab } from '@/components/longevity-tab-state';
 
 export const Route = createFileRoute('/longevity-os')({
@@ -23,12 +22,36 @@ function Page() {
   const [selected, setSelected] = useState<LongevityTab>('clinic-operations');
   const tabs = useRef<HTMLDivElement>(null);
   const panel = useRef<HTMLElement>(null);
+  const page = useRef<HTMLElement>(null);
+  const pendingScroll = useRef(false);
+  const normalizingHash = useRef(false);
+  const [reservedHeight, setReservedHeight] = useState<number | undefined>();
+  const closing = useRef<HTMLDivElement>(null);
+  const [closingVisible, setClosingVisible] = useState(false);
+
+  useEffect(() => {
+    const element = closing.current;
+    if (!element) return;
+    const observer = new IntersectionObserver(([entry]) => setClosingVisible(entry?.isIntersecting ?? false));
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+    const measure = () => page.current?.style.setProperty('--longevity-header-height', `${header.getBoundingClientRect().height}px`);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
 
   function scrollToContent() {
     const content = panel.current;
     if (!content) return;
-    const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 82;
-    const tabHeight = tabs.current?.getBoundingClientRect().height ?? 68;
+    const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 0;
+    const tabHeight = tabs.current?.getBoundingClientRect().height ?? 0;
     window.scrollTo({ top: window.scrollY + content.getBoundingClientRect().top - headerHeight - tabHeight, behavior: 'instant' });
   }
 
@@ -36,12 +59,16 @@ function Page() {
     let saved: string | null = null;
     try { saved = window.sessionStorage.getItem(longevityTabStorageKey); } catch { /* The direct links still work if storage is unavailable. */ }
     const next = resolveLongevityTab(hash, saved);
+    pendingScroll.current = !normalizingHash.current && Boolean(hash || next === 'ai-services');
+    normalizingHash.current = false;
+    if (next !== selected) setReservedHeight(panel.current?.getBoundingClientRect().height);
     setSelected(next);
     try { window.sessionStorage.setItem(longevityTabStorageKey, next); } catch { /* Selection remains usable for this visit. */ }
-    if (!hash && next === 'ai-services') {
+    if (!hash) {
+      normalizingHash.current = next === 'clinic-operations';
       void navigate({ to: '/longevity-os', hash: next, replace: true, resetScroll: false, hashScrollIntoView: false });
     }
-    if (hash || next === 'ai-services') {
+    if (pendingScroll.current) {
       const frame = window.requestAnimationFrame(scrollToContent);
       return () => window.cancelAnimationFrame(frame);
     }
@@ -49,13 +76,15 @@ function Page() {
   }, [hash, navigate]);
 
   function selectTab(tab: LongevityTab) {
+    pendingScroll.current = true;
+    if (tab !== selected) setReservedHeight(panel.current?.getBoundingClientRect().height);
     setSelected(tab);
     try { window.sessionStorage.setItem(longevityTabStorageKey, tab); } catch { /* Optional visit preference. */ }
-    void navigate({ to: '/longevity-os', hash: tab, replace: true, resetScroll: false, hashScrollIntoView: false });
+    void navigate({ to: '/longevity-os', hash: tab, resetScroll: false, hashScrollIntoView: false });
     window.requestAnimationFrame(scrollToContent);
   }
 
-  return <main>
+  return <main ref={page} className="longevity-page">
     <section className="longevity-opening grid-background">
       <div className="wrap">
         <span className="eyebrow">ONE PRACTICE. ONE SHARED PATIENT MEMORY.</span>
@@ -64,8 +93,11 @@ function Page() {
         <p className="opening-copy">Built on the Patient Twin, Longevity OS brings your clinic’s command center and AI services together.<br className="desktop-break" /> Run the practice. Keep patients connected to their next step.</p>
       </div>
     </section>
-    <div ref={tabs} className="longevity-tabs-bar">
-      <div className="wrap longevity-tabs" role="tablist" aria-label="Longevity OS">
+    <div className="longevity-content-region">
+    <div ref={tabs} className={`longevity-tabs-bar${closingVisible ? ' longevity-tabs-released' : ''}`}>
+      <div className="wrap longevity-navigation">
+      <span className="longevity-context">Longevity OS</span>
+      <div className="longevity-tabs" role="tablist" aria-label="Longevity OS">
         {(['clinic-operations', 'ai-services'] as const).map(tab => <Button
           key={tab} id={`${tab}-tab`} role="tab" variant="ghost"
           aria-selected={selected === tab} aria-controls={tab} tabIndex={selected === tab ? 0 : -1}
@@ -77,12 +109,23 @@ function Page() {
             selectTab(next);
             document.getElementById(`${next}-tab`)?.focus({ preventScroll: true });
           }}
-        >{tab === 'clinic-operations' ? <Workflow size={17} /> : <Layers3 size={17} />}{tab === 'clinic-operations' ? 'Clinic Operations' : 'AI Services'}</Button>)}
+        >{tab === 'clinic-operations' ? 'Clinic Operations' : 'AI Services'}</Button>)}
+      </div>
       </div>
     </div>
-    <section ref={panel} id={selected} role="tabpanel" aria-labelledby={`${selected}-tab`} tabIndex={0} className="longevity-product-section">
-      <PreservedDocument key={selected} name={selected === 'clinic-operations' ? 'operations' : 'services'} embedded hideClosing />
+    <section ref={panel} id={selected} role="tabpanel" aria-labelledby={`${selected}-tab`} tabIndex={0} className="longevity-product-section" style={{ minHeight: reservedHeight }}>
+      <div key={selected} className="longevity-panel-content">
+      <PreservedDocument name={selected === 'clinic-operations' ? 'operations' : 'services'} embedded hideClosing compact onReady={() => {
+        setReservedHeight(undefined);
+        if (pendingScroll.current) {
+          window.requestAnimationFrame(scrollToContent);
+          pendingScroll.current = false;
+        }
+      }} />
+      </div>
     </section>
-    <PreservedDocument name="services" embedded closingOnly />
+    </div>
+    <noscript><div className="wrap longevity-no-script"><a href="/preserved/operations.html">Clinic Operations — complete content</a><a href="/preserved/services.html">AI Services — complete content</a></div></noscript>
+    <div ref={closing} className="longevity-closing"><PreservedDocument name="services" embedded closingOnly /></div>
   </main>;
 }

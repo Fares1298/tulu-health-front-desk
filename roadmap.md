@@ -14,3 +14,5 @@
 - [x] Group confirmed integrations and verify the expanded homepage on desktop/mobile with reduced motion and working product links.
 - [x] Add sticky Longevity OS tabs with complete original sections, direct links, restored selection and one shared closing invitation.
 - [x] Verify tab switching, content preservation, returning navigation, mobile layout and original demonstrations.
+- [x] Compact only Longevity OS navigation and spacing, retaining full content and a single closing invitation.
+- [x] Verify sticky boundaries, tab/history/anchor scrolling, mobile, keyboard and reduced-motion behaviour.
