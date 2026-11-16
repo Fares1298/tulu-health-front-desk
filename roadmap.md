@@ -1,4 +1,9 @@
 # Tulu website restructuring
+- [ ] Add clearly labelled evidence placeholders and readable security links on the homepage.
+- [ ] Replace Longevity OS tab-only navigation with visible summaries and inline complete details; preserve video, metrics, direct links and Growth.
+- [ ] Correct AI Front Desk actions, remove calculator and unsupported proof figures, and connect the approved reactivation review.
+- [ ] Verify desktop, mobile, keyboard, video, contact routing and existing demos.
+- [ ] Replace evidence placeholders with approved customer assets, security evidence and a documented integration example (awaiting supplied material).
 - [x] Broaden the main homepage and add three product entrances.
 - [x] Reproduce the approved AI Front Desk layout for Convert IQ and Revive.
 - [x] Preserve existing longevity and other pages, demonstrations and URLs.
