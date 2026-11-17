@@ -1,5 +1,5 @@
 # Tulu website restructuring
-- [ ] Add verified partner roster, genuine logos and homepage selection; supplied Customer slide.pdf is missing.
+- [ ] Add verified partner roster, genuine logos and homepage selection using the newly supplied Customer slide.pdf.
 - [ ] Add separate homepage news preview and classified News & Media page, verifying supplied links and spreadsheet.
 - [ ] Verify desktop/mobile, navigation, assets and evidence safeguards; record quote approvals and unresolved sources.
 - [x] Restore full Longevity OS screenshots and shared-track alignment for feature images and AI previews without changing other content.
