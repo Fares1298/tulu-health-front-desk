@@ -1,4 +1,7 @@
 # Tulu website restructuring
+- [ ] Add verified partner roster, genuine logos and homepage selection; supplied Customer slide.pdf is missing.
+- [ ] Add separate homepage news preview and classified News & Media page, verifying supplied links and spreadsheet.
+- [ ] Verify desktop/mobile, navigation, assets and evidence safeguards; record quote approvals and unresolved sources.
 - [x] Restore full Longevity OS screenshots and shared-track alignment for feature images and AI previews without changing other content.
 - [x] Verify original image boundaries, aligned frames/actions, enlargement links and desktop/mobile reading order.
 - [x] Present Clinic Operations only as an open 2 / 3 / 2 editorial feature matrix, retaining every metric, qualification, screenshot and link.
