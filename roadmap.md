@@ -1,6 +1,6 @@
 # Tulu website restructuring
-- [ ] Restore full Longevity OS screenshots and shared-track alignment for feature images and AI previews without changing other content.
-- [ ] Verify original image boundaries, aligned frames/actions, enlargement links and desktop/mobile reading order.
+- [x] Restore full Longevity OS screenshots and shared-track alignment for feature images and AI previews without changing other content.
+- [x] Verify original image boundaries, aligned frames/actions, enlargement links and desktop/mobile reading order.
 - [x] Present Clinic Operations only as an open 2 / 3 / 2 editorial feature matrix, retaining every metric, qualification, screenshot and link.
 - [x] Verify grid sizing, feature links, screenshots, once-only motion and mobile/reduced-motion readability.
 - [x] Refine only Longevity OS AI Services typography, preview frames, Coming soon availability and closing spacing.

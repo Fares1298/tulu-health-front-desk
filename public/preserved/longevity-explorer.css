@@ -51,7 +51,7 @@ main{min-height:0!important}main>.bg-radial-spot,main>.bg-grid{display:none}
 .lx-feature-matrix .lx-value{font-size:18px;line-height:1.5}
 .lx-feature-matrix .lx-stat{font-size:16px;line-height:1.6}
 .lx-feature-matrix .lx-description{font-size:16px;line-height:1.7}
-.lx-feature-matrix .lx-product-figure{grid-row:5/span 2;display:grid;grid-template-rows:subgrid;margin-top:24px;width:100%}
+.lx-feature-matrix .lx-product-figure{grid-row:5/span 2;display:grid;grid-template-rows:subgrid;justify-self:start;margin-top:24px;width:100%}
 .lx-feature-matrix .lx-screenshot-frame{display:flex;align-items:center;justify-content:center;aspect-ratio:8/5;width:100%;height:100%;box-sizing:border-box;border:1px solid var(--lx-line);border-radius:4px;background:var(--lx-light);transition:border-color 180ms ease}
 .lx-feature-matrix .lx-full-screenshot{position:static;display:block;width:100%;height:100%;max-width:100%;object-fit:contain;object-position:center;transform:none;border:0;border-radius:4px}
 .lx-feature-matrix .lx-screenshot-frame:hover,.lx-feature-matrix .lx-screenshot-frame:focus-visible{border-color:var(--lx-clay)}
