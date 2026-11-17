@@ -1,7 +1,10 @@
 # Tulu website restructuring
-- [ ] Add verified partner roster, genuine logos and homepage selection; supplied Customer slide.pdf is missing.
-- [ ] Add separate homepage news preview and classified News & Media page, verifying supplied links and spreadsheet.
-- [ ] Verify desktop/mobile, navigation, assets and evidence safeguards; record quote approvals and unresolved sources.
+- [x] Add partner roster, genuine available logos and homepage selection using Customer_slide.pdf.
+- [x] Add separate homepage news preview and classified News & Media page with twelve verified direct articles.
+- [x] Verify desktop/mobile, navigation, logo loading and evidence safeguards; record unresolved sources in the editorial review.
+- [ ] Obtain Sorrell MD logo and Dr Luke Sorrell featured-quote wording, reuse permission and approved attribution.
+- [ ] Confirm Ruban / Resohealth official destinations and NatHorizon versus NXT Horizon naming.
+- [ ] Review remaining spreadsheet entries and Hindustan Times destination (awaiting spreadsheet access or export).
 - [x] Restore full Longevity OS screenshots and shared-track alignment for feature images and AI previews without changing other content.
 - [x] Verify original image boundaries, aligned frames/actions, enlargement links and desktop/mobile reading order.
 - [x] Present Clinic Operations only as an open 2 / 3 / 2 editorial feature matrix, retaining every metric, qualification, screenshot and link.
@@ -16,7 +19,7 @@
 - [x] Replace Longevity OS tab-only navigation with visible summaries and inline complete details; preserve video, metrics, direct links and Growth.
 - [x] Correct AI Front Desk actions, remove calculator and unsupported proof figures, and connect the approved reactivation review.
 - [x] Verify desktop, mobile, keyboard, video, contact routing and existing demos.
-- [ ] Replace evidence placeholders with approved customer assets, security evidence and a documented integration example (awaiting supplied material).
+- [ ] Supply approved partner statements, security evidence and a documented integration example (awaiting supplied material).
 - [x] Broaden the main homepage and add three product entrances.
 - [x] Reproduce the approved AI Front Desk layout for Convert IQ and Revive.
 - [x] Preserve existing longevity and other pages, demonstrations and URLs.

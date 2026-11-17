@@ -3,7 +3,7 @@ import { ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function EvidencePlaceholder({ title, children }: { title: string; children: React.ReactNode }) {
-  return <aside className="evidence-placeholder"><span className="evidence-status">Placeholder · not customer evidence</span><h3>{title}</h3><p>{children}</p></aside>;
+  return <aside className="evidence-placeholder"><span className="evidence-status">Placeholder · not partner evidence</span><h3>{title}</h3><p>{children}</p></aside>;
 }
 
 export function SecuritySummary() {
