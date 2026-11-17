@@ -1,5 +1,5 @@
-import medanta from '@/assets/partners/medanta.svg.asset.json';
-import moc from '@/assets/partners/moc.svg.asset.json';
+import medanta from '@/assets/partners/medanta-light.png.asset.json';
+import moc from '@/assets/partners/moc-light.png.asset.json';
 import ruban from '@/assets/partners/ruban.png.asset.json';
 import ayushman from '@/assets/partners/ayushman.png.asset.json';
 import upkar from '@/assets/partners/upkar.png.asset.json';
