@@ -17,7 +17,9 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as GovernanceRouteImport } from './routes/governance'
 import { Route as LongevityOsRouteImport } from './routes/longevity-os'
+import { Route as NewsMediaRouteImport } from './routes/news-media'
 import { Route as OperationsRouteImport } from './routes/operations'
+import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SecurityRouteImport } from './routes/security'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -67,9 +69,19 @@ const LongevityOsRoute = LongevityOsRouteImport.update({
   path: '/longevity-os',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NewsMediaRoute = NewsMediaRouteImport.update({
+  id: '/news-media',
+  path: '/news-media',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OperationsRoute = OperationsRouteImport.update({
   id: '/operations',
   path: '/operations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -122,7 +134,9 @@ export interface FileRoutesByFullPath {
   '/demo': typeof DemoRoute
   '/governance': typeof GovernanceRoute
   '/longevity-os': typeof LongevityOsRoute
+  '/news-media': typeof NewsMediaRoute
   '/operations': typeof OperationsRoute
+  '/partners': typeof PartnersRoute
   '/privacy': typeof PrivacyRoute
   '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
@@ -140,7 +154,9 @@ export interface FileRoutesByTo {
   '/demo': typeof DemoRoute
   '/governance': typeof GovernanceRoute
   '/longevity-os': typeof LongevityOsRoute
+  '/news-media': typeof NewsMediaRoute
   '/operations': typeof OperationsRoute
+  '/partners': typeof PartnersRoute
   '/privacy': typeof PrivacyRoute
   '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
@@ -160,7 +176,9 @@ export interface FileRoutesById {
   '/demo': typeof DemoRoute
   '/governance': typeof GovernanceRoute
   '/longevity-os': typeof LongevityOsRoute
+  '/news-media': typeof NewsMediaRoute
   '/operations': typeof OperationsRoute
+  '/partners': typeof PartnersRoute
   '/privacy': typeof PrivacyRoute
   '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
@@ -181,7 +199,9 @@ export interface FileRouteTypes {
     | '/demo'
     | '/governance'
     | '/longevity-os'
+    | '/news-media'
     | '/operations'
+    | '/partners'
     | '/privacy'
     | '/security'
     | '/services'
@@ -199,7 +219,9 @@ export interface FileRouteTypes {
     | '/demo'
     | '/governance'
     | '/longevity-os'
+    | '/news-media'
     | '/operations'
+    | '/partners'
     | '/privacy'
     | '/security'
     | '/services'
@@ -218,7 +240,9 @@ export interface FileRouteTypes {
     | '/demo'
     | '/governance'
     | '/longevity-os'
+    | '/news-media'
     | '/operations'
+    | '/partners'
     | '/privacy'
     | '/security'
     | '/services'
@@ -238,7 +262,9 @@ export interface RootRouteChildren {
   DemoRoute: typeof DemoRoute
   GovernanceRoute: typeof GovernanceRoute
   LongevityOsRoute: typeof LongevityOsRoute
+  NewsMediaRoute: typeof NewsMediaRoute
   OperationsRoute: typeof OperationsRoute
+  PartnersRoute: typeof PartnersRoute
   PrivacyRoute: typeof PrivacyRoute
   SecurityRoute: typeof SecurityRoute
   ServicesRoute: typeof ServicesRoute
@@ -305,11 +331,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LongevityOsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/news-media': {
+      id: '/news-media'
+      path: '/news-media'
+      fullPath: '/news-media'
+      preLoaderRoute: typeof NewsMediaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/operations': {
       id: '/operations'
       path: '/operations'
       fullPath: '/operations'
       preLoaderRoute: typeof OperationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -392,7 +432,9 @@ const rootRouteChildren: RootRouteChildren = {
   DemoRoute: DemoRoute,
   GovernanceRoute: GovernanceRoute,
   LongevityOsRoute: LongevityOsRoute,
+  NewsMediaRoute: NewsMediaRoute,
   OperationsRoute: OperationsRoute,
+  PartnersRoute: PartnersRoute,
   PrivacyRoute: PrivacyRoute,
   SecurityRoute: SecurityRoute,
   ServicesRoute: ServicesRoute,

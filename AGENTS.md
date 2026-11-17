@@ -37,3 +37,4 @@ use the editor.
 - Carry contextual review inquiries through the contact route to the existing scheduler; explicit request context avoids implying a marketing action launches patient outreach.
 - Isolate homepage motion and illustrative sequences in homepage-only components; viewport-aware playback and static base styles preserve other pages and no-script readability.
 - Adapt the live patient-home interface into a labelled native sample for the homepage longevity showcase; legible layouts and finite emphasis sequences avoid shrinking or altering the preserved product pages.
+- Keep partner/media data in a shared browser-safe evidence catalogue and render native Partners and News & Media routes; explicit publication guards prevent pending statements or duplicate/unverified coverage from appearing.
