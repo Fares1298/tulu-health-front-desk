@@ -63,6 +63,6 @@ export function displayCoverageDate(date: string) {
 export const sorrellPerspective = {
   speaker: 'Dr Luke Sorrell', role: 'Founder', organisation: 'Sorrell MD',
   wordingApproved: false, reusePermission: false,
-  quote: 'What makes it unique is that it operates rather than reports. Most tools tell you what happened last quarter; Tulu turns the same data into a daily work queue. For a practice like mine, that’s the difference between having data and actually acting on it.',
+  quote: '', // Candidate wording lives only in the internal editorial review until approved.
   source: 'https://www.pharmabiz.com/NewsDetails.aspx?aid=188163&sid=2',
 };
