@@ -38,5 +38,5 @@ use the editor.
 - Isolate homepage motion and illustrative sequences in homepage-only components; viewport-aware playback and static base styles preserve other pages and no-script readability.
 - Adapt the live patient-home interface into a labelled native sample for the homepage longevity showcase; legible layouts and finite emphasis sequences avoid shrinking or altering the preserved product pages.
 - Keep partner/media data in a shared browser-safe evidence catalogue and render native Partners and News & Media routes; explicit publication guards prevent pending statements or duplicate/unverified coverage from appearing.
-- Store supplied individual perspectives in a shared catalogue; render all six on Partners and use Embla only for the homepage selection, with pause controls and a static reduced-motion fallback to preserve readable quotations.
+- Store supplied individual perspectives in a shared catalogue; render all six on Partners and use Embla only for the homepage selection, with pause-on-hover/focus and a static reduced-motion fallback to preserve readable quotations without visible controls.
 - Animate only the homepage partner-logo strip with equal-width repeated groups moving right; inert duplicates, pause-on-focus and a reduced-motion grid preserve accessible original links and the full Partners roster.

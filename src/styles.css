@@ -796,7 +796,7 @@ em { font-weight: inherit; color: var(--primary); }
 @keyframes partner-logos-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 @media(prefers-reduced-motion:reduce) {
   .partner-logo-track { animation: none; transform: none; width: auto; display: block; }
-  .partner-logo-copy, .partner-logo-pause { display: none; }
+  .partner-logo-copy { display: none; }
   .partner-logo-group .partner-grid { display: grid; padding: 0; }
   .partner-logo-group .partner-grid li { width: auto; }
 }
@@ -881,8 +881,6 @@ a.partner-item:hover > span { color: var(--primary); }
 .perspective-track .perspective-slide { flex: 0 0 33.333333%; padding-inline: 7px; }
 .perspective-track .perspective-card { transform: scale(.93); transition: transform 450ms ease, border-color 450ms ease; }
 .perspective-track .is-centred .perspective-card { transform: scale(1); border-color: var(--primary); }
-.perspective-controls { display: flex; gap: 10px; align-items: center; justify-content: center; margin-top: 18px; }
-.perspective-controls > span { font-size: 13px; color: var(--muted-foreground); margin-left: 8px; }
 @media(max-width:1000px) { .perspective-grid-inner { grid-template-columns: repeat(2,minmax(0,1fr)); } .perspective-track .perspective-slide { flex-basis: 55%; } }
 @media(max-width:760px) {
   .perspective-grid-inner { grid-template-columns: 1fr; }
