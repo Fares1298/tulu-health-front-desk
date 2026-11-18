@@ -1,4 +1,5 @@
 # Tulu website restructuring
+- [x] Add six native partner perspectives and a three-person homepage carousel with two-second centre focus; verify layouts and controls.
 - [x] Add partner roster, genuine available logos and homepage selection using Customer_slide.pdf.
 - [x] Add separate homepage news preview and classified News & Media page with twelve verified direct articles.
 - [x] Verify desktop/mobile, navigation, logo loading and evidence safeguards; record unresolved sources in the editorial review.

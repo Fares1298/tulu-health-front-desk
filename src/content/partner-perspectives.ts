@@ -1,0 +1,14 @@
+export type PartnerPerspective = { name: string; initials: string; role: string; organisation: string; quote: string };
+
+// Supplied for publication in Tulu-Partner-Testimonials.html; individual statements,
+// not institutional endorsements or evidence of measured outcomes.
+export const partnerPerspectives: PartnerPerspective[] = [
+  { name: 'Ranjith B.R', initials: 'RB', role: 'Head – Digital Initiatives', organisation: 'Medanta', quote: 'Tulu Health helped us accelerate our go-to-market execution with a highly responsive and proactive team. The engagement felt like a true partnership rather than a typical vendor relationship.' },
+  { name: 'A.S Pillai', initials: 'AP', role: 'Ex-Group CFO', organisation: 'VPS Healthcare / Burjeel Hospital', quote: 'Tulu Health is building an intelligent AI-agent platform for Revenue Cycle Management, addressing one of the most critical levers for hospital sustainability — improving cash flows, reducing revenue leakage, and bringing predictability to financial performance.' },
+  { name: 'Dr. Swapnil Patel', initials: 'SP', role: 'Head of Oncology', organisation: 'Upkar Hospital', quote: 'It provides our cancer patients with personalized, easy-to-understand information about their diagnosis, treatment pathways, all in one seamless interface. As an oncologist, it also enables me to stay connected with patients during their journey of cancer treatment and monitor compliance.' },
+  { name: 'Dr. Vijay Agarwal', initials: 'VA', role: 'President', organisation: 'CAHO', quote: 'Tulu Health has been a key partner in creating a AI powered pre-surgery consent & education platform, and an AI assistant, solving a complex challenge for both doctors and patients. Their deep healthcare insight and user-focused solutions set them apart. Tulu represents a great hope for the future of healthcare: collaborative, compassionate and innovative.' },
+  { name: 'Dr. Arkadip Chakraborty', initials: 'AC', role: 'Resident MCh Spine Surgery', organisation: 'AIIMS', quote: 'Tulu Health’s AI Solution simplifies complex surgical journeys into clear, actionable steps for patients, covering everything from cost transparency to pre-op reminders and recovery timelines. More importantly, it speaks their language, both literally and emotionally, building trust when it’s needed most.' },
+  { name: 'Dr. Apoorv Ojha', initials: 'AO', role: 'Resident DM Cardiology', organisation: 'VMMC & Safdarjung Hospital', quote: 'As a cardiologist, I’ve seen firsthand how critical patient trust and clarity are in determining outcomes. Tulu Health’s AI-driven platform has been a game changer in bridging the gaps that often lead to delayed treatment or poor follow-through' },
+];
+export const homePerspectives = [partnerPerspectives[0], partnerPerspectives[1], partnerPerspectives[3]].filter((entry): entry is PartnerPerspective => Boolean(entry));
+export const PERSPECTIVE_INTERVAL_MS = 2000;
