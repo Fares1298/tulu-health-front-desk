@@ -6,8 +6,8 @@ describe('partner perspectives publication', () => {
     expect(partnerPerspectives).toHaveLength(6);
     expect(new Set(partnerPerspectives.map(entry => entry.name)).size).toBe(6);
   });
-  it('features the requested three individuals on the homepage', () => {
-    expect(homePerspectives.map(entry => entry.name)).toEqual(['Ranjith B.R', 'A.S Pillai', 'Dr. Vijay Agarwal']);
+  it('features all six supplied individuals on the homepage', () => {
+    expect(homePerspectives.map(entry => entry.name)).toEqual(['Ranjith B.R', 'A.S Pillai', 'Dr. Swapnil Patel', 'Dr. Vijay Agarwal', 'Dr. Arkadip Chakraborty', 'Dr. Apoorv Ojha']);
   });
   it('limits Dr Arkadip’s attribution to the supplied role and AIIMS', () => {
     const entry = partnerPerspectives.find(item => item.name === 'Dr. Arkadip Chakraborty');

@@ -10,5 +10,5 @@ export const partnerPerspectives: PartnerPerspective[] = [
   { name: 'Dr. Arkadip Chakraborty', initials: 'AC', role: 'Resident MCh Spine Surgery', organisation: 'AIIMS', quote: 'Tulu Health’s AI Solution simplifies complex surgical journeys into clear, actionable steps for patients, covering everything from cost transparency to pre-op reminders and recovery timelines. More importantly, it speaks their language, both literally and emotionally, building trust when it’s needed most.' },
   { name: 'Dr. Apoorv Ojha', initials: 'AO', role: 'Resident DM Cardiology', organisation: 'VMMC & Safdarjung Hospital', quote: 'As a cardiologist, I’ve seen firsthand how critical patient trust and clarity are in determining outcomes. Tulu Health’s AI-driven platform has been a game changer in bridging the gaps that often lead to delayed treatment or poor follow-through' },
 ];
-export const homePerspectives = [partnerPerspectives[0], partnerPerspectives[1], partnerPerspectives[3]].filter((entry): entry is PartnerPerspective => Boolean(entry));
+export const homePerspectives = partnerPerspectives;
 export const PERSPECTIVE_INTERVAL_MS = 2000;
