@@ -32,7 +32,7 @@ use the editor.
 - Keep shared site navigation and footer in the root layout so all product destinations remain one website.
 - Preserve imported original pages as same-origin documents with their original scripts and assets; wrap them in a height-synchronised frame to avoid rewriting existing product and demo functionality.
 - Keep newly authored homepage content in native React routes, using shared semantic CSS tokens and the Button component; render the user-supplied AI Front Desk HTML through the preserved-document wrapper so its design and interactive demos remain intact.
-- Present Longevity OS as one preserved document with an always-visible 2 / 3 / 2 Clinic Operations editorial matrix and four-service grid; retain feature hash anchors and original-image enlarge links so all information remains accessible without disclosure controls.
+- Longevity OS is a native six-section route (src/components/longevity-os) reusing the original screenshots and copy; signature motion is CSS + IntersectionObserver with no-JS and reduced-motion static fallbacks, keeping the original feature hash ids.
 - Use shared subgrid tracks for neighbouring Longevity feature text, full-image frames, captions and service previews; reset to natural stacked flow at narrower widths to preserve complete images and avoid mobile height reservations.
 - Carry contextual review inquiries through the contact route to the existing scheduler; explicit request context avoids implying a marketing action launches patient outreach.
 - Isolate homepage motion and illustrative sequences in homepage-only components; viewport-aware playback and static base styles preserve other pages and no-script readability.

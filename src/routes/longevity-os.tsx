@@ -1,16 +1,16 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { PreservedPage } from '@/components/preserved-page';
+import { LongevityOSPage } from '@/components/longevity-os';
 
 export const Route = createFileRoute('/longevity-os')({
   head: () => ({ meta: [
-    { title: 'Longevity OS | Clinic Operations & AI Services | Tulu Health' },
-    { name: 'description', content: 'Longevity OS connects your practice around the Patient Twin. Explore the Clinic Operations command center and four AI services sharing one living patient memory.' },
+    { title: 'Longevity OS | Clinic Operations & AI Workforce | Tulu Health' },
+    { name: 'description', content: 'Your entire longevity practice in one connected operating system: Clinic Operations, an AI workforce and one shared Patient Twin.' },
     { property: 'og:title', content: 'Longevity OS | Tulu Health' },
-    { property: 'og:description', content: 'One longevity practice, all the pieces connected. Clinic Operations and AI Services, grounded in the same Patient Twin.' },
+    { property: 'og:description', content: 'Clinic operations, patient intelligence and an AI workforce — working from one shared Patient Twin.' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { property: 'og:image', content: 'https://www.tuluhealth.com/videos/clinic-demo-poster.jpg' },
-    { name: 'twitter:image', content: 'https://www.tuluhealth.com/videos/clinic-demo-poster.jpg' },
+    { property: 'og:image', content: 'https://www.tuluhealth.com/images/operations/pulse.png' },
+    { name: 'twitter:image', content: 'https://www.tuluhealth.com/images/operations/pulse.png' },
   ] }),
-  component: () => <PreservedPage name="longevity-explorer" />,
+  component: LongevityOSPage,
 });

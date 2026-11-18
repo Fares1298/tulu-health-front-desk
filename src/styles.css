@@ -892,3 +892,160 @@ a.partner-item:hover > span { color: var(--primary); }
   .partner-perspectives { padding-block: 40px; }
 }
 @media(prefers-reduced-motion:reduce) { .perspective-track .perspective-card { transition: none; transform: none; } }
+
+/* ===== Longevity OS (unified page) ===== */
+.los { --los-out: cubic-bezier(.22,.8,.3,1); --los-io: cubic-bezier(.45,0,.25,1); }
+.los h1, .los h2 { font-weight: 500; letter-spacing: -0.02em; line-height: 1.08; }
+.los h1 em, .los h2 em { font-style: italic; color: var(--primary); }
+.los h1 em { display: block; }
+.los .eyebrow { letter-spacing: .12em; color: var(--primary); }
+.los-hero { padding: 72px 0 24px; }
+.los-hero-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; }
+.los-hero h1 { font-size: clamp(36px, 4.6vw, 58px); margin: 16px 0 20px; }
+.los-hero-copy > p { font-size: 18px; line-height: 1.6; color: var(--muted-foreground); max-width: 34em; }
+.los-ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 28px; }
+.los-secondary { display: inline-flex; gap: 8px; align-items: center; padding: 10px 18px; border: 1px solid var(--border); border-radius: 999px; font-size: 14px; font-weight: 500; transition: border-color 200ms, transform 200ms var(--los-out), background 200ms; }
+.los-secondary:hover, .los-secondary:focus-visible { border-color: var(--primary); background: var(--card); transform: translateY(-1px); }
+.los-hero-media { position: relative; }
+.los-float img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--border); background: var(--card); box-shadow: 0 24px 60px -30px color-mix(in oklab, var(--foreground) 35%, transparent); }
+.los-twin-chip { position: absolute; left: -18px; bottom: -18px; display: flex; gap: 8px; align-items: center; padding: 10px 14px; border-radius: 12px; background: var(--inverse); color: var(--background); font-size: 12px; max-width: 80%; }
+.los-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); flex: none; }
+.los-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 64px; padding: 22px; border: 1px solid var(--border); border-radius: 20px; }
+.los-metrics div { text-align: center; } .los-metrics strong { display: block; font-size: 26px; color: var(--primary); font-weight: 600; }
+.los-metrics span { font-size: 13px; color: var(--muted-foreground); }
+.los-note { text-align: center; font-size: 12px; color: var(--muted-foreground); margin-top: 10px; }
+.los-section { padding: 88px 0; scroll-margin-top: 80px; }
+.los-head { max-width: 720px; margin-bottom: 40px; }
+.los-head h2 { font-size: clamp(30px, 3.6vw, 46px); margin: 12px 0 14px; }
+.los-head p { font-size: 17px; line-height: 1.6; color: var(--muted-foreground); }
+.los .dark-band .los-head p { color: var(--inverse-muted); }
+.los-note-left { font-size: 13px !important; }
+.los-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.los-pillar { display: flex; flex-direction: column; gap: 10px; padding: 32px; border-radius: 24px; border: 1px solid var(--border); background: var(--card); transition: transform 240ms var(--los-out), border-color 240ms, box-shadow 240ms; }
+.los-pillar:hover, .los-pillar:focus-visible { transform: translateY(-4px); border-color: var(--primary); box-shadow: 0 18px 40px -28px color-mix(in oklab, var(--foreground) 40%, transparent); }
+.los-pillar h3 { font-size: 26px; font-weight: 500; } .los-pillar p { font-size: 16px; line-height: 1.55; color: var(--muted-foreground); }
+.los-pillar img { margin-top: auto; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); }
+.los-pillar-dark { background: var(--inverse); color: var(--background); border-color: transparent; }
+.los-pillar-dark p { color: var(--inverse-muted); }
+.los-service-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: auto; }
+.los-service-list li { display: flex; gap: 8px; align-items: center; padding: 14px; border-radius: 12px; border: 1px solid color-mix(in oklab, var(--background) 18%, transparent); font-size: 14px; }
+.los-service-list svg { color: var(--primary); }
+.los-groups { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 28px; border-top: 1px solid var(--border); }
+.los-groups > div { padding: 20px 20px 0 0; } .los-groups h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+.los-groups p { font-size: 14px; line-height: 1.55; color: var(--muted-foreground); }
+.los-ops { margin-top: 80px; }
+.los-ops-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 32px; }
+.los-op { scroll-margin-top: 90px; display: flex; flex-direction: column; gap: 6px; padding-top: 20px; border-top: 1px solid var(--border); }
+.los-op h3 { font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--primary); }
+.los-value { font-size: 20px; font-weight: 500; line-height: 1.3; } .los-stat { font-size: 14px; font-weight: 600; }
+.los-op > p:not(.los-value):not(.los-stat) { font-size: 16px; line-height: 1.55; color: var(--muted-foreground); }
+.los-links a { color: var(--primary); text-decoration: underline; }
+.los-shot { margin-top: auto; padding-top: 10px; }
+.los-shot img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); background: var(--card); transition: transform 240ms var(--los-out); }
+.los-shot a:hover img { transform: translateY(-3px); }
+.los-shot figcaption { font-size: 12px; color: var(--muted-foreground); margin-top: 6px; }
+/* Patient Twin */
+.los-twin-section { background: var(--panel); }
+.los-twin-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: center; }
+.los-twin-layout .los-head { margin: 0; }
+.los-twin-diagram { position: relative; aspect-ratio: 1; max-width: 520px; width: 100%; margin-inline: auto; margin-bottom: 70px; }
+.los-twin-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+.los-twin-lines line { stroke: var(--primary); stroke-opacity: .45; stroke-width: 1.2; stroke-dasharray: 1; stroke-dashoffset: 0; }
+.los-pulse-ring { fill: none; stroke: var(--primary); stroke-width: 1; opacity: 0; transform-origin: 200px 200px; }
+.los-twin-core { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 30%; aspect-ratio: 1; border-radius: 50%; display: grid; place-content: center; justify-items: center; gap: 4px; text-align: center; background: var(--inverse); color: var(--background); }
+.los-twin-core svg { color: var(--primary); } .los-twin-core strong { font-size: 15px; font-weight: 600; } .los-twin-core small { font-size: 11px; color: var(--inverse-muted); }
+.los-source { position: absolute; translate: -50% -50%; display: inline-flex; gap: 6px; align-items: center; white-space: nowrap; padding: 7px 11px; border-radius: 999px; background: var(--card); border: 1px solid var(--border); font-size: 12px; font-weight: 500; }
+.los-source svg { color: var(--primary); }
+.los-actors { position: absolute; left: 0; right: 0; bottom: -64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.los-actors span { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px; border-radius: 14px; background: var(--inverse); color: var(--background); font-size: 13px; font-weight: 500; }
+.los-actors svg { color: var(--primary); } .los-actors small { font-size: 11px; color: var(--inverse-muted); font-weight: 400; }
+/* AI workforce */
+.los-ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.los-ai-card { scroll-margin-top: 90px; display: flex; flex-direction: column; gap: 12px; padding: 28px; border-radius: 22px; border: 1px solid color-mix(in oklab, var(--background) 14%, transparent); background: color-mix(in oklab, var(--background) 5%, var(--inverse)); transition: transform 240ms var(--los-out), border-color 240ms, box-shadow 240ms; }
+.los-ai-card:hover, .los-ai-card:focus-within { transform: translateY(-4px); border-color: color-mix(in oklab, var(--primary) 70%, transparent); box-shadow: 0 20px 40px -26px var(--primary); }
+.los-ai-card h3 { font-size: 22px; font-weight: 500; line-height: 1.25; } .los .dark-band .los-ai-card > p { color: var(--inverse-muted); font-size: 16px; line-height: 1.55; }
+.los .dark-band .eyebrow { color: var(--primary); }
+.los-soon { margin-left: 8px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--primary); font-size: 10px; }
+.los-mock { display: grid; gap: 8px; padding: 16px; border-radius: 14px; background: var(--card); color: var(--foreground); }
+.los .dark-band .los-mock p { color: var(--foreground); font-size: 15px; line-height: 1.5; }
+.los-mock small { font-size: 12px; color: var(--muted-foreground); }
+.los-tag { justify-self: start; font-size: 12px; padding: 4px 10px; border-radius: 999px; background: var(--panel); }
+.los-bar { display: grid; grid-template-columns: 9.5em 1fr 3em; gap: 10px; align-items: center; font-size: 13px; }
+.los-bar i { height: 8px; border-radius: 99px; background: linear-gradient(90deg, var(--primary) var(--w), var(--panel) var(--w)); }
+/* Journey */
+.los-portal { border: 1px solid var(--border); border-radius: 22px; background: var(--card); overflow: hidden; }
+.los-portal-bar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px 20px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 500; }
+.los-portal-bar span { display: inline-flex; gap: 6px; align-items: center; } .los-portal-bar small { color: var(--muted-foreground); }
+.los-portal-body { display: grid; grid-template-columns: repeat(3, 1fr) 1.4fr; gap: 16px; padding: 20px; }
+.los-portal-body > div { padding: 16px; border-radius: 14px; background: var(--background); }
+.los-portal-body strong { display: block; font-size: 32px; font-weight: 600; margin: 6px 0 4px; } .los-portal-body strong small { font-size: 15px; color: var(--muted-foreground); }
+.los-portal-body p { font-size: 14px; color: var(--muted-foreground); display: flex; gap: 6px; align-items: center; margin-top: 6px; }
+.los-portal-features { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 20px 20px; }
+.los-portal-features li { font-size: 13px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); }
+.los-journey { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 56px; }
+.los-journey::before, .los-journey::after { content: ""; position: absolute; left: 4%; right: 4%; top: 18px; height: 2px; background: var(--border); }
+.los-journey::after { background: var(--primary); transform-origin: left; transform: scaleX(1); }
+.los-journey li { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+.los-step { position: relative; z-index: 1; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--card); border: 2px solid var(--primary); font-size: 12px; font-weight: 600; transition: background 300ms, color 300ms, box-shadow 300ms; }
+.los-journey strong { font-size: 16px; font-weight: 600; margin-top: 6px; } .los-journey small { font-size: 13px; color: var(--muted-foreground); }
+.los-journey li[data-current] .los-step { box-shadow: 0 0 0 6px color-mix(in oklab, var(--primary) 20%, transparent); }
+.los-journey li[data-on] .los-step { background: var(--primary); color: var(--primary-foreground); }
+.los-journey-close { display: flex; gap: 8px; align-items: center; justify-content: center; margin-top: 32px; font-size: 18px; font-weight: 500; color: var(--primary); }
+
+/* Motion: only when JS is ready and motion is allowed */
+@media (prefers-reduced-motion: no-preference) {
+  .los-in { animation: los-up 600ms var(--los-out) both; }
+  .los-d1 { animation-delay: 80ms; } .los-d2 { animation-delay: 180ms; } .los-d3 { animation-delay: 300ms; }
+  .los-slide { animation: los-side 700ms var(--los-out) 200ms both; }
+  .los-float { animation: los-float 6s var(--los-io) 1s infinite; }
+  .los[data-motion="ready"] [data-los-reveal] { opacity: 0; transform: translateY(16px); transition: opacity 480ms var(--los-out) var(--d, 0ms), transform 480ms var(--los-out) var(--d, 0ms); }
+  .los[data-motion="ready"] [data-los-reveal][data-in] { opacity: 1; transform: none; }
+  .los[data-motion="ready"] .los-pillar[data-in], .los[data-motion="ready"] .los-ai-card[data-in] { transition: opacity 480ms var(--los-out) var(--d,0ms), transform 240ms var(--los-out), border-color 240ms, box-shadow 240ms; }
+  .los[data-motion="ready"] .los-pillar[data-in]:hover, .los[data-motion="ready"] .los-ai-card[data-in]:hover { transform: translateY(-4px); }
+  /* Patient Twin sequence */
+  .los[data-motion="ready"] .los-twin-diagram:not([data-seq]) .los-twin-core { opacity: 0; scale: .85; }
+  .los[data-motion="ready"] .los-twin-diagram:not([data-seq]) .los-source, .los[data-motion="ready"] .los-twin-diagram:not([data-seq]) .los-actors span { opacity: 0; }
+  .los[data-motion="ready"] .los-twin-diagram:not([data-seq]) line { stroke-dashoffset: 1; }
+  .los-twin-core { transition: opacity 400ms var(--los-out), scale 500ms var(--los-out); }
+  .los-source { transition: opacity 360ms var(--los-out) calc(250ms + var(--i) * 70ms); }
+  .los-twin-lines line { transition: stroke-dashoffset 600ms var(--los-io) calc(500ms + var(--i) * 60ms); }
+  .los-actors span { transition: opacity 400ms var(--los-out) calc(1200ms + var(--i) * 90ms); }
+  .los-twin-diagram[data-seq] .los-pulse-ring { animation: los-pulse 1.6s var(--los-out) 1.6s 2; }
+  /* Journey line */
+  .los[data-motion="ready"] .los-journey:not([data-seq])::after { transform: scaleX(0); }
+  .los-journey::after { transition: transform 1.4s var(--los-io) 200ms; }
+  .los-journey-close { transition: opacity 400ms; }
+  .los[data-motion="ready"] .los-journey-close:not([data-on]) { opacity: .35; }
+}
+@keyframes los-up { from { opacity: 0; transform: translateY(16px); } }
+@keyframes los-side { from { opacity: 0; transform: translateX(28px); } }
+@keyframes los-float { 50% { transform: translateY(-5px); } }
+@keyframes los-pulse { from { opacity: .6; r: 60; } to { opacity: 0; r: 180; } }
+
+@media (max-width: 1000px) {
+  .los-hero-grid, .los-twin-layout { grid-template-columns: 1fr; }
+  .los-groups { grid-template-columns: 1fr 1fr; }
+  .los-portal-body { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .los-hero { padding-top: 40px; }
+  .los-section { padding: 60px 0; }
+  .los-pillars, .los-ops-grid, .los-ai-grid, .los-groups, .los-portal-body { grid-template-columns: 1fr; }
+  .los-metrics { grid-template-columns: 1fr 1fr; }
+  .los-twin-chip { position: static; margin-top: 12px; max-width: none; }
+  .los-pillar, .los-ai-card { padding: 22px; }
+  .los-bar { grid-template-columns: 1fr 1fr 2.5em; }
+  /* Twin: readable stacked list on small screens */
+  .los-twin-diagram { aspect-ratio: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 0; }
+  .los-twin-lines { display: none; }
+  .los-twin-core { position: static; translate: none; width: 150px; margin: 0 calc(50% - 75px) 8px; }
+  .los-source { position: static; translate: none; }
+  .los-actors { position: static; width: 100%; margin-top: 10px; }
+  /* Journey: vertical timeline */
+  .los-journey { grid-template-columns: 1fr; gap: 18px; }
+  .los-journey::before, .los-journey::after { left: 18px; right: auto; top: 10px; bottom: 10px; width: 2px; height: auto; transform-origin: top; }
+  .los[data-motion="ready"] .los-journey:not([data-seq])::after { transform: scaleY(0); }
+  .los-journey li { display: grid; grid-template-columns: 38px 1fr; column-gap: 14px; text-align: left; align-items: center; }
+  .los-journey li strong { margin: 0; } .los-journey li small { grid-column: 2; }
+  .los-step { grid-row: span 2; }
+}
