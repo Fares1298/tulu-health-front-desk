@@ -1,4 +1,8 @@
 # Tulu website restructuring
+- [x] Refine three alternating Operations showcases with six-second cross-fade carousels.
+- [x] Compact AI Workforce cards while preserving all four services and capabilities.
+- [x] Create preview-only Company page with leadership and specialist placeholders.
+- [x] Verify carousel behavior, original assets, responsive layouts and Company publication guard.
 - [x] Add six native partner perspectives and a three-person homepage carousel with two-second centre focus; verify layouts and controls.
 - [x] Add partner roster, genuine available logos and homepage selection using Customer_slide.pdf.
 - [x] Add separate homepage news preview and classified News & Media page with twelve verified direct articles.

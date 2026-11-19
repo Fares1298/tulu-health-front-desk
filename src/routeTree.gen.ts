@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AiFrontDeskRouteImport } from './routes/ai-front-desk'
 import { Route as ArchitectureRouteImport } from './routes/architecture'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as GovernanceRouteImport } from './routes/governance'
@@ -47,6 +48,11 @@ const ArchitectureRoute = ArchitectureRouteImport.update({
 const BlogRoute = BlogRouteImport.update({
   id: '/blog',
   path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyRoute = CompanyRouteImport.update({
+  id: '/company',
+  path: '/company',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -130,6 +136,7 @@ export interface FileRoutesByFullPath {
   '/ai-front-desk': typeof AiFrontDeskRoute
   '/architecture': typeof ArchitectureRoute
   '/blog': typeof BlogRouteWithChildren
+  '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/demo': typeof DemoRoute
   '/governance': typeof GovernanceRoute
@@ -150,6 +157,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ai-front-desk': typeof AiFrontDeskRoute
   '/architecture': typeof ArchitectureRoute
+  '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/demo': typeof DemoRoute
   '/governance': typeof GovernanceRoute
@@ -172,6 +180,7 @@ export interface FileRoutesById {
   '/ai-front-desk': typeof AiFrontDeskRoute
   '/architecture': typeof ArchitectureRoute
   '/blog': typeof BlogRouteWithChildren
+  '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/demo': typeof DemoRoute
   '/governance': typeof GovernanceRoute
@@ -195,6 +204,7 @@ export interface FileRouteTypes {
     | '/ai-front-desk'
     | '/architecture'
     | '/blog'
+    | '/company'
     | '/contact'
     | '/demo'
     | '/governance'
@@ -215,6 +225,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ai-front-desk'
     | '/architecture'
+    | '/company'
     | '/contact'
     | '/demo'
     | '/governance'
@@ -236,6 +247,7 @@ export interface FileRouteTypes {
     | '/ai-front-desk'
     | '/architecture'
     | '/blog'
+    | '/company'
     | '/contact'
     | '/demo'
     | '/governance'
@@ -258,6 +270,7 @@ export interface RootRouteChildren {
   AiFrontDeskRoute: typeof AiFrontDeskRoute
   ArchitectureRoute: typeof ArchitectureRoute
   BlogRoute: typeof BlogRouteWithChildren
+  CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
   DemoRoute: typeof DemoRoute
   GovernanceRoute: typeof GovernanceRoute
@@ -301,6 +314,13 @@ declare module '@tanstack/react-router' {
       path: '/blog'
       fullPath: '/blog'
       preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company': {
+      id: '/company'
+      path: '/company'
+      fullPath: '/company'
+      preLoaderRoute: typeof CompanyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -428,6 +448,7 @@ const rootRouteChildren: RootRouteChildren = {
   AiFrontDeskRoute: AiFrontDeskRoute,
   ArchitectureRoute: ArchitectureRoute,
   BlogRoute: BlogRouteWithChildren,
+  CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
   DemoRoute: DemoRoute,
   GovernanceRoute: GovernanceRoute,

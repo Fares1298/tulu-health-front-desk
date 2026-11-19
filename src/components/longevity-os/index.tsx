@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Activity, ArrowRight, Bot, CalendarDays, FileText, FlaskConical, Heart, MessageCircle, Route as RouteIcon, Stethoscope, Target, User, Watch } from 'lucide-react';
 import { DemoButton } from '@/components/tulu-shell';
 import { useViewportSequence } from '@/components/home-motion';
+import { OperationsShowcases } from './operations-showcases';
 
 const IMG = 'https://www.tuluhealth.com/images/operations/';
 const DEMO_NOTE = 'Seeded-demo data and product examples — not verified customer results.';
@@ -23,11 +24,6 @@ function useReveals() {
   return ref;
 }
 
-function Shot({ name, label }: { name: string; label: string }) {
-  const src = `${IMG}${name}.png`;
-  return <figure className="los-shot"><a href={src} target="_blank" rel="noopener" aria-label={`Enlarge ${label} screen (opens in a new tab)`}><img src={src} alt={`Tulu Health ${label} screen`} width={1600} height={1000} loading="lazy" /></a><figcaption>{label} · Seeded-demo product screenshot</figcaption></figure>;
-}
-
 export function HeroSection() {
   return <section className="los-hero grid-background" aria-labelledby="los-hero-title"><div className="wrap los-hero-grid">
     <div className="los-hero-copy">
@@ -46,16 +42,6 @@ export function HeroSection() {
   </section>;
 }
 
-const operations = [
-  { id: 'worklist', name: 'Worklist', value: "426 patients, ranked by what they're worth to save.", stat: '$1.8M in identified revenue at risk · 378 actions already queued', copy: 'Every patient scored on revenue at risk and lifetime value, with the next-best action attached.' },
-  { id: 'campaigns', name: 'Campaigns', value: 'Build the list. Send the campaign. Watch it work.', stat: '42 of 412 patients renewing in the next 30 days', copy: 'Cohorts built live against the real patient panel. Compose once, send by SMS, email or voice agent. Sends in the demo are simulated.' },
-  { id: 'pulse', name: 'Clinic Pulse', value: 'The number your board is asking for, on one screen.', stat: '29% of revenue driven by the top 10% of patients', copy: 'Revenue concentration, churn leakage and campaign ROI, computed from the same twin.' },
-  { id: 'capacity', name: 'Capacity', value: 'See the empty slot before the month closes, not after.', stat: '74% provider utilization · $28,400 in unsold capacity this month', copy: 'Provider utilization inside a healthy target band, with unsold capacity visible while there is time to fill it.' },
-  { id: 'membership', name: 'Membership', value: 'Know your MRR the way a subscription business should.', stat: '$193,922 MRR across 189 active members', copy: 'Active members, churn, renewals, entitlements and renewal value by tier.' },
-  { id: 'compliance', name: 'Compliance', value: 'Two critical risks, ranked ahead of everything else.', stat: '2 critical risks flagged · 3 high · 7 states tracked', copy: "Credentialing, state-specific rules and audit readiness, ranked by severity. This tracks the clinic's own risk register, not a Tulu certification." },
-  { id: 'outcomes', name: 'Outcomes', value: 'Proof the program works, not a testimonial.', stat: '−14 mg/dL median ApoB change · 82% of patients improved (n=34)', copy: 'Measured change across a reset cohort. Measured, not anecdotal.' },
-];
-
 const groups = [
   { title: 'Growth', items: 'Worklist prioritization · Campaigns & recall · Referral and acquisition tracking' },
   { title: 'Operations', items: 'Capacity & provider utilization · Protocol adherence · Overdue diagnostics' },
@@ -73,11 +59,7 @@ export function PlatformSection() {
     <div className="los-groups">{groups.map((g, i) => <div key={g.title} data-los-reveal style={{ ['--d' as string]: `${i * 80}ms` }}><h3>{g.title}</h3><p>{g.items}</p></div>)}</div>
     <div id="clinic-operations" className="los-ops">
       <div className="los-head" data-los-reveal><span className="eyebrow">CLINIC OPERATIONS IN DETAIL</span><p className="los-note-left">{DEMO_NOTE}</p></div>
-      <div className="los-ops-grid">{operations.map((o, i) => <article key={o.id} id={o.id} className="los-op" data-los-reveal style={{ ['--d' as string]: `${(i % 2) * 90}ms` }}>
-        <h3>{o.name}</h3><p className="los-value">{o.value}</p><p className="los-stat">{o.stat}</p><p>{o.copy}</p>
-        {o.id === 'compliance' && <p className="los-links"><Link to="/security">Review security details</Link> · <Link to="/governance">AI governance</Link></p>}
-        <Shot name={o.id} label={o.name} />
-      </article>)}</div>
+      <OperationsShowcases />
     </div>
   </div></section>;
 }
@@ -105,10 +87,10 @@ export function AIWorkforceSection() {
   return <section id="ai-workforce" className="los-section dark-band" aria-labelledby="los-ai-title"><div className="wrap">
     <div className="los-head" data-los-reveal><span className="eyebrow">AI WORKFORCE</span><h2 id="los-ai-title">Four services. <em>One shared memory.</em></h2><p>{DEMO_NOTE}</p></div>
     <div className="los-ai-grid">
-      <article id="recall" className="los-ai-card" data-los-reveal><span className="eyebrow">AI RECALL</span><h3>Your best revenue is sitting in your lapsed list.</h3><p>The Twin identifies who is due and why; AI Recall reaches out with a relevant reason to return, grounded in the patient’s real history, and rebooks.</p><div className="los-mock"><small>Voice agent · outbound · sample conversation</small><p>“Hi Maria, it’s been about six months since your last panel, you were mid-protocol. I’d love to help you pick it back up. Can I find you a time?”</p><span className="los-tag">Reactivation · writes back to twin</span></div><Link to="/contact" className="text-link">Ask about AI Recall <ArrowRight /></Link></article>
-      <article id="front-desk" className="los-ai-card" data-los-reveal style={{ ['--d' as string]: '80ms' }}><span className="eyebrow">AI FRONT DESK</span><h3>Never send another inbound to voicemail.</h3><p>Answers calls and chats 24/7, recognises new leads and existing members, answers questions, books into your scheduler and hands off to a human when it should.</p><div className="los-mock"><small>Sample call · inbound · after-hours</small><p>“Thanks for calling, I can get you booked for a consult this week. Have you visited us before, or is this your first time?”</p><span className="los-tag">New caller · booking consult</span></div><Link to="/ai-front-desk" className="text-link">Explore AI Front Desk <ArrowRight /></Link></article>
-      <article id="navigator" className="los-ai-card" data-los-reveal style={{ ['--d' as string]: '160ms' }}><span className="eyebrow">AI CARE NAVIGATOR</span><h3>Grow revenue per patient by guiding them to their right next step.</h3><p>Biomarkers, wearable signals and protocol cadence identify who is genuinely due; Navigator reaches out with the appropriate next step and escalates to a clinician when the data warrants.</p><div className="los-mock"><small>Patient context · David R. · due for quarterly panel</small><p>“Hi David, your quarterly panel is coming due and your sleep metrics have shifted, let's get you booked so your physician can review.”</p><span className="los-tag">Escalated to Dr. Lee for review</span></div><Link to="/contact" className="text-link">Ask about AI Care Navigator <ArrowRight /></Link></article>
-      <article id="benchmarks" className="los-ai-card" data-los-reveal style={{ ['--d' as string]: '240ms' }}><span className="eyebrow">AI BENCHMARKS <span className="los-soon">COMING SOON</span></span><h3>Know how your practice really compares.</h3><p>Compares recall rates, front-desk conversion and care-navigation patterns across practices using anonymised, aggregated data.</p><div className="los-mock"><small>Practice vs. network · illustrative</small>{[['Recall rate', 68], ['Front-desk conversion', 74], ['Care navigation', 55]].map(([l, v]) => <div key={l} className="los-bar"><span>{l}</span><i style={{ ['--w' as string]: `${v}%` }} /><b>{v}%</b></div>)}<small>Sample percentages only — not verified network results.</small></div><Link to="/contact" className="text-link">Ask about AI Benchmarks <ArrowRight /></Link></article>
+      <article id="recall" className="los-ai-card" data-los-reveal><span className="los-ai-icon"><CalendarDays size={18} /></span><span className="eyebrow">AI RECALL</span><h3>Your best revenue is sitting in your lapsed list.</h3><p>The Twin identifies who is due and why; AI Recall reaches out with a relevant reason to return, grounded in the patient’s real history, and rebooks.</p><div className="los-mock"><small>Voice agent · outbound · sample conversation</small><p>“Hi Maria, it’s been about six months since your last panel, you were mid-protocol. I’d love to help you pick it back up. Can I find you a time?”</p><span className="los-tag">Reactivation · writes back to twin</span></div><Link to="/contact" className="text-link">Ask about AI Recall <ArrowRight /></Link></article>
+      <article id="front-desk" className="los-ai-card" data-los-reveal style={{ ['--d' as string]: '80ms' }}><span className="los-ai-icon"><MessageCircle size={18} /></span><span className="eyebrow">AI FRONT DESK</span><h3>Never send another inbound to voicemail.</h3><p>Answers calls and chats 24/7, recognises new leads and existing members, answers questions, books into your scheduler and hands off to a human when it should.</p><div className="los-mock"><small>Sample call · inbound · after-hours</small><p>“Thanks for calling, I can get you booked for a consult this week. Have you visited us before, or is this your first time?”</p><span className="los-tag">New caller · booking consult</span></div><Link to="/ai-front-desk" className="text-link">Explore AI Front Desk <ArrowRight /></Link></article>
+      <article id="navigator" className="los-ai-card" data-los-reveal style={{ ['--d' as string]: '160ms' }}><span className="los-ai-icon"><RouteIcon size={18} /></span><span className="eyebrow">AI CARE NAVIGATOR</span><h3>Grow revenue per patient by guiding them to their right next step.</h3><p>Biomarkers, wearable signals and protocol cadence identify who is genuinely due; Navigator reaches out with the appropriate next step and escalates to a clinician when the data warrants.</p><div className="los-mock"><small>Patient context · David R. · due for quarterly panel</small><p>“Hi David, your quarterly panel is coming due and your sleep metrics have shifted, let's get you booked so your physician can review.”</p><span className="los-tag">Escalated to Dr. Lee for review</span></div><Link to="/contact" className="text-link">Ask about AI Care Navigator <ArrowRight /></Link></article>
+      <article id="benchmarks" className="los-ai-card" data-los-reveal style={{ ['--d' as string]: '240ms' }}><span className="los-ai-icon"><Activity size={18} /></span><span className="eyebrow">AI BENCHMARKS <span className="los-soon">COMING SOON</span></span><h3>Know how your practice really compares.</h3><p>Compares recall rates, front-desk conversion and care-navigation patterns across practices using anonymised, aggregated data.</p><div className="los-mock"><small>Practice vs. network · illustrative</small>{[['Recall rate', 68], ['Front-desk conversion', 74], ['Care navigation', 55]].map(([l, v]) => <div key={l} className="los-bar"><span>{l}</span><i style={{ ['--w' as string]: `${v}%` }} /><b>{v}%</b></div>)}<small>Sample percentages only — not verified network results.</small></div><Link to="/contact" className="text-link">Ask about AI Benchmarks <ArrowRight /></Link></article>
     </div>
   </div></section>;
 }

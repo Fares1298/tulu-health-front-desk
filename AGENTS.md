@@ -40,3 +40,6 @@ use the editor.
 - Keep partner/media data in a shared browser-safe evidence catalogue and render native Partners and News & Media routes; explicit publication guards prevent pending statements or duplicate/unverified coverage from appearing.
 - Store supplied individual perspectives in a shared catalogue; render all six on Partners and use Embla only for the homepage selection, with pause-on-hover/focus and a static reduced-motion fallback to preserve readable quotations without visible controls.
 - Animate only the homepage partner-logo strip with equal-width repeated groups moving right; inert duplicates, pause-on-focus and a reduced-motion grid preserve accessible original links and the full Partners roster.
+
+- Keep Operations slide data and playback in focused Longevity modules; one stable figure track with full original images prevents image/caption layout shifts.
+- Company content is unlinked and preview-host gated with noindex; production build mode alone cannot distinguish preview from publication.
