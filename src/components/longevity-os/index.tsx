@@ -4,6 +4,8 @@ import { Activity, ArrowRight, Bot, CalendarDays, FileText, FlaskConical, Heart,
 import { DemoButton } from '@/components/tulu-shell';
 import { useViewportSequence } from '@/components/home-motion';
 import { OperationsShowcases } from './operations-showcases';
+import { AIWorkforceSection } from './ai-workforce';
+export { AIWorkforceSection } from './ai-workforce';
 
 const IMG = 'https://www.tuluhealth.com/images/operations/';
 const DEMO_NOTE = 'Seeded-demo data and product examples — not verified customer results.';
@@ -57,10 +59,6 @@ export function PlatformSection() {
       <Link to="/longevity-os" hash="ai-workforce" className="los-pillar los-pillar-dark" data-los-reveal style={{ ['--d' as string]: '90ms' }}><span className="eyebrow">AI WORKFORCE</span><h3>Scale every interaction.</h3><p>AI Recall, AI Front Desk, AI Care Navigator and AI Benchmarks — reading from and writing back to the same Patient Twin.</p><ul className="los-service-list">{['AI Recall', 'AI Front Desk', 'AI Care Navigator', 'AI Benchmarks'].map(s => <li key={s}><Bot size={15} />{s}</li>)}</ul></Link>
     </div>
     <div className="los-groups">{groups.map((g, i) => <div key={g.title} data-los-reveal style={{ ['--d' as string]: `${i * 80}ms` }}><h3>{g.title}</h3><p>{g.items}</p></div>)}</div>
-    <div id="clinic-operations" className="los-ops">
-      <div className="los-head" data-los-reveal><span className="eyebrow">CLINIC OPERATIONS IN DETAIL</span><p className="los-note-left">{DEMO_NOTE}</p></div>
-      <OperationsShowcases />
-    </div>
   </div></section>;
 }
 
@@ -83,15 +81,10 @@ export function PatientTwinSection() {
   </div></section>;
 }
 
-export function AIWorkforceSection() {
-  return <section id="ai-workforce" className="los-section dark-band" aria-labelledby="los-ai-title"><div className="wrap">
-    <div className="los-head" data-los-reveal><span className="eyebrow">AI WORKFORCE</span><h2 id="los-ai-title">Four services. <em>One shared memory.</em></h2><p>{DEMO_NOTE}</p></div>
-    <div className="los-ai-grid">
-      <article id="recall" className="los-ai-card" data-los-reveal><span className="los-ai-icon"><CalendarDays size={18} /></span><span className="eyebrow">AI RECALL</span><h3>Your best revenue is sitting in your lapsed list.</h3><p>The Twin identifies who is due and why; AI Recall reaches out with a relevant reason to return, grounded in the patient’s real history, and rebooks.</p><div className="los-mock"><small>Voice agent · outbound · sample conversation</small><p>“Hi Maria, it’s been about six months since your last panel, you were mid-protocol. I’d love to help you pick it back up. Can I find you a time?”</p><span className="los-tag">Reactivation · writes back to twin</span></div><Link to="/contact" className="text-link">Ask about AI Recall <ArrowRight /></Link></article>
-      <article id="front-desk" className="los-ai-card" data-los-reveal style={{ ['--d' as string]: '80ms' }}><span className="los-ai-icon"><MessageCircle size={18} /></span><span className="eyebrow">AI FRONT DESK</span><h3>Never send another inbound to voicemail.</h3><p>Answers calls and chats 24/7, recognises new leads and existing members, answers questions, books into your scheduler and hands off to a human when it should.</p><div className="los-mock"><small>Sample call · inbound · after-hours</small><p>“Thanks for calling, I can get you booked for a consult this week. Have you visited us before, or is this your first time?”</p><span className="los-tag">New caller · booking consult</span></div><Link to="/ai-front-desk" className="text-link">Explore AI Front Desk <ArrowRight /></Link></article>
-      <article id="navigator" className="los-ai-card" data-los-reveal style={{ ['--d' as string]: '160ms' }}><span className="los-ai-icon"><RouteIcon size={18} /></span><span className="eyebrow">AI CARE NAVIGATOR</span><h3>Grow revenue per patient by guiding them to their right next step.</h3><p>Biomarkers, wearable signals and protocol cadence identify who is genuinely due; Navigator reaches out with the appropriate next step and escalates to a clinician when the data warrants.</p><div className="los-mock"><small>Patient context · David R. · due for quarterly panel</small><p>“Hi David, your quarterly panel is coming due and your sleep metrics have shifted, let's get you booked so your physician can review.”</p><span className="los-tag">Escalated to Dr. Lee for review</span></div><Link to="/contact" className="text-link">Ask about AI Care Navigator <ArrowRight /></Link></article>
-      <article id="benchmarks" className="los-ai-card" data-los-reveal style={{ ['--d' as string]: '240ms' }}><span className="los-ai-icon"><Activity size={18} /></span><span className="eyebrow">AI BENCHMARKS <span className="los-soon">COMING SOON</span></span><h3>Know how your practice really compares.</h3><p>Compares recall rates, front-desk conversion and care-navigation patterns across practices using anonymised, aggregated data.</p><div className="los-mock"><small>Practice vs. network · illustrative</small>{[['Recall rate', 68], ['Front-desk conversion', 74], ['Care navigation', 55]].map(([l, v]) => <div key={l} className="los-bar"><span>{l}</span><i style={{ ['--w' as string]: `${v}%` }} /><b>{v}%</b></div>)}<small>Sample percentages only — not verified network results.</small></div><Link to="/contact" className="text-link">Ask about AI Benchmarks <ArrowRight /></Link></article>
-    </div>
+export function ClinicOperationsSection() {
+  return <section id="clinic-operations" className="los-section" aria-labelledby="los-operations-title"><div className="wrap">
+    <div className="los-head" data-los-reveal><span className="eyebrow">CLINIC OPERATIONS</span><h2 id="los-operations-title">Run a better practice. <em>See the whole picture.</em></h2><p className="los-note-left">{DEMO_NOTE}</p></div>
+    <OperationsShowcases />
   </div></section>;
 }
 
@@ -129,5 +122,5 @@ export function FinalCTA() {
 
 export function LongevityOSPage() {
   const ref = useReveals();
-  return <main ref={ref} className="los"><HeroSection /><PlatformSection /><PatientTwinSection /><AIWorkforceSection /><PatientJourneySection /><FinalCTA /></main>;
+  return <main ref={ref} className="los"><HeroSection /><AIWorkforceSection /><ClinicOperationsSection /><PlatformSection /><PatientTwinSection /><PatientJourneySection /><FinalCTA /></main>;
 }

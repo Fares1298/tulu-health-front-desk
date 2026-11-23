@@ -16,6 +16,7 @@ const destinations = [
   { to: '/twin', label: 'Patient Twin' },
   { to: '/longevity-os', label: 'Longevity OS' },
   { to: '/demo', label: 'See It in Action' },
+  { to: '/company', label: 'Company' },
   { to: '/blog', label: 'Blog' },
 ] as const;
 
