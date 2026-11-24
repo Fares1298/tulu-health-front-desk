@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { OPERATIONS_INTERVAL_MS } from './operations-data';
 
-export function useOperationCarousel(count: number, paused: boolean) {
+export function useOperationCarousel(count: number, paused: boolean, interval = OPERATIONS_INTERVAL_MS) {
   const [selected, setSelected] = useState(0);
   const [revision, setRevision] = useState(0);
   const select = (index: number) => {
@@ -11,8 +11,8 @@ export function useOperationCarousel(count: number, paused: boolean) {
   };
   useEffect(() => {
     if (paused || count < 2) return;
-    const timer = window.setTimeout(() => setSelected(index => (index + 1) % count), OPERATIONS_INTERVAL_MS);
+    const timer = window.setTimeout(() => setSelected(index => (index + 1) % count), interval);
     return () => window.clearTimeout(timer);
-  }, [count, paused, selected, revision]);
+  }, [count, interval, paused, selected, revision]);
   return { selected, select };
 }

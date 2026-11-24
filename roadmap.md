@@ -1,9 +1,9 @@
 # Tulu website restructuring
-- [ ] Integrate the approved compact AI Workforce design natively and verify its interfaces/motion.
-- [ ] Integrate all 14 Clinic Operations steps and screens (blocked: the named Operations HTML is not present among accessible attachments).
-- [ ] Place AI Workforce and Clinic Operations after the hero, preserving subsequent content.
-- [ ] Add public Company navigation between See It in Action and Blog; preserve unsupplied profile placeholders.
-- [ ] Verify section layout, mobile/tablet behavior, navigation and existing Operations playback.
+- [x] Integrate the approved compact AI Workforce design natively and verify its interfaces/motion.
+- [x] Integrate the now-supplied Clinic Operations HTML with all 14 screens and interactions.
+- [x] Place AI Workforce immediately after Clinic Operations and before Patient Twin.
+- [x] Add public Company navigation between See It in Action and Blog; preserve unsupplied profile placeholders.
+- [x] Verify section layout, mobile/tablet behavior, navigation and existing Operations playback.
 - [x] Refine three alternating Operations showcases with six-second cross-fade carousels.
 - [x] Compact AI Workforce cards while preserving all four services and capabilities.
 - [x] Create preview-only Company page with leadership and specialist placeholders.

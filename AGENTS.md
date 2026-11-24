@@ -32,7 +32,7 @@ use the editor.
 - Keep shared site navigation and footer in the root layout so all product destinations remain one website.
 - Preserve imported original pages as same-origin documents with their original scripts and assets; wrap them in a height-synchronised frame to avoid rewriting existing product and demo functionality.
 - Keep newly authored homepage content in native React routes, using shared semantic CSS tokens and the Button component; render the user-supplied AI Front Desk HTML through the preserved-document wrapper so its design and interactive demos remain intact.
-- Longevity OS uses native focused section modules with AI Workforce then Clinic Operations after the hero; scoped CSS and cleaned-up IntersectionObservers preserve supplied designs, original feature hashes and no-script/reduced-motion readability.
+- Longevity OS uses native focused section modules with Clinic Operations followed by AI Workforce before Patient Twin; scoped CSS and cleaned-up IntersectionObservers preserve supplied designs, original feature hashes and no-script/reduced-motion readability.
 - Use shared subgrid tracks for neighbouring Longevity feature text, full-image frames, captions and service previews; reset to natural stacked flow at narrower widths to preserve complete images and avoid mobile height reservations.
 - Carry contextual review inquiries through the contact route to the existing scheduler; explicit request context avoids implying a marketing action launches patient outreach.
 - Isolate homepage motion and illustrative sequences in homepage-only components; viewport-aware playback and static base styles preserve other pages and no-script readability.
@@ -41,5 +41,5 @@ use the editor.
 - Store supplied individual perspectives in a shared catalogue; render all six on Partners and use Embla only for the homepage selection, with pause-on-hover/focus and a static reduced-motion fallback to preserve readable quotations without visible controls.
 - Animate only the homepage partner-logo strip with equal-width repeated groups moving right; inert duplicates, pause-on-focus and a reduced-motion grid preserve accessible original links and the full Partners roster.
 
-- Keep Operations slide data and playback in focused Longevity modules; one stable figure track with full original images prevents image/caption layout shifts.
+- Keep supplied Operations walkthrough graphics and copy in a browser-safe catalogue with scoped CSS and native step controls; shared grid tracks retain all screens without layout shifts and viewport-aware playback respects reduced motion.
 - Company is a public native route linked between the demo and blog destinations; keep noindex while profile content awaits approval to avoid indexing incomplete biographies.

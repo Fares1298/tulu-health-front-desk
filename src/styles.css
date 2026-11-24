@@ -8,6 +8,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "./components/longevity-os/clinic-operations.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -1248,3 +1249,86 @@ a.partner-item:hover > span { color: var(--primary); }
 @media(max-width:800px) { .twf-wrap { width:calc(100% - 48px); } }
 @media(max-width:540px) { .twf-wrap { width:calc(100% - 36px); } .twf-ai-head-note { white-space:normal; } .twf-demo-top { white-space:normal; gap:4px; flex-wrap:wrap; } }
 @media(prefers-reduced-motion:reduce) { .twf-ai-section[data-animated] .twf-workforce-card:not([data-entered]) { opacity:1; transform:none; filter:none; } .twf-workforce-card:hover { translate:none; } }
+
+/* Supplied Clinic Operations graphic palette; isolated semantic preview tokens. */
+:root {
+  --clinic-preview-color-1: #f5efe5;
+  --clinic-preview-color-2: #fcfaf6;
+  --clinic-preview-color-3: #2c241f;
+  --clinic-preview-color-4: #82776b;
+  --clinic-preview-color-5: #ded4c7;
+  --clinic-preview-color-6: #b66d4e;
+  --clinic-preview-color-7: #f4e8e2;
+  --clinic-preview-color-8: #74795d;
+  --clinic-preview-color-9: #527873;
+  --clinic-preview-color-10: #2b241f;
+  --clinic-preview-color-11: #f5efe5ee;
+  --clinic-preview-color-12: #eee1cf;
+  --clinic-preview-color-13: #594b40;
+  --clinic-preview-color-14: #e9e0d5;
+  --clinic-preview-color-15: #49351f10;
+  --clinic-preview-color-16: #8b7d6e;
+  --clinic-preview-color-17: #e8f0ed;
+  --clinic-preview-color-18: #f8f5ef;
+  --clinic-preview-color-19: #eee7dc;
+  --clinic-preview-color-20: #eee8df;
+  --clinic-preview-color-21: #eae3d8;
+  --clinic-preview-color-22: #786c60;
+  --clinic-preview-color-23: #e8dfd3;
+  --clinic-preview-color-24: #a45f46;
+  --clinic-preview-color-25: #d7cbbd;
+  --clinic-preview-color-26: #f1ece4;
+  --clinic-preview-color-27: #fffdfa;
+  --clinic-preview-color-28: #eee7de;
+  --clinic-preview-color-29: #e6ddd1;
+  --clinic-preview-color-30: #c38a43;
+  --clinic-preview-color-31: #ddc9a7;
+  --clinic-preview-color-32: #e8e1d6;
+  --clinic-preview-color-33: #e7ddd0;
+  --clinic-preview-color-34: #e5dacb;
+  --clinic-preview-color-35: #f3ece2;
+  --clinic-preview-color-36: #a69785;
+  --clinic-preview-color-37: #9a8e81;
+  --clinic-preview-color-38: #cdbda9;
+  --clinic-preview-color-39: #e4d8ca;
+  --clinic-preview-color-40: #e9dfd3;
+  --clinic-preview-color-41: #887b6e;
+  --clinic-preview-color-42: #e1d4c5;
+  --clinic-preview-color-43: #b66d4e22;
+  --clinic-preview-color-44: #b66d4e25;
+  --clinic-preview-color-45: #eee6dc;
+  --clinic-preview-color-46: #766b60;
+  --clinic-preview-color-47: #f7f3ed;
+  --clinic-preview-color-48: #918476;
+  --clinic-preview-color-49: #e8e0d4;
+  --clinic-preview-color-50: #74685c;
+  --clinic-preview-color-51: #f1dfd4;
+  --clinic-preview-color-52: #e1e9df;
+  --clinic-preview-color-53: #63775d;
+  --clinic-preview-color-54: #f5e7e1;
+  --clinic-preview-color-55: #f4edda;
+  --clinic-preview-color-56: #92713c;
+  --clinic-preview-color-57: #8a7e72;
+  --clinic-preview-color-58: #7b9a7c;
+  --clinic-preview-color-59: #7b9a7c20;
+  --clinic-preview-color-60: #f7f2eb;
+  --clinic-preview-color-61: #eee4d8;
+  --clinic-preview-color-62: #b5a797;
+  --clinic-preview-color-63: #f4e5df;
+  --clinic-preview-color-64: #f3eddd;
+  --clinic-preview-color-65: #94723e;
+  --clinic-preview-color-66: #e8eee6;
+  --clinic-preview-color-67: #687d63;
+  --clinic-preview-color-68: #6d6258;
+  --clinic-preview-color-69: #66816a;
+  --clinic-preview-color-70: #f2e4dc;
+  --clinic-preview-color-71: #647c60;
+  --clinic-preview-color-72: #5c8061;
+  --clinic-preview-color-73: #e8f0e8;
+  --clinic-preview-color-74: #e6dacc;
+  --clinic-preview-color-75: #f2eee8;
+  --clinic-preview-color-76: #5f8062;
+  --clinic-preview-color-77: #c98260;
+  --clinic-preview-color-78: #7e987b;
+  --clinic-preview-color-79: white;
+}

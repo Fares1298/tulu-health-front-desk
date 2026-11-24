@@ -1,0 +1,144 @@
+[
+  {
+    "id": "growth",
+    "category": "01 \u2014 GROWTH & RETENTION",
+    "headline": "Know which patients need attention.",
+    "description": "Turn patient data into clear next actions with prioritized worklists, targeted campaigns and coordinated follow-ups.",
+    "interval": 4800,
+    "previewHeading": "<div class=\"growth-screen-top\">\n<div>\n<div class=\"tiny\">TULU GROWTH WORKSPACE</div>\n<div class=\"ptitle\">Patient engagement <i>workspace</i></div>\n</div>\n<span class=\"live\"><span class=\"live-pulse\"></span> Interactive preview</span>\n</div>",
+    "steps": [
+      {
+        "id": "worklist",
+        "label": "Patient Worklists",
+        "kicker": "STEP 01 \u00b7 PATIENT WORKLISTS",
+        "headline": "Every patient who needs attention, in one clear view.",
+        "description": "See the people, signals and next actions that need your team's attention today.",
+        "html": "<div class=\"growth-screen active\" data-screen=\"0\">\n<div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">PATIENT WORKLISTS \u00b7 TODAY</span><h3>Who to act on <em>today</em></h3></div><span class=\"screen-filter\">All patients\u2304</span></div>\n<div class=\"screen-summary\"><div><small>Needs attention</small><b>128</b></div><div><small>High priority</small><b>34</b></div><div><small>Potential value</small><b>$184k</b></div></div>\n<div class=\"screen-table-head\"><span>Patient</span><span>Signal</span><span>Priority</span><span>Next action</span></div>\n<div class=\"screen-patient\"><span class=\"screen-avatar\">LC</span><b>Lily Clark<small>Membership \u00b7 27 days to renewal</small></b><span class=\"signal-tag\">At risk</span><span class=\"action-tag\">Schedule check-in \u2197</span></div>\n<div class=\"screen-patient\"><span class=\"screen-avatar peach\">BR</span><b>Brian Rodriguez<small>Missed follow-up \u00b7 42 days</small></b><span class=\"signal-tag amber\">Overdue</span><span class=\"action-tag\">Send follow-up \u2197</span></div>\n<div class=\"screen-patient\"><span class=\"screen-avatar green\">OR</span><b>Oliver Ramirez<small>Plan adherence \u00b7 declining</small></b><span class=\"signal-tag\">At risk</span><span class=\"action-tag\">Review plan \u2197</span></div>\n<div class=\"screen-footer\"><span class=\"screen-dot\"></span> Worklist updated just now <span class=\"screen-footer-right\">View all patients \u2192</span></div>\n</div>"
+      },
+      {
+        "id": "prioritization",
+        "label": "Prioritization",
+        "kicker": "STEP 02 \u00b7 PRIORITIZATION",
+        "headline": "Know who to focus on first.",
+        "description": "Rank opportunities by urgency, patient context and potential value so the team acts on the right things.",
+        "html": "<div class=\"growth-screen\" data-screen=\"1\">\n<div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">PRIORITIZATION \u00b7 NEXT BEST ACTIONS</span><h3>Focus on what <em>matters most</em></h3></div><span class=\"screen-filter\">Priority score\u2304</span></div>\n<div class=\"priority-layout\">\n<div class=\"priority-feature\"><span class=\"screen-eyebrow\">TOP OPPORTUNITY</span><b>High-value renewals</b><strong>34 <small>patients</small></strong><p>Patients with high lifetime value and an upcoming renewal window.</p><div class=\"priority-bar\"><i style=\"--bar:86%\"></i></div><small>Priority score \u00b7 86/100</small></div>\n<div class=\"priority-list\"><div class=\"priority-item\"><span class=\"priority-rank\">01</span><div><b>Renewal at risk</b><small>34 patients \u00b7 $92k potential</small></div><span class=\"priority-high\">High</span></div><div class=\"priority-item\"><span class=\"priority-rank\">02</span><div><b>Missed follow-up</b><small>28 patients \u00b7 care continuity</small></div><span class=\"priority-medium\">Medium</span></div><div class=\"priority-item\"><span class=\"priority-rank\">03</span><div><b>Membership opportunity</b><small>19 patients \u00b7 $38k potential</small></div><span class=\"priority-medium\">Medium</span></div><div class=\"priority-item\"><span class=\"priority-rank\">04</span><div><b>Re-engagement</b><small>47 patients \u00b7 dormant</small></div><span class=\"priority-low\">Low</span></div></div>\n</div>\n<div class=\"screen-footer\"><span class=\"screen-dot\"></span> Priorities ranked by urgency, patient context and value <span class=\"screen-footer-right\">Open prioritization \u2192</span></div>\n</div>"
+      },
+      {
+        "id": "campaigns",
+        "label": "Campaigns",
+        "kicker": "STEP 03 \u00b7 CAMPAIGNS",
+        "headline": "Move from insight to coordinated outreach.",
+        "description": "Build focused campaigns for the right patient groups and follow their performance as they run.",
+        "html": "<div class=\"growth-screen\" data-screen=\"2\">\n<div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">CAMPAIGNS \u00b7 AUDIENCE &amp; OUTREACH</span><h3>Turn insights into <em>campaigns</em></h3></div><span class=\"screen-filter\">This month\u2304</span></div>\n<div class=\"campaign-topline\"><div><span class=\"campaign-status\"></span> Campaign performance <small> \u00b7 Last 30 days</small></div><span class=\"screen-filter\">All campaigns\u2304</span></div>\n<div class=\"campaign-metrics\"><div><small>Patients reached</small><b>1,284</b><span>\u2191 18.4%</span></div><div><small>Appointments booked</small><b>186</b><span>\u2191 12.8%</span></div><div><small>Recovered revenue</small><b>$42.8k</b><span>\u2191 21.2%</span></div></div>\n<div class=\"campaign-card\"><div><span class=\"campaign-icon\">\u2733</span><div><b>Membership renewal</b><small>Patients with renewals due in 30 days</small></div></div><span class=\"campaign-live\">Active</span><div class=\"campaign-progress\"><i style=\"--bar:72%\"></i></div><div class=\"campaign-meta\"><span>72% audience reached</span><span>84 of 116 patients</span></div></div>\n<div class=\"campaign-card\"><div><span class=\"campaign-icon peach\">\u2197</span><div><b>Re-engage dormant patients</b><small>Personalized outreach to inactive patients</small></div></div><span class=\"campaign-draft\">Scheduled</span><div class=\"campaign-progress\"><i style=\"--bar:38%\"></i></div><div class=\"campaign-meta\"><span>38% audience reached</span><span>46 of 121 patients</span></div></div>\n<div class=\"screen-footer\"><span class=\"screen-dot\"></span> Campaigns use patient context and clinic-approved messaging <span class=\"screen-footer-right\">View campaigns \u2192</span></div>\n</div>"
+      },
+      {
+        "id": "recall-operations",
+        "label": "Recall",
+        "kicker": "STEP 04 \u00b7 RECALL",
+        "headline": "Bring the right patients back at the right time.",
+        "description": "Surface patients due for a check-in, renewal or return visit and prepare relevant follow-up.",
+        "html": "<div class=\"growth-screen\" data-screen=\"3\">\n<div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">RECALL \u00b7 PATIENT REACTIVATION</span><h3>Bring the right patients <em>back</em></h3></div><span class=\"screen-filter\">Recall queue\u2304</span></div>\n<div class=\"recall-hero\"><div><span class=\"screen-eyebrow\">READY FOR RECALL</span><b>86 <small>patients</small></b><p>Patients due for a check-in, renewal or return visit.</p></div><div class=\"recall-ring\"><span>68<small>%</small></span></div></div>\n<div class=\"recall-list\"><div class=\"recall-row\"><span class=\"recall-avatar\">JM</span><div><b>Jennifer Moore</b><small>Last visit \u00b7 5 months ago</small></div><span class=\"recall-channel\">SMS</span><span class=\"recall-status\">Ready</span></div><div class=\"recall-row\"><span class=\"recall-avatar peach\">DK</span><div><b>Daniel Kim</b><small>Membership renewal \u00b7 overdue</small></div><span class=\"recall-channel\">Email</span><span class=\"recall-status\">Ready</span></div><div class=\"recall-row\"><span class=\"recall-avatar green\">SP</span><div><b>Sophia Patel</b><small>Follow-up \u00b7 due this week</small></div><span class=\"recall-channel\">SMS</span><span class=\"recall-status\">Ready</span></div></div>\n<div class=\"screen-footer\"><span class=\"screen-dot\"></span> Recall recommendations are ready for team review <span class=\"screen-footer-right\">Open recall queue \u2192</span></div>\n</div>"
+      }
+    ]
+  },
+  {
+    "id": "business",
+    "category": "02 \u2014 BUSINESS PERFORMANCE",
+    "headline": "Understand how your practice is performing.",
+    "description": "See the financial and operational health of your clinic in one place. Understand recurring revenue, provider utilization, memberships and performance trends.",
+    "interval": 4200,
+    "previewHeading": "<div class=\"growth-screen-top\"><div><div class=\"tiny\">TULU BUSINESS WORKSPACE</div><div class=\"ptitle\">Clinic performance <i>overview</i></div></div><span class=\"live\"><span class=\"live-pulse\"></span> Interactive preview</span></div>",
+    "steps": [
+      {
+        "id": "pulse",
+        "label": "Clinic Pulse",
+        "kicker": "STEP 01 \u00b7 CLINIC PULSE",
+        "headline": "One view of the health of your clinic.",
+        "description": "Bring revenue, retention, utilization and operational signals into one reconciled business view.",
+        "html": "<div class=\"growth-screen active\" data-screen=\"0\"><div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">CLINIC PULSE \u00b7 BUSINESS SIGNALS</span><h3>How is the clinic <em>performing?</em></h3></div><span class=\"screen-filter\">Last 90 days\u2304</span></div><div class=\"screen-summary\"><div><small>Revenue \u00b7 this month</small><b>$284k</b></div><div><small>MRR</small><b>$192k</b></div><div><small>Revenue at risk</small><b>$18.4k</b></div></div><div class=\"priority-layout\"><div class=\"priority-feature\"><span class=\"screen-eyebrow\">RETENTION SIGNAL</span><b>Revenue leakage</b><strong>\u2193 25%</strong><p>Revenue leakage trend over the last six months.</p><div class=\"priority-bar\"><i style=\"--bar:75%\"></i></div><small>Improving trend</small></div><div class=\"priority-list\"><div class=\"priority-item\"><span class=\"priority-rank\">01</span><div><b>Renewals due \u00b7 next 90 days</b><small>Forecast against at-risk value</small></div><span class=\"priority-high\">Review</span></div><div class=\"priority-item\"><span class=\"priority-rank\">02</span><div><b>Revenue concentration</b><small>Top 10% of patients \u00b7 29% of revenue</small></div><span class=\"priority-medium\">Watch</span></div><div class=\"priority-item\"><span class=\"priority-rank\">03</span><div><b>Provider rebooking</b><small>Return rate by provider</small></div><span class=\"priority-medium\">Track</span></div></div></div><div class=\"screen-footer\"><span class=\"screen-dot\"></span>Business signals reconciled across clinic systems \u00b7 read-only view</div></div>"
+      },
+      {
+        "id": "capacity",
+        "label": "Provider Capacity",
+        "kicker": "STEP 02 \u00b7 PROVIDER CAPACITY",
+        "headline": "See where provider time is going.",
+        "description": "Understand utilization and rebooking patterns across providers to spot capacity and retention opportunities.",
+        "html": "<div class=\"growth-screen\" data-screen=\"1\"><div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">PROVIDER CAPACITY \u00b7 UTILIZATION</span><h3>Understand provider <em>capacity</em></h3></div><span class=\"screen-filter\">Last 90 days\u2304</span></div><div class=\"screen-table-head\"><span>Provider</span><span>Utilization</span><span>Rebooking</span><span>Trend</span></div><div class=\"screen-patient\"><span class=\"screen-avatar\">AM</span><b>Dr. Amelia Moore<small>Longevity physician</small></b><span class=\"signal-tag\">86%</span><span class=\"action-tag\">78% return</span></div><div class=\"screen-patient\"><span class=\"screen-avatar\">JC</span><b>Dr. James Chen<small>Functional medicine</small></b><span class=\"signal-tag\">74%</span><span class=\"action-tag\">72% return</span></div><div class=\"screen-patient\"><span class=\"screen-avatar\">SP</span><b>Dr. Sarah Patel<small>Wellness provider</small></b><span class=\"signal-tag\">68%</span><span class=\"action-tag\">65% return</span></div><div class=\"priority-feature\" style=\"margin-top:10px\"><b>Capacity overview</b><div class=\"priority-bar\"><i style=\"--bar:82%\"></i></div><small>Utilization by provider \u00b7 illustrative view</small></div><div class=\"screen-footer\"><span class=\"screen-dot\"></span>Provider utilization and patient rebooking at a glance</div></div>"
+      },
+      {
+        "id": "membership",
+        "label": "Memberships",
+        "kicker": "STEP 03 \u00b7 MEMBERSHIPS",
+        "headline": "Know where every member stands.",
+        "description": "Track entitlements, program position, renewals and engagement so the team can act before members lapse.",
+        "html": "<div class=\"growth-screen\" data-screen=\"2\"><div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">MEMBERSHIPS \u00b7 ENTITLEMENTS</span><h3>Every membership, <em>in view</em></h3></div><span class=\"screen-filter\">Last 90 days\u2304</span></div><div class=\"screen-summary\"><div><small>Active members</small><b>1,248</b></div><div><small>Renewals \u00b7 30 days</small><b>86</b></div><div><small>At-risk members</small><b>34</b></div></div><div class=\"priority-list\"><div class=\"priority-item\"><span class=\"priority-rank\">01</span><div><b>Entitlements remaining</b><small>Used vs. left across active plans</small></div><span class=\"priority-high\">Review</span></div><div class=\"priority-item\"><span class=\"priority-rank\">02</span><div><b>Onboarding progress</b><small>Program stage and checklist status</small></div><span class=\"priority-medium\">Track</span></div><div class=\"priority-item\"><span class=\"priority-rank\">03</span><div><b>Engagement drift</b><small>Appointment gaps and communication trend</small></div><span class=\"priority-high\">At risk</span></div></div><div class=\"screen-footer\"><span class=\"screen-dot\"></span>Entitlements, renewal windows and member engagement</div></div>"
+      },
+      {
+        "id": "revenue-mrr",
+        "label": "Revenue & MRR",
+        "kicker": "STEP 04 \u00b7 REVENUE & MRR",
+        "headline": "Understand recurring revenue and what drives it.",
+        "description": "Review MRR, entitlement revenue, renewal outlook and revenue concentration in one place.",
+        "html": "<div class=\"growth-screen\" data-screen=\"3\"><div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">REVENUE &amp; MRR \u00b7 RECURRING REVENUE</span><h3>Track recurring <em>revenue</em></h3></div><span class=\"screen-filter\">Last 90 days\u2304</span></div><div class=\"screen-summary\"><div><small>Monthly recurring revenue</small><b>$192k</b></div><div><small>Entitlement revenue</small><b>$146k</b></div><div><small>Renewals forecast</small><b>$68k</b></div></div><div class=\"chart-bars\"><div class=\"mini-chart\"><span>MRR trend</span><div class=\"bars\"><i style=\"--h:45%\"></i><i style=\"--h:55%\"></i><i style=\"--h:62%\"></i><i style=\"--h:72%\"></i><i style=\"--h:86%\"></i></div></div><div class=\"mini-chart\"><span>Revenue mix</span><div class=\"bars\"><i style=\"--h:82%\"></i><i style=\"--h:61%\"></i><i style=\"--h:42%\"></i><i style=\"--h:29%\"></i></div></div></div><div class=\"screen-footer\"><span class=\"screen-dot\"></span>Recurring revenue and renewal outlook</div></div>"
+      },
+      {
+        "id": "financial-performance",
+        "label": "Financial Performance",
+        "kicker": "STEP 05 \u00b7 FINANCIAL PERFORMANCE",
+        "headline": "Connect revenue to the cost of care.",
+        "description": "Reconcile lab spend against membership and lab revenue to understand margin and spot financial leakage.",
+        "html": "<div class=\"growth-screen\" data-screen=\"4\"><div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">FINANCIAL PERFORMANCE \u00b7 RECONCILIATION</span><h3>See the financial <em>picture</em></h3></div><span class=\"screen-filter\">Last 90 days\u2304</span></div><div class=\"screen-summary\"><div><small>Membership revenue</small><b>$192k</b></div><div><small>Lab spend</small><b>$46.2k</b></div><div><small>Lab margin</small><b>31%</b></div></div><div class=\"priority-list\"><div class=\"priority-item\"><span class=\"priority-rank\">01</span><div><b>Revenue reconciliation</b><small>Membership and lab revenue</small></div><span class=\"priority-medium\">Matched</span></div><div class=\"priority-item\"><span class=\"priority-rank\">02</span><div><b>Lab spend vs. revenue</b><small>Margin visibility across services</small></div><span class=\"priority-high\">Review</span></div><div class=\"priority-item\"><span class=\"priority-rank\">03</span><div><b>Financial leakage</b><small>Flags for revenue at risk</small></div><span class=\"priority-medium\">Monitor</span></div></div><div class=\"screen-footer\"><span class=\"screen-dot\"></span>Financial visibility across revenue, lab spend and margin</div></div>"
+      }
+    ]
+  },
+  {
+    "id": "oversight",
+    "category": "03 \u2014 OVERSIGHT & OUTCOMES",
+    "headline": "Stay ahead of risks. Prove the results.",
+    "description": "Maintain visibility into clinical oversight, compliance, patient outcomes and program performance as your practice grows.",
+    "interval": 4200,
+    "previewHeading": "<div class=\"growth-screen-top\"><div><div class=\"tiny\">TULU OVERSIGHT WORKSPACE</div><div class=\"ptitle\">Clinical oversight <i>&amp; outcomes</i></div></div><span class=\"live\"><span class=\"live-pulse\"></span> Interactive preview</span></div>",
+    "steps": [
+      {
+        "id": "compliance",
+        "label": "Compliance",
+        "kicker": "STEP 01 \u00b7 COMPLIANCE",
+        "headline": "Keep compliance obligations visible.",
+        "description": "Surface licensure, consent, communication and marketing-claim items that need review.",
+        "html": "<div class=\"growth-screen active\" data-screen=\"0\"><div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">COMPLIANCE \u00b7 OBLIGATIONS</span><h3>Keep the practice <em>covered</em></h3></div><span class=\"screen-filter\">All items\u2304</span></div><div class=\"screen-summary\"><div><small>Critical items</small><b>2</b></div><div><small>High priority</small><b>3</b></div><div><small>States with members</small><b>7</b></div></div><div class=\"priority-list\"><div class=\"priority-item\"><span class=\"priority-rank\">!</span><div><b>Telehealth licensure</b><small>3 members reside outside licensed states \u00b7 review provider coverage</small></div><span class=\"priority-high\">Critical</span></div><div class=\"priority-item\"><span class=\"priority-rank\">!</span><div><b>Compounded peptides</b><small>Review sourcing, protocol and consent language</small></div><span class=\"priority-high\">Critical</span></div><div class=\"priority-item\"><span class=\"priority-rank\">!</span><div><b>Marketing claims</b><small>4 live assets need claim review</small></div><span class=\"priority-medium\">High</span></div></div><div class=\"screen-footer\"><span class=\"screen-dot\"></span>Compliance obligations surfaced for clinic review</div></div>"
+      },
+      {
+        "id": "risk-visibility",
+        "label": "Risk Visibility",
+        "kicker": "STEP 02 \u00b7 RISK VISIBILITY",
+        "headline": "See emerging risks before they escalate.",
+        "description": "Prioritize critical and high-risk items with the context teams need to review them.",
+        "html": "<div class=\"growth-screen\" data-screen=\"1\"><div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">RISK VISIBILITY \u00b7 PRIORITISED</span><h3>Know where risk is <em>building</em></h3></div><span class=\"screen-filter\">All items\u2304</span></div><div class=\"risk-spotlight\"><div><span class=\"screen-eyebrow\">PRIORITY QUEUE</span><b>Items requiring review</b><p>Sort open issues by severity and affected patients.</p></div><strong>5<small> open</small></strong></div><div class=\"priority-list\"><div class=\"priority-item\"><span class=\"priority-rank\">01</span><div><b>Licensure exposure</b><small>3 members \u00b7 provider coverage check</small></div><span class=\"priority-high\">Critical</span></div><div class=\"priority-item\"><span class=\"priority-rank\">02</span><div><b>Protocol and consent</b><small>Compounded peptide review</small></div><span class=\"priority-high\">Critical</span></div><div class=\"priority-item\"><span class=\"priority-rank\">03</span><div><b>Claims review</b><small>4 marketing assets</small></div><span class=\"priority-medium\">High</span></div></div><div class=\"screen-footer\"><span class=\"screen-dot\"></span>Risk items ordered by severity and patient impact</div></div>"
+      },
+      {
+        "id": "outcomes",
+        "label": "Patient Outcomes",
+        "kicker": "STEP 03 \u00b7 PATIENT OUTCOMES",
+        "headline": "Make progress easier to understand.",
+        "description": "Bring longitudinal biomarkers, labs, wearable trends and patient goals into a coherent view.",
+        "html": "<div class=\"growth-screen\" data-screen=\"2\"><div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">PATIENT OUTCOMES \u00b7 LONGITUDINAL</span><h3>See the patient's <em>progress</em></h3></div><span class=\"screen-filter\">All items\u2304</span></div><div class=\"screen-summary\"><div><small>Patient records</small><b>1,248</b></div><div><small>With longitudinal data</small><b>86%</b></div><div><small>Follow-up due</small><b>42</b></div></div><div class=\"outcome-card\"><span class=\"screen-eyebrow\">PATIENT TWIN \u00b7 LONGITUDINAL VIEW</span><b>Biomarker &amp; wearable trends</b><div class=\"trend-row\"><span>HRV</span><div class=\"trend-line\"><i style=\"--bar:76%\"></i></div><b>+8%</b></div><div class=\"trend-row\"><span>Sleep</span><div class=\"trend-line\"><i style=\"--bar:64%\"></i></div><b>+5%</b></div><div class=\"trend-row\"><span>Steps</span><div class=\"trend-line\"><i style=\"--bar:82%\"></i></div><b>+11%</b></div><small>Illustrative trend indicators \u00b7 review in patient context</small></div><div class=\"screen-footer\"><span class=\"screen-dot\"></span>Longitudinal labs, biomarkers and wearable trends in patient context</div></div>"
+      },
+      {
+        "id": "program-performance",
+        "label": "Program Performance",
+        "kicker": "STEP 04 \u00b7 PROGRAM PERFORMANCE",
+        "headline": "Understand how programs are progressing.",
+        "description": "Review patient progress, adherence and cohort-level movement against program goals.",
+        "html": "<div class=\"growth-screen\" data-screen=\"3\"><div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">PROGRAM PERFORMANCE \u00b7 PROGRESS</span><h3>Track program <em>performance</em></h3></div><span class=\"screen-filter\">All items\u2304</span></div><div class=\"screen-summary\"><div><small>Active programs</small><b>312</b></div><div><small>Adherence follow-ups</small><b>48</b></div><div><small>Cohort review</small><b>12</b></div></div><div class=\"priority-list\"><div class=\"priority-item\"><span class=\"priority-rank\">01</span><div><b>Protocol adherence</b><small>Progress against physician-authored plan</small></div><span class=\"priority-medium\">Review</span></div><div class=\"priority-item\"><span class=\"priority-rank\">02</span><div><b>Program milestones</b><small>Patient stage and follow-up checkpoints</small></div><span class=\"priority-medium\">Track</span></div><div class=\"priority-item\"><span class=\"priority-rank\">03</span><div><b>Cohort biomarker movement</b><small>Longitudinal group-level outcomes</small></div><span class=\"priority-high\">Review</span></div></div><div class=\"screen-footer\"><span class=\"screen-dot\"></span>Program progress and cohort outcomes over time</div></div>"
+      },
+      {
+        "id": "clinical-oversight",
+        "label": "Clinical Oversight",
+        "kicker": "STEP 05 \u00b7 CLINICAL OVERSIGHT",
+        "headline": "Keep care plans and follow-through connected.",
+        "description": "Give clinicians a clear view of outstanding results, plan status and follow-up needs.",
+        "html": "<div class=\"growth-screen\" data-screen=\"4\"><div class=\"screen-heading\"><div><span class=\"screen-eyebrow\">CLINICAL OVERSIGHT \u00b7 FOLLOW-THROUGH</span><h3>Keep care <em>connected</em></h3></div><span class=\"screen-filter\">All items\u2304</span></div><div class=\"priority-list\"><div class=\"priority-item\"><span class=\"priority-rank\">01</span><div><b>Outstanding lab results</b><small>Results pending review or routing</small></div><span class=\"priority-high\">Pending</span></div><div class=\"priority-item\"><span class=\"priority-rank\">02</span><div><b>Care plan follow-through</b><small>Physician-authored recommendations and status</small></div><span class=\"priority-medium\">Track</span></div><div class=\"priority-item\"><span class=\"priority-rank\">03</span><div><b>Patient communication record</b><small>Email and text interactions captured in the record</small></div><span class=\"priority-medium\">Synced</span></div></div><div class=\"priority-feature\" style=\"margin-top:10px\"><b>Clinical review queue</b><p>Keep results, plans and follow-up needs visible to the care team.</p></div><div class=\"screen-footer\"><span class=\"screen-dot\"></span>Outstanding results, care plans and communication continuity</div></div>"
+      }
+    ]
+  }
+]

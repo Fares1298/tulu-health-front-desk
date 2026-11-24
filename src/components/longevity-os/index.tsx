@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Activity, ArrowRight, Bot, CalendarDays, FileText, FlaskConical, Heart, MessageCircle, Route as RouteIcon, Stethoscope, Target, User, Watch } from 'lucide-react';
 import { DemoButton } from '@/components/tulu-shell';
 import { useViewportSequence } from '@/components/home-motion';
-import { OperationsShowcases } from './operations-showcases';
+import { ClinicOperationsWalkthroughs } from './clinic-operations';
 import { AIWorkforceSection } from './ai-workforce';
 export { AIWorkforceSection } from './ai-workforce';
 
@@ -84,7 +84,7 @@ export function PatientTwinSection() {
 export function ClinicOperationsSection() {
   return <section id="clinic-operations" className="los-section" aria-labelledby="los-operations-title"><div className="wrap">
     <div className="los-head" data-los-reveal><span className="eyebrow">CLINIC OPERATIONS</span><h2 id="los-operations-title">Run a better practice. <em>See the whole picture.</em></h2><p className="los-note-left">{DEMO_NOTE}</p></div>
-    <OperationsShowcases />
+    <ClinicOperationsWalkthroughs />
   </div></section>;
 }
 
@@ -122,5 +122,5 @@ export function FinalCTA() {
 
 export function LongevityOSPage() {
   const ref = useReveals();
-  return <main ref={ref} className="los"><HeroSection /><AIWorkforceSection /><ClinicOperationsSection /><PlatformSection /><PatientTwinSection /><PatientJourneySection /><FinalCTA /></main>;
+  return <main ref={ref} className="los"><HeroSection /><PlatformSection /><ClinicOperationsSection /><AIWorkforceSection /><PatientTwinSection /><PatientJourneySection /><FinalCTA /></main>;
 }
